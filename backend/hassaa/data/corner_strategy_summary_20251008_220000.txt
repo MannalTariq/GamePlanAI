@@ -1,0 +1,12 @@
+Corner Kick Strategy Report
+==========================
+Generated: 20251008_220000
+Best Strategy: Target Player #100009
+Confidence: 0.32
+Total Players: 22
+Attackers: 10
+Defenders: 10
+Keeper: 2
+
+Primary Target: Player #100009
+Alternate Targets: 100001, 100002

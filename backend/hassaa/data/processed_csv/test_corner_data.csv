@@ -1,0 +1,32 @@
+corner_id,match_id,time,team_taking,is_inswing,delivery_target,outcome,is_shot,is_clearance,is_goal,winning_duel_id,header_location_x,header_location_y
+4883,489,25.86,b'Juventude',True,near post,shot,True,False,False,1014.0,14.3,22.32
+4891,490,57.19,b'1. FSV Mainz 05',True,far post,clearance,False,True,False,1008.0,2.08,18.14
+4901,491,22.46,b'Wolverhampton Wanderers',True,far post,clearance,False,True,False,1027.0,99.12,12.29
+4902,491,76.15,b'Wattens',False,far post,shot,True,False,False,1040.0,77.17,26.53
+4911,492,88.94,b'Fluminense',True,near post,clearance,False,True,False,1017.0,39.23,38.57
+4912,492,24.19,b'Schalke 04',True,near post,goal,True,False,True,1009.0,14.84,14.19
+4913,492,61.98,b'Schalke 04',True,penalty spot,clearance,False,True,False,1028.0,15.14,29.88
+4914,492,15.65,b'Fluminense',True,penalty spot,clearance,False,True,False,1039.0,37.19,21.49
+4921,493,2.08,b'Rapid Vienna',True,near post,no outcome,False,False,False,1016.0,32.49,10.26
+4931,494,56.4,b'Borussia M\xf6nchengladbach',False,far post,clearance,False,True,False,1040.0,75.31,39.72
+4932,494,62.52,b'Santos',True,penalty spot,clearance,False,True,False,1012.0,47.37,35.15
+4933,494,3.43,b'Borussia M\xf6nchengladbach',False,far post,goal,True,False,True,1027.0,67.23,41.81
+4934,494,67.29,b'Borussia M\xf6nchengladbach',True,near post,shot,True,False,False,1011.0,82.46,12.48
+4941,495,9.6,b'SC Freiburg',True,near post,foul,False,False,False,1038.0,25.82,24.67
+4951,496,66.36,b'1. FSV Mainz 05',True,near post,goal,True,False,True,1045.0,53.19,0.01
+4952,496,35.86,b'Salernitana',False,far post,no outcome,False,False,False,1000.0,73.97,4.64
+4953,496,79.86,b'Salernitana',False,penalty spot,no outcome,False,False,False,1046.0,66.87,2.71
+4954,496,83.17,b'1. FSV Mainz 05',False,far post,clearance,False,True,False,1022.0,96.78,31.11
+4955,496,39.86,b'1. FSV Mainz 05',True,penalty spot,shot,True,False,False,1019.0,49.92,15.42
+4961,497,6.18,b'Flamengo',False,near post,shot,True,False,False,1039.0,25.52,21.59
+4962,497,81.74,b'Monza',True,far post,shot,True,False,False,1021.0,97.15,1.01
+4971,498,79.24,b'Gr\xeamio',True,penalty spot,clearance,False,True,False,1006.0,24.69,1.76
+4972,498,43.8,b'Austria Lustenau',False,far post,clearance,False,True,False,1014.0,86.78,11.02
+4973,498,12.96,b'Gr\xeamio',False,far post,shot,True,False,False,1041.0,40.19,34.21
+4974,498,19.03,b'Austria Lustenau',True,near post,shot,True,False,False,1012.0,83.83,32.01
+4981,499,36.71,b'Southampton',True,far post,no outcome,False,False,False,1032.0,71.41,7.62
+4982,499,24.52,b'VfL Bochum 1848',False,penalty spot,clearance,False,True,False,1014.0,88.28,11.76
+4983,499,8.25,b'Southampton',False,near post,clearance,False,True,False,1030.0,44.68,47.91
+4991,500,84.04,b'Fluminense',True,penalty spot,shot,True,False,False,1036.0,39.45,17.58
+4992,500,18.74,b'SK Rapid Wien',False,far post,shot,True,False,False,1040.0,12.78,28.86
+4993,500,17.95,b'Fluminense',False,penalty spot,shot,True,False,False,1002.0,26.22,30.71

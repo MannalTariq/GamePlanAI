@@ -1,0 +1,44 @@
+{
+  "tabular_baseline": {},
+  "gnn_multitask": {
+    "fold": 5,
+    "receiver": {
+      "top1": 0.875,
+      "top3": 1.0,
+      "top5": 1.0,
+      "map3": 0.1428930852644088,
+      "ndcg3": 1.573647986383945
+    },
+    "shot": {
+      "f1": 0.5096952908587258,
+      "roc_auc": 0.5119134897360704,
+      "pr_auc": 0.34335255534799636,
+      "acc": 0.3420074349442379
+    },
+    "calibration_temperature_shot": 6.154828071594238
+  },
+  "gnn_single_task": {
+    "shot": {
+      "fold": 5,
+      "shot": {
+        "f1": 0.5242165242165242,
+        "roc_auc": 0.533724340175953,
+        "pr_auc": 0.35600092285883933,
+        "acc": 0.379182156133829
+      },
+      "calibration_temperature_shot": 0.9785909056663513
+    },
+    "receiver": {
+      "fold": 5,
+      "receiver": {
+        "top1": 0.4375,
+        "top3": 1.0,
+        "top5": 1.0,
+        "map3": 0.07404318261395466,
+        "ndcg3": 0.9798979863839449
+      }
+    }
+  },
+  "best_model": "gnn_single_task_shot",
+  "recommendation": "Based on evaluation metrics, the gnn_single_task_shot model performs best. Shot prediction F1: 0.524, Receiver prediction Top-3: 1.000"
+}

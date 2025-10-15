@@ -1,0 +1,1452 @@
+corner_id,match_id,time,team_taking,is_inswing,delivery_target,outcome,is_shot,is_clearance,is_goal,winning_duel_id,header_location_x,header_location_y
+1,1,3.41,b'Austria Klagenfurt',False,far post,no outcome,False,False,False,206113.0,74.87,48.46
+2,1,4.3,b'Austria Klagenfurt',True,far post,goal,True,False,True,197756.0,3.11,34.54
+3,1,81.7,b'Austria Klagenfurt',False,penalty spot,foul,False,False,False,193260.0,75.07,43.01
+4,1,51.49,b'Austria Klagenfurt',True,near post,shot,True,False,False,265525.0,58.5,14.94
+5,1,73.19,b'Napoli',False,near post,clearance,False,True,False,270136.0,30.63,47.28
+11,2,45.42,b'Corinthians',True,near post,foul,False,False,False,202512.0,14.62,12.51
+12,2,71.37,b'Corinthians',True,near post,goal,True,False,True,212151.0,41.18,48.56
+13,2,59.85,b'Corinthians',True,penalty spot,clearance,False,True,False,254121.0,84.69,18.71
+14,2,65.81,b'Corinthians',True,far post,shot,True,False,False,223113.0,64.28,2.47
+21,3,49.6,b'FSV Mainz 05',False,penalty spot,foul,False,False,False,230369.0,94.35,12.61
+31,4,32.61,b'VfL Bochum 1848',False,far post,clearance,False,True,False,254480.0,95.18,8.32
+32,4,1.74,b'WSG Tirol',True,penalty spot,shot,True,False,False,250931.0,49.41,11.43
+33,4,89.49,b'WSG Tirol',False,far post,clearance,False,True,False,213750.0,28.59,1.63
+34,4,82.38,b'WSG Tirol',True,penalty spot,no outcome,False,False,False,264645.0,56.58,3.12
+41,5,51.75,b'TSG Hoffenheim',True,penalty spot,goal,True,False,True,230281.0,39.6,30.1
+42,5,86.91,b'Crystal Palace',True,far post,no outcome,False,False,False,220018.0,59.14,46.4
+51,6,24.73,b'Bologna',True,near post,shot,True,False,False,212096.0,0.7,1.83
+52,6,42.99,b'Bologna',True,penalty spot,clearance,False,True,False,203376.0,28.92,29.08
+61,7,74.04,b'WSG Tirol',True,far post,shot,True,False,False,222493.0,45.49,29.06
+62,7,5.5,b'SV Werder Bremen',True,penalty spot,shot,True,False,False,267867.0,94.38,7.66
+71,8,54.52,b'Clube Atl\xe9tico Mineiro',True,far post,clearance,False,True,False,252903.0,55.69,16.54
+72,8,56.3,b'PFC CSKA Moscow',True,near post,no outcome,False,False,False,223868.0,18.72,48.39
+73,8,11.62,b'Clube Atl\xe9tico Mineiro',True,penalty spot,shot,True,False,False,235194.0,89.95,24.97
+81,9,50.85,b'RB Leipzig',True,penalty spot,shot,True,False,False,231352.0,33.1,19.89
+82,9,86.3,b'RB Leipzig',True,far post,shot,True,False,False,244284.0,31.97,36.43
+83,9,87.73,b'RB Leipzig',True,penalty spot,no outcome,False,False,False,256345.0,18.12,26.81
+84,9,59.63,b'RB Leipzig',True,penalty spot,clearance,False,True,False,220697.0,36.65,31.2
+91,10,65.77,b'Everton',True,far post,shot,True,False,False,237916.0,8.41,9.78
+92,10,16.52,b'SC Rheindorf Altach',True,penalty spot,goal,True,False,True,230218.0,88.98,41.97
+93,10,48.52,b'Everton',False,far post,foul,False,False,False,262930.0,0.21,32.87
+94,10,11.6,b'Everton',True,far post,clearance,False,True,False,240044.0,87.96,10.36
+95,10,52.68,b'SC Rheindorf Altach',True,near post,clearance,False,True,False,255206.0,33.37,46.48
+101,11,41.27,b'Hertha BSC',False,far post,shot,True,False,False,210880.0,95.13,5.29
+102,11,62.71,b'SV Mattersburg',True,near post,foul,False,False,False,258316.0,23.4,37.06
+111,12,43.98,b'Schalke 04',True,near post,clearance,False,True,False,264260.0,24.89,17.97
+112,12,66.58,b'Schalke 04',True,far post,clearance,False,True,False,210366.0,35.98,12.1
+113,12,74.59,b'Schalke 04',False,far post,clearance,False,True,False,264298.0,99.43,12.67
+114,12,82.39,b'Sassuolo',True,far post,clearance,False,True,False,238637.0,73.82,30.02
+115,12,32.99,b'Schalke 04',False,penalty spot,goal,True,False,True,230233.0,11.4,16.07
+121,13,26.64,b'Manchester City',False,near post,clearance,False,True,False,237595.0,48.97,21.74
+122,13,87.28,b'Manchester City',True,penalty spot,foul,False,False,False,260929.0,8.69,42.33
+123,13,62.98,b'Crotone',True,near post,foul,False,False,False,263455.0,51.77,16.83
+131,14,74.61,b'Schalke 04',False,far post,clearance,False,True,False,236015.0,63.2,10.78
+132,14,29.77,b'Schalke 04',False,penalty spot,shot,True,False,False,230232.0,76.99,8.0
+133,14,2.12,b'Milan',True,far post,clearance,False,True,False,226456.0,29.0,26.17
+141,15,56.59,b'Torino',False,penalty spot,clearance,False,True,False,265761.0,76.14,7.76
+142,15,72.16,b'Torino',True,near post,clearance,False,True,False,226129.0,68.84,29.66
+143,15,64.22,b'Torino',True,penalty spot,shot,True,False,False,240091.0,55.59,15.38
+144,15,43.24,b'Torino',True,penalty spot,clearance,False,True,False,230202.0,16.2,41.66
+145,15,54.86,b'Torino',True,near post,goal,True,False,True,247082.0,32.69,5.63
+151,16,26.02,b'VfL Bochum 1848',True,penalty spot,goal,True,False,True,230981.0,34.13,18.65
+161,17,86.8,b'Kaizer Chiefs',False,near post,no outcome,False,False,False,223680.0,41.42,30.92
+162,17,3.34,b'Southampton',True,near post,foul,False,False,False,259031.0,8.91,30.89
+163,17,15.91,b'Southampton',False,penalty spot,clearance,False,True,False,244004.0,66.92,20.09
+164,17,78.02,b'Kaizer Chiefs',False,penalty spot,shot,True,False,False,241102.0,69.27,12.42
+165,17,25.79,b'Southampton',True,penalty spot,foul,False,False,False,225711.0,45.82,37.41
+171,18,50.81,b'Austria Klagenfurt',True,far post,shot,True,False,False,258505.0,17.13,4.74
+172,18,87.5,b'Rapid Vienna',True,near post,shot,True,False,False,230406.0,54.23,22.86
+181,19,4.96,b'Atl\xe9tico Mineiro',False,near post,shot,True,False,False,190778.0,18.72,4.05
+182,19,23.27,b'Crystal Palace',False,far post,clearance,False,True,False,237321.0,38.31,26.4
+183,19,53.55,b'Crystal Palace',False,far post,clearance,False,True,False,226093.0,22.9,22.02
+184,19,59.22,b'Crystal Palace',True,near post,clearance,False,True,False,271857.0,53.5,43.59
+191,20,82.72,b'Palmeiras',False,near post,clearance,False,True,False,270017.0,64.18,31.47
+192,20,31.4,b'Palmeiras',True,penalty spot,clearance,False,True,False,206115.0,29.97,27.7
+193,20,66.53,b'Arsenal',True,penalty spot,shot,True,False,False,234678.0,88.0,20.67
+194,20,56.8,b'Arsenal',True,near post,clearance,False,True,False,193860.0,86.27,42.03
+201,21,21.94,b'Leeds United',False,far post,clearance,False,True,False,268536.0,22.89,47.25
+211,22,48.29,b'U.C. Sampdoria',False,far post,clearance,False,True,False,169792.0,76.02,45.28
+212,22,86.07,b'U.C. Sampdoria',False,far post,clearance,False,True,False,230372.0,1.75,1.53
+213,22,17.36,b'U.C. Sampdoria',True,far post,foul,False,False,False,264793.0,29.1,17.63
+214,22,5.17,b'U.C. Sampdoria',True,penalty spot,goal,True,False,True,244795.0,33.69,12.62
+221,23,83.01,b'SPAL',True,near post,shot,True,False,False,229391.0,33.2,34.35
+222,23,37.16,b'SPAL',True,near post,clearance,False,True,False,202685.0,1.59,22.34
+223,23,82.61,b'SPAL',True,far post,no outcome,False,False,False,198032.0,38.98,33.5
+231,24,6.05,b'Benevento',True,penalty spot,clearance,False,True,False,189251.0,84.99,4.15
+232,24,51.3,b'Benevento',False,penalty spot,goal,True,False,True,236109.0,73.28,4.13
+241,25,55.01,b'FC Schalke 04',False,near post,clearance,False,True,False,244661.0,24.93,46.98
+251,26,41.93,b'Bayer 04 Leverkusen',True,far post,goal,True,False,True,254882.0,84.62,45.84
+252,26,52.73,b'Bayer 04 Leverkusen',False,far post,clearance,False,True,False,137506.0,85.43,14.39
+261,27,33.11,b'Hertha BSC',True,near post,clearance,False,True,False,235421.0,2.33,27.8
+262,27,20.31,b'Hertha BSC',True,near post,clearance,False,True,False,261640.0,92.82,5.99
+263,27,40.86,b'Hertha BSC',False,far post,shot,True,False,False,231743.0,45.97,27.25
+264,27,86.72,b'Bologna',False,penalty spot,shot,True,False,False,262632.0,83.78,36.33
+271,28,22.03,b'Clube Atl\xe9tico Mineiro',False,far post,clearance,False,True,False,200215.0,95.38,46.35
+272,28,24.1,b'Clube Atl\xe9tico Mineiro',True,penalty spot,no outcome,False,False,False,224494.0,96.63,6.04
+273,28,70.08,b'Internacional',True,near post,no outcome,False,False,False,230278.0,50.06,39.65
+274,28,65.57,b'Internacional',True,near post,clearance,False,True,False,255043.0,82.14,4.53
+275,28,88.48,b'Clube Atl\xe9tico Mineiro',True,near post,goal,True,False,True,241585.0,23.96,42.05
+281,29,87.06,b'SV Werder Bremen',False,penalty spot,clearance,False,True,False,220651.0,98.52,49.7
+291,30,56.43,b'Ava\xed FC',False,penalty spot,foul,False,False,False,228614.0,1.71,9.58
+292,30,11.46,b'Ava\xed FC',False,penalty spot,shot,True,False,False,228295.0,26.7,12.56
+301,31,29.15,b'Spezia',True,near post,goal,True,False,True,186158.0,39.52,27.94
+302,31,7.59,b'Newcastle United',True,penalty spot,no outcome,False,False,False,266891.0,76.76,30.23
+311,32,79.95,b'U.C. Sampdoria',False,penalty spot,no outcome,False,False,False,230229.0,63.86,38.3
+321,33,88.98,b'Monza',False,near post,shot,True,False,False,257190.0,54.55,33.71
+322,33,18.13,b'Monza',True,far post,shot,True,False,False,186905.0,44.99,16.74
+323,33,31.93,b'Monza',False,far post,shot,True,False,False,262663.0,25.69,5.23
+324,33,11.9,b'Fulham',True,penalty spot,goal,True,False,True,230469.0,97.07,10.87
+331,34,41.24,b'Benevento',False,far post,clearance,False,True,False,263620.0,69.58,47.59
+332,34,66.62,b'Benevento',False,far post,no outcome,False,False,False,245903.0,47.35,23.52
+333,34,23.18,b'FC Red Bull Salzburg',False,penalty spot,no outcome,False,False,False,230295.0,6.67,39.05
+334,34,43.48,b'Benevento',True,far post,goal,True,False,True,231677.0,75.07,13.13
+341,35,9.7,b'1. FC K\xf6ln',True,far post,foul,False,False,False,251954.0,38.43,26.09
+342,35,51.23,b'Gr\xeamio',True,far post,no outcome,False,False,False,253475.0,8.36,45.29
+343,35,66.86,b'1. FC K\xf6ln',True,near post,clearance,False,True,False,230464.0,44.06,32.85
+344,35,64.5,b'1. FC K\xf6ln',False,penalty spot,goal,True,False,True,230918.0,18.71,7.38
+351,36,73.83,b'Sport-Club Freiburg',True,far post,shot,True,False,False,203775.0,7.49,34.95
+352,36,89.32,b'Aston Villa',True,penalty spot,clearance,False,True,False,256790.0,76.37,25.87
+353,36,63.31,b'Aston Villa',False,far post,clearance,False,True,False,222492.0,54.45,30.78
+361,37,83.92,b'Crystal Palace',False,near post,foul,False,False,False,260925.0,14.71,31.07
+362,37,74.21,b'VfL Bochum 1848',True,near post,shot,True,False,False,228751.0,22.13,7.99
+371,38,66.35,b'Club Athletico Paranaense',True,penalty spot,shot,True,False,False,229906.0,31.45,11.06
+372,38,51.23,b'Club Athletico Paranaense',True,near post,shot,True,False,False,236498.0,94.82,2.41
+373,38,40.57,b'FC Bayern M\xfcnchen',False,penalty spot,clearance,False,True,False,243588.0,41.26,6.85
+374,38,47.65,b'FC Bayern M\xfcnchen',False,penalty spot,clearance,False,True,False,188996.0,94.15,44.36
+381,39,19.87,b'Clube Atl\xe9tico Mineiro',True,near post,clearance,False,True,False,203487.0,9.72,25.53
+391,40,88.05,b'Manchester City',True,near post,shot,True,False,False,210502.0,57.17,48.54
+392,40,36.08,b'Vasco da Gama',False,penalty spot,clearance,False,True,False,200316.0,49.08,36.76
+393,40,7.32,b'Manchester City',True,far post,no outcome,False,False,False,266000.0,82.47,27.7
+394,40,12.09,b'Vasco da Gama',True,near post,clearance,False,True,False,223524.0,47.56,42.46
+401,41,27.75,b'Paderborn',True,penalty spot,shot,True,False,False,251551.0,94.22,45.12
+402,41,79.64,b'1. FC K\xf6ln',False,penalty spot,clearance,False,True,False,269653.0,32.63,37.62
+403,41,12.13,b'Paderborn',True,near post,no outcome,False,False,False,236378.0,38.29,32.45
+404,41,67.76,b'Paderborn',True,near post,shot,True,False,False,253474.0,74.58,6.04
+411,42,83.87,b'Genoa',True,far post,clearance,False,True,False,268259.0,75.81,24.76
+412,42,45.69,b'Genoa',True,far post,clearance,False,True,False,263041.0,25.4,12.6
+413,42,42.69,b'U.C. Sampdoria',True,penalty spot,clearance,False,True,False,188541.0,79.42,9.18
+414,42,17.73,b'Genoa',False,near post,clearance,False,True,False,190460.0,27.09,5.83
+421,43,9.35,b'Ried',True,penalty spot,clearance,False,True,False,244456.0,82.7,12.47
+422,43,58.69,b'Sturm Graz',True,penalty spot,clearance,False,True,False,244108.0,54.99,19.32
+423,43,79.12,b'Ried',False,penalty spot,foul,False,False,False,184431.0,45.77,49.04
+431,44,39.66,b'Admira',True,near post,clearance,False,True,False,222493.0,38.46,7.26
+432,44,75.45,b'Admira',True,penalty spot,shot,True,False,False,257170.0,37.01,30.91
+433,44,66.73,b'Bayer 04 Leverkusen',True,far post,foul,False,False,False,219912.0,85.08,17.78
+434,44,33.1,b'Admira',False,near post,clearance,False,True,False,243200.0,22.52,11.53
+441,45,21.57,b'Wolverhampton Wanderers',True,penalty spot,no outcome,False,False,False,264411.0,25.84,42.62
+442,45,82.98,b'Fulham',False,penalty spot,no outcome,False,False,False,252119.0,5.76,26.31
+443,45,9.15,b'Fulham',True,far post,foul,False,False,False,189446.0,83.0,33.63
+451,46,12.57,b'FC Flyeralarm Admira',True,far post,foul,False,False,False,236485.0,44.0,30.6
+452,46,54.75,b'FC Flyeralarm Admira',False,penalty spot,clearance,False,True,False,253290.0,17.36,17.88
+461,47,65.87,b'Associa\xe7\xe3o Chapecoense de Futebol',True,far post,goal,True,False,True,193361.0,14.23,46.72
+471,48,34.56,b'Wattens',False,near post,shot,True,False,False,199189.0,82.72,35.85
+472,48,14.98,b'Werder Bremen',False,far post,clearance,False,True,False,171972.0,7.54,35.22
+473,48,56.78,b'Wattens',True,penalty spot,shot,True,False,False,204922.0,42.36,41.73
+481,49,37.01,b'Bayer 04 Leverkusen',True,near post,clearance,False,True,False,243048.0,68.12,10.57
+482,49,73.72,b'S\xe3o Paulo',True,far post,shot,True,False,False,230509.0,29.18,46.42
+483,49,26.43,b'S\xe3o Paulo',False,near post,shot,True,False,False,204838.0,37.39,1.11
+484,49,44.03,b'Bayer 04 Leverkusen',True,far post,goal,True,False,True,232805.0,24.36,33.57
+491,50,53.65,b'Fulham',True,far post,shot,True,False,False,230493.0,42.64,12.4
+492,50,49.15,b'Sassuolo',True,far post,shot,True,False,False,260415.0,58.69,36.38
+493,50,67.95,b'Sassuolo',True,penalty spot,no outcome,False,False,False,194201.0,87.38,30.45
+501,51,70.99,b'SpVgg Greuther F\xfcrth',True,penalty spot,clearance,False,True,False,258407.0,11.05,33.9
+502,51,86.03,b'SpVgg Greuther F\xfcrth',False,penalty spot,no outcome,False,False,False,237692.0,80.95,44.46
+503,51,33.93,b'SpVgg Greuther F\xfcrth',True,far post,shot,True,False,False,220659.0,74.94,12.58
+504,51,49.81,b'WSG Tirol',False,far post,clearance,False,True,False,265194.0,96.3,36.21
+511,52,58.89,b'Wattens',True,penalty spot,clearance,False,True,False,258820.0,43.51,44.45
+512,52,63.8,b'Eintracht Frankfurt',True,near post,shot,True,False,False,242752.0,9.91,7.55
+513,52,83.19,b'Eintracht Frankfurt',True,near post,clearance,False,True,False,173130.0,92.52,32.54
+514,52,68.28,b'Wattens',True,near post,clearance,False,True,False,244546.0,64.31,1.5
+515,52,54.95,b'Wattens',True,penalty spot,shot,True,False,False,256620.0,38.27,44.88
+521,53,38.83,b'Torino F.C.',True,far post,clearance,False,True,False,208670.0,18.14,21.02
+522,53,4.91,b'Torino F.C.',True,near post,clearance,False,True,False,258928.0,23.88,35.25
+523,53,19.71,b'Nottingham Forest',False,penalty spot,shot,True,False,False,195365.0,68.11,42.7
+524,53,19.51,b'Nottingham Forest',False,near post,clearance,False,True,False,240675.0,62.52,36.53
+525,53,72.6,b'Nottingham Forest',True,far post,goal,True,False,True,257228.0,63.98,22.32
+531,54,41.18,b'VfL Bochum 1848',True,penalty spot,clearance,False,True,False,234760.0,99.72,9.39
+541,55,42.88,b'Spezia',False,near post,clearance,False,True,False,241689.0,61.79,33.26
+542,55,74.16,b'Udinese',False,penalty spot,clearance,False,True,False,199254.0,58.9,41.53
+543,55,37.7,b'Spezia',True,penalty spot,clearance,False,True,False,225781.0,84.25,8.27
+544,55,68.95,b'Udinese',False,near post,goal,True,False,True,270682.0,28.3,22.88
+545,55,34.46,b'Udinese',True,far post,clearance,False,True,False,232488.0,56.42,0.62
+551,56,29.14,b'CSA',False,far post,shot,True,False,False,230441.0,55.01,30.02
+552,56,14.17,b'CSA',False,penalty spot,no outcome,False,False,False,237386.0,85.45,39.33
+553,56,66.02,b'Spezia',False,penalty spot,clearance,False,True,False,247409.0,85.39,41.12
+561,57,7.55,b'FC Union Berlin',True,penalty spot,shot,True,False,False,184274.0,57.79,11.11
+562,57,20.31,b'Atalanta',True,near post,no outcome,False,False,False,189280.0,46.85,39.44
+563,57,28.48,b'Atalanta',True,penalty spot,clearance,False,True,False,242947.0,22.51,33.4
+571,58,74.97,b'VfL Bochum 1848',True,near post,goal,True,False,True,242530.0,10.99,43.83
+581,59,43.57,b'FC K\xf6ln',False,penalty spot,clearance,False,True,False,198946.0,69.91,16.88
+582,59,38.59,b'FC K\xf6ln',True,far post,shot,True,False,False,152107.0,51.79,2.36
+583,59,63.33,b'U.S. Sassuolo Calcio',False,penalty spot,clearance,False,True,False,206098.0,27.91,48.95
+584,59,69.11,b'U.S. Sassuolo Calcio',True,penalty spot,no outcome,False,False,False,256887.0,46.19,17.28
+591,60,4.22,b'AC Milan',False,penalty spot,clearance,False,True,False,252279.0,80.32,28.75
+592,60,59.34,b'Torino F.C.',False,far post,shot,True,False,False,244108.0,42.72,20.11
+593,60,64.8,b'Torino F.C.',True,near post,clearance,False,True,False,234102.0,84.33,40.64
+594,60,77.9,b'Torino F.C.',True,near post,clearance,False,True,False,235790.0,63.52,7.56
+601,61,86.56,b'Vasco da Gama',False,near post,clearance,False,True,False,253969.0,73.03,8.61
+611,62,31.03,b'Bragantino',True,far post,goal,True,False,True,262793.0,42.38,34.26
+612,62,11.97,b'Bragantino',True,near post,clearance,False,True,False,201988.0,63.46,20.17
+613,62,81.29,b'Bragantino',False,near post,goal,True,False,True,220093.0,29.77,25.79
+614,62,12.52,b'U.C. Sampdoria',False,far post,clearance,False,True,False,212267.0,71.99,29.36
+621,63,45.34,b'LASK Linz',False,near post,shot,True,False,False,189250.0,72.11,31.09
+622,63,21.42,b'SC Freiburg',True,penalty spot,clearance,False,True,False,230197.0,63.14,41.69
+623,63,51.6,b'LASK Linz',False,penalty spot,no outcome,False,False,False,230188.0,9.58,12.94
+631,64,18.27,b'Paderborn',True,near post,clearance,False,True,False,230439.0,90.59,2.75
+632,64,49.79,b'Paderborn',True,far post,clearance,False,True,False,205989.0,42.53,0.55
+633,64,9.71,b'Cruzeiro',False,penalty spot,no outcome,False,False,False,257176.0,90.99,3.6
+634,64,36.69,b'Cruzeiro',True,penalty spot,shot,True,False,False,172553.0,43.14,45.77
+635,64,55.86,b'Paderborn',False,far post,clearance,False,True,False,192387.0,4.3,41.01
+641,65,1.91,b'Fiorentina',True,near post,shot,True,False,False,231410.0,45.87,43.1
+642,65,19.12,b'Fiorentina',False,far post,clearance,False,True,False,193849.0,2.81,2.46
+643,65,21.65,b'FC Union Berlin',False,far post,foul,False,False,False,230510.0,74.13,16.33
+651,66,35.61,b'Sport-Club Freiburg',False,far post,shot,True,False,False,221587.0,61.59,25.73
+652,66,35.69,b'Sport-Club Freiburg',True,near post,clearance,False,True,False,215785.0,63.49,41.16
+653,66,31.1,b'Cear\xe1 Sporting Club',False,penalty spot,foul,False,False,False,257636.0,39.29,11.03
+654,66,41.41,b'Sport-Club Freiburg',True,far post,shot,True,False,False,230408.0,72.59,10.59
+661,67,68.88,b'Watford',True,penalty spot,shot,True,False,False,266619.0,14.21,5.99
+662,67,51.87,b'Sassuolo',True,penalty spot,goal,True,False,True,192445.0,41.71,32.41
+663,67,21.29,b'Sassuolo',False,near post,shot,True,False,False,248385.0,56.66,5.35
+664,67,68.53,b'Watford',True,far post,clearance,False,True,False,190311.0,63.61,26.3
+665,67,73.92,b'Watford',False,near post,clearance,False,True,False,193331.0,1.41,26.24
+671,68,10.64,b'Wattens',True,penalty spot,shot,True,False,False,198031.0,54.61,8.21
+672,68,6.28,b'Wattens',True,near post,shot,True,False,False,236164.0,57.05,47.24
+673,68,34.61,b'Wattens',True,near post,shot,True,False,False,234378.0,0.42,45.5
+674,68,3.7,b'Lecce',True,far post,clearance,False,True,False,236772.0,50.59,25.88
+675,68,25.25,b'Wattens',True,penalty spot,shot,True,False,False,207557.0,87.67,49.67
+681,69,8.26,b'Nottingham Forest',True,far post,clearance,False,True,False,265577.0,16.75,28.63
+682,69,64.63,b'Chelsea',True,far post,foul,False,False,False,236378.0,70.75,9.17
+683,69,5.69,b'Nottingham Forest',False,near post,shot,True,False,False,206511.0,31.84,30.93
+684,69,23.7,b'Chelsea',True,penalty spot,shot,True,False,False,199914.0,35.9,27.55
+691,70,40.88,b'SV Werder Bremen',True,penalty spot,clearance,False,True,False,243702.0,36.0,39.92
+701,71,39.18,b'AC Milan',True,near post,clearance,False,True,False,258625.0,19.58,48.85
+702,71,30.97,b'Juventus',True,penalty spot,goal,True,False,True,270033.0,5.54,30.16
+703,71,38.01,b'AC Milan',True,near post,shot,True,False,False,221491.0,85.37,30.01
+704,71,70.38,b'Juventus',True,penalty spot,goal,True,False,True,246861.0,30.71,6.14
+705,71,83.03,b'Juventus',True,penalty spot,goal,True,False,True,191076.0,66.03,41.79
+711,72,65.89,b'Watford',True,penalty spot,foul,False,False,False,209957.0,90.81,33.26
+712,72,9.85,b'Udinese',True,near post,clearance,False,True,False,243275.0,67.13,38.68
+713,72,60.95,b'Watford',False,near post,clearance,False,True,False,231428.0,70.49,3.08
+721,73,63.89,b'Manchester United',True,far post,clearance,False,True,False,230248.0,49.17,15.86
+722,73,82.86,b'Borussia M\xf6nchengladbach',False,far post,shot,True,False,False,230472.0,25.69,18.69
+723,73,8.79,b'Manchester United',False,far post,no outcome,False,False,False,230387.0,0.91,20.19
+724,73,37.25,b'Borussia M\xf6nchengladbach',False,far post,clearance,False,True,False,239709.0,74.55,32.87
+731,74,10.88,b'Internacional',True,penalty spot,shot,True,False,False,233049.0,64.58,17.34
+732,74,88.12,b'Udinese',False,far post,shot,True,False,False,53739.0,20.98,7.19
+741,75,18.93,b'Genoa',True,penalty spot,goal,True,False,True,230323.0,7.31,20.08
+742,75,88.1,b'Mamelodi Sundowns',False,far post,foul,False,False,False,230295.0,95.34,39.87
+743,75,7.28,b'Mamelodi Sundowns',True,penalty spot,shot,True,False,False,257916.0,61.75,21.19
+744,75,47.97,b'Mamelodi Sundowns',False,penalty spot,clearance,False,True,False,255360.0,39.17,13.97
+745,75,37.33,b'Genoa',False,near post,foul,False,False,False,192663.0,63.27,29.73
+751,76,5.38,b'Rheindorf Altach',False,far post,no outcome,False,False,False,224221.0,38.97,11.64
+752,76,74.85,b'Rheindorf Altach',False,penalty spot,goal,True,False,True,262955.0,20.3,18.77
+753,76,13.33,b'Rheindorf Altach',True,penalty spot,clearance,False,True,False,257534.0,48.65,46.7
+754,76,75.54,b'Rheindorf Altach',True,penalty spot,shot,True,False,False,237647.0,37.36,46.8
+755,76,49.7,b'U.S. Sassuolo Calcio',True,far post,shot,True,False,False,245275.0,46.95,3.4
+761,77,67.48,b'Spartak Moskva',True,near post,no outcome,False,False,False,244087.0,53.14,3.87
+762,77,45.24,b'Mamelodi Sundowns',True,penalty spot,shot,True,False,False,256115.0,9.09,39.29
+763,77,44.89,b'Mamelodi Sundowns',True,penalty spot,goal,True,False,True,231874.0,51.53,43.97
+771,78,46.43,b'Club Athletico Paranaense',True,penalty spot,clearance,False,True,False,195864.0,91.84,26.05
+772,78,68.86,b'Torino',False,penalty spot,clearance,False,True,False,263647.0,53.17,3.92
+773,78,88.25,b'Club Athletico Paranaense',False,penalty spot,no outcome,False,False,False,262930.0,31.31,8.46
+781,79,85.96,b'SpVgg Greuther F\xfcrth',True,penalty spot,clearance,False,True,False,202126.0,93.37,28.39
+782,79,85.69,b'SpVgg Greuther F\xfcrth',True,far post,goal,True,False,True,266647.0,57.37,34.89
+783,79,45.83,b'SpVgg Greuther F\xfcrth',True,near post,clearance,False,True,False,226627.0,98.48,39.19
+791,80,70.43,b'Borussia Dortmund',False,far post,goal,True,False,True,240740.0,63.92,36.01
+792,80,1.1,b'Borussia Dortmund',False,penalty spot,goal,True,False,True,242641.0,96.46,13.63
+793,80,58.15,b'Borussia Dortmund',False,near post,clearance,False,True,False,265484.0,17.93,43.56
+794,80,54.71,b'Borussia Dortmund',True,near post,shot,True,False,False,180706.0,84.93,6.75
+795,80,44.91,b'Sampdoria',True,far post,foul,False,False,False,239452.0,61.57,45.26
+801,81,55.77,b'FC Bayern M\xfcnchen',False,near post,no outcome,False,False,False,236193.0,56.95,48.41
+811,82,72.1,b'Fortuna D\xfcsseldorf',True,penalty spot,no outcome,False,False,False,228614.0,4.95,41.76
+812,82,11.35,b'Udinese',True,near post,shot,True,False,False,183580.0,45.32,2.32
+813,82,22.96,b'Fortuna D\xfcsseldorf',True,penalty spot,clearance,False,True,False,231835.0,22.42,25.44
+821,83,18.21,b'FC K\xf6ln',True,near post,shot,True,False,False,268271.0,3.04,37.71
+831,84,62.06,b'West Ham United',True,penalty spot,clearance,False,True,False,230348.0,63.46,18.33
+832,84,3.5,b'West Ham United',True,far post,clearance,False,True,False,234112.0,76.23,49.59
+833,84,37.13,b'Atl\xe9tico Mineiro',False,far post,clearance,False,True,False,205897.0,89.36,15.77
+841,85,67.77,b'Kaizer Chiefs',False,penalty spot,no outcome,False,False,False,203850.0,20.53,18.09
+842,85,74.33,b'Internacional',True,penalty spot,clearance,False,True,False,230463.0,29.37,45.89
+843,85,51.42,b'Kaizer Chiefs',True,far post,shot,True,False,False,192071.0,34.19,41.35
+844,85,5.36,b'Kaizer Chiefs',False,near post,clearance,False,True,False,238986.0,67.41,13.53
+845,85,21.95,b'Kaizer Chiefs',True,far post,clearance,False,True,False,222400.0,94.05,3.06
+851,86,75.44,b'Genoa',True,far post,clearance,False,True,False,243657.0,43.9,46.93
+852,86,54.32,b'Genoa',True,far post,shot,True,False,False,263043.0,23.03,12.72
+853,86,74.84,b'Bologna',False,penalty spot,clearance,False,True,False,219655.0,72.5,29.54
+861,87,49.1,b'Rapid Vienna',False,near post,shot,True,False,False,221479.0,83.09,34.73
+862,87,74.15,b'Rapid Vienna',True,far post,goal,True,False,True,268259.0,27.76,29.22
+871,88,57.99,b'Club Athletico Paranaense',False,penalty spot,shot,True,False,False,236076.0,74.66,20.25
+872,88,17.34,b'Club Athletico Paranaense',True,far post,no outcome,False,False,False,208004.0,82.05,32.41
+873,88,30.35,b'Club Athletico Paranaense',True,penalty spot,clearance,False,True,False,208128.0,82.85,47.69
+881,89,56.99,b'Schalke 04',False,near post,shot,True,False,False,235126.0,1.13,32.17
+882,89,16.89,b'Eintracht Frankfurt',True,near post,no outcome,False,False,False,206085.0,27.6,32.22
+883,89,6.08,b'Eintracht Frankfurt',True,near post,no outcome,False,False,False,206463.0,85.57,43.52
+891,90,62.07,b'Spezia',True,near post,goal,True,False,True,247204.0,52.84,16.13
+892,90,8.17,b'Spezia',True,far post,shot,True,False,False,261991.0,33.69,36.58
+893,90,48.91,b'RB Leipzig',True,far post,goal,True,False,True,209840.0,27.73,25.12
+901,91,62.18,b'Crotone',True,far post,shot,True,False,False,201243.0,70.68,7.57
+902,91,25.21,b'Kaizer Chiefs',True,far post,goal,True,False,True,210537.0,16.16,10.35
+911,92,46.04,b'DSC Arminia Bielefeld',True,near post,shot,True,False,False,244925.0,92.61,44.02
+912,92,63.24,b'FC Red Bull Salzburg',True,penalty spot,clearance,False,True,False,215466.0,79.76,26.67
+913,92,61.34,b'FC Red Bull Salzburg',True,penalty spot,goal,True,False,True,230493.0,56.6,49.81
+921,93,35.58,b'Ava\xed',True,near post,goal,True,False,True,263076.0,70.41,14.99
+922,93,31.84,b'Rapid Vienna',True,far post,clearance,False,True,False,260079.0,7.51,43.06
+923,93,71.87,b'Ava\xed',False,far post,shot,True,False,False,229487.0,84.18,41.19
+931,94,29.06,b'Am\xe9rica Mineiro',True,far post,shot,True,False,False,187072.0,14.15,45.34
+932,94,39.54,b'Manchester City',True,near post,goal,True,False,True,229167.0,28.48,18.58
+941,95,86.48,b'Brighton & Hove Albion',True,penalty spot,foul,False,False,False,270047.0,30.31,44.69
+942,95,17.82,b'Athletico PR',True,near post,clearance,False,True,False,260126.0,99.94,6.29
+943,95,55.76,b'Brighton & Hove Albion',True,penalty spot,clearance,False,True,False,237678.0,54.72,49.44
+951,96,5.52,b'Torino',True,near post,clearance,False,True,False,225953.0,92.17,5.28
+952,96,66.44,b'Torino',False,near post,shot,True,False,False,189251.0,36.84,1.04
+953,96,65.51,b'Vasco da Gama',True,far post,shot,True,False,False,204447.0,85.42,7.25
+954,96,12.95,b'Torino',False,far post,shot,True,False,False,246174.0,63.72,39.46
+955,96,34.51,b'Vasco da Gama',False,penalty spot,clearance,False,True,False,264223.0,87.3,42.34
+961,97,16.58,b'spusu SKN St. P\xf6lten',True,near post,shot,True,False,False,254303.0,45.78,42.27
+962,97,68.13,b'spusu SKN St. P\xf6lten',False,far post,foul,False,False,False,228205.0,26.61,20.4
+963,97,18.28,b'Monza',True,penalty spot,clearance,False,True,False,230520.0,13.88,47.43
+964,97,54.13,b'spusu SKN St. P\xf6lten',False,far post,clearance,False,True,False,252789.0,97.43,41.7
+971,98,71.49,b'Rheindorf Altach',False,near post,shot,True,False,False,241614.0,11.87,49.51
+972,98,77.93,b'TSV Egger Glas Hartberg',True,far post,shot,True,False,False,210474.0,16.18,39.45
+973,98,61.24,b'TSV Egger Glas Hartberg',False,far post,clearance,False,True,False,262404.0,77.22,45.32
+974,98,8.22,b'Rheindorf Altach',True,far post,clearance,False,True,False,243585.0,0.63,21.11
+981,99,71.45,b'Atl\xe9tico Mineiro',True,far post,clearance,False,True,False,265188.0,75.28,5.47
+991,100,12.05,b'Bologna',True,near post,shot,True,False,False,210719.0,26.39,39.96
+992,100,36.49,b'Bologna',False,far post,goal,True,False,True,226456.0,25.38,4.65
+993,100,54.15,b'Chapecoense',False,penalty spot,shot,True,False,False,251196.0,36.1,19.9
+1001,101,43.05,b'Corinthians',True,far post,no outcome,False,False,False,236532.0,2.39,19.07
+1011,102,16.9,b'Norwich City',True,penalty spot,foul,False,False,False,266032.0,93.93,40.85
+1012,102,88.66,b'FC Augsburg',True,near post,no outcome,False,False,False,233968.0,37.29,38.75
+1013,102,36.05,b'Norwich City',True,far post,shot,True,False,False,263620.0,62.34,8.23
+1021,103,77.11,b'Chapecoense',True,near post,shot,True,False,False,188166.0,36.22,19.32
+1031,104,42.83,b'Salzburg',True,near post,clearance,False,True,False,210047.0,79.19,6.38
+1032,104,29.91,b'Salzburg',False,near post,clearance,False,True,False,200138.0,39.79,29.64
+1033,104,16.32,b'Schalke 04',True,far post,clearance,False,True,False,230445.0,67.07,47.55
+1041,105,47.17,b'Internacional',False,far post,goal,True,False,True,230221.0,98.64,3.3
+1042,105,72.47,b'Cear\xe1 Sporting Club',False,penalty spot,no outcome,False,False,False,240273.0,34.72,39.93
+1043,105,20.19,b'Internacional',False,penalty spot,clearance,False,True,False,230371.0,93.59,7.81
+1044,105,26.52,b'Cear\xe1 Sporting Club',True,near post,shot,True,False,False,230143.0,38.5,47.9
+1045,105,27.01,b'Internacional',False,far post,no outcome,False,False,False,229817.0,16.21,46.59
+1051,106,53.13,b'FC Union Berlin',True,penalty spot,foul,False,False,False,216409.0,22.56,14.31
+1061,107,55.83,b'Milan',True,far post,foul,False,False,False,252440.0,5.73,15.19
+1062,107,17.55,b'Mattersburg',False,far post,shot,True,False,False,230529.0,56.66,6.85
+1063,107,70.29,b'Milan',False,near post,shot,True,False,False,235813.0,50.33,1.16
+1071,108,53.89,b'Chapecoense',False,far post,clearance,False,True,False,254541.0,55.55,7.08
+1081,109,76.1,b'Brentford',True,far post,clearance,False,True,False,167495.0,68.33,45.35
+1091,110,83.16,b'Am\xe9rica Mineiro',True,penalty spot,foul,False,False,False,247623.0,60.28,4.02
+1092,110,26.9,b'Am\xe9rica Mineiro',False,near post,clearance,False,True,False,215785.0,36.5,41.73
+1101,111,36.59,b'Club Athletico Paranaense',False,far post,goal,True,False,True,268623.0,41.57,48.77
+1102,111,73.87,b'PFC CSKA Moscow',False,far post,goal,True,False,True,190471.0,7.29,26.01
+1103,111,87.75,b'Club Athletico Paranaense',True,far post,shot,True,False,False,263050.0,34.28,39.51
+1104,111,12.76,b'Club Athletico Paranaense',True,near post,clearance,False,True,False,236898.0,49.36,35.23
+1111,112,12.55,b'FC Union Berlin',True,far post,clearance,False,True,False,199576.0,91.46,15.1
+1112,112,46.96,b'FC Union Berlin',False,far post,no outcome,False,False,False,242947.0,78.74,42.04
+1121,113,12.96,b'SK Rapid Wien',True,near post,clearance,False,True,False,216354.0,69.4,40.64
+1131,114,75.74,b'TSG Hoffenheim',False,near post,clearance,False,True,False,235374.0,78.04,12.25
+1132,114,64.64,b'TSG Hoffenheim',True,far post,clearance,False,True,False,241382.0,3.13,24.86
+1133,114,86.6,b'SpVgg Greuther F\xfcrth',True,penalty spot,clearance,False,True,False,203263.0,7.62,12.95
+1134,114,81.41,b'TSG Hoffenheim',False,penalty spot,clearance,False,True,False,239795.0,0.68,37.03
+1141,115,43.12,b'Sampdoria',True,penalty spot,goal,True,False,True,226162.0,58.91,1.03
+1151,116,50.31,b'Fulham',True,penalty spot,shot,True,False,False,263932.0,54.88,14.71
+1161,117,73.27,b'Borussia Dortmund',False,penalty spot,no outcome,False,False,False,196978.0,49.98,14.24
+1162,117,27.65,b'West Ham United',True,penalty spot,foul,False,False,False,230327.0,30.07,16.42
+1163,117,69.17,b'Borussia Dortmund',True,penalty spot,shot,True,False,False,262005.0,24.14,44.22
+1171,118,1.44,b'LASK Linz',True,far post,no outcome,False,False,False,205988.0,34.7,49.12
+1181,119,72.11,b'U.S. Sassuolo Calcio',True,far post,goal,True,False,True,211117.0,26.14,29.01
+1182,119,58.0,b'U.S. Sassuolo Calcio',True,far post,no outcome,False,False,False,263044.0,6.81,40.45
+1183,119,53.74,b'Hertha BSC',True,far post,shot,True,False,False,236142.0,31.68,17.18
+1184,119,7.69,b'U.S. Sassuolo Calcio',False,near post,clearance,False,True,False,235026.0,63.78,5.51
+1191,120,11.32,b'Schalke 04',True,near post,clearance,False,True,False,180216.0,56.03,23.67
+1192,120,35.84,b'Schalke 04',True,near post,shot,True,False,False,243049.0,70.21,2.64
+1193,120,28.98,b'Cruzeiro',False,near post,clearance,False,True,False,221992.0,88.37,8.49
+1201,121,77.66,b'Sport-Club Freiburg',False,penalty spot,shot,True,False,False,247289.0,47.32,29.23
+1202,121,67.51,b'Am\xe9rica Mineiro',False,far post,clearance,False,True,False,190738.0,2.87,27.41
+1203,121,28.48,b'Am\xe9rica Mineiro',True,far post,clearance,False,True,False,192641.0,10.44,30.49
+1211,122,44.28,b'Venezia',False,penalty spot,shot,True,False,False,181458.0,11.01,34.21
+1212,122,42.77,b'Palmeiras',True,penalty spot,shot,True,False,False,137506.0,82.96,18.57
+1213,122,51.64,b'Palmeiras',False,near post,clearance,False,True,False,263804.0,15.52,20.43
+1214,122,30.7,b'Venezia',False,near post,goal,True,False,True,208596.0,98.92,49.57
+1221,123,68.39,b'Lazio',True,near post,shot,True,False,False,251341.0,11.3,31.87
+1222,123,20.82,b'Lazio',True,penalty spot,foul,False,False,False,140293.0,88.48,33.15
+1231,124,3.65,b'Werder Bremen',True,near post,shot,True,False,False,182888.0,68.8,26.58
+1232,124,13.49,b'Werder Bremen',True,far post,clearance,False,True,False,198949.0,98.13,34.41
+1233,124,73.7,b'SK Rapid Wien',True,near post,clearance,False,True,False,247229.0,68.56,36.88
+1241,125,82.9,b'Gr\xeamio',True,penalty spot,clearance,False,True,False,235073.0,67.78,3.44
+1251,126,13.13,b'Spartak Moskva',True,penalty spot,clearance,False,True,False,230246.0,31.17,28.5
+1252,126,49.79,b'Spartak Moskva',True,penalty spot,shot,True,False,False,194665.0,0.89,38.88
+1261,127,31.79,b'Juventude',True,penalty spot,shot,True,False,False,232900.0,54.53,9.31
+1262,127,70.74,b'Udinese Calcio',True,near post,no outcome,False,False,False,263887.0,88.0,42.54
+1271,128,69.11,b'Cremonese',False,near post,shot,True,False,False,233968.0,75.24,33.77
+1281,129,54.02,b'Napoli',True,near post,foul,False,False,False,175254.0,93.54,30.23
+1282,129,84.98,b'SK Rapid Wien',True,penalty spot,clearance,False,True,False,208528.0,31.09,41.32
+1291,130,77.18,b'SK Sturm Graz',True,penalty spot,clearance,False,True,False,179844.0,55.77,31.88
+1292,130,27.22,b'Ried',True,penalty spot,clearance,False,True,False,235405.0,69.01,18.82
+1293,130,16.5,b'SK Sturm Graz',False,far post,clearance,False,True,False,266866.0,96.75,26.83
+1301,131,6.34,b'CSKA Moskva',True,penalty spot,shot,True,False,False,247349.0,97.88,45.52
+1302,131,71.13,b'CSKA Moskva',False,near post,clearance,False,True,False,257636.0,52.0,43.63
+1303,131,9.09,b'FSV Mainz 05',True,near post,clearance,False,True,False,230488.0,74.87,5.2
+1311,132,29.21,b'VfL Bochum 1848',True,penalty spot,shot,True,False,False,230357.0,72.34,3.28
+1312,132,58.61,b'Coritiba',True,near post,no outcome,False,False,False,215441.0,87.03,15.4
+1313,132,61.98,b'Coritiba',False,near post,shot,True,False,False,245863.0,63.45,44.46
+1314,132,89.46,b'VfL Bochum 1848',False,near post,clearance,False,True,False,162297.0,94.36,4.75
+1321,133,68.68,b'Juventude',True,near post,shot,True,False,False,205988.0,30.91,48.37
+1322,133,28.29,b'Hellas Verona',False,far post,shot,True,False,False,192071.0,7.18,27.58
+1323,133,52.45,b'Juventude',True,penalty spot,clearance,False,True,False,234820.0,37.65,6.5
+1331,134,66.41,b'Fulham',True,far post,clearance,False,True,False,236189.0,13.44,27.65
+1341,135,89.33,b'FC Schalke 04',False,near post,no outcome,False,False,False,173306.0,81.2,17.22
+1342,135,89.68,b'Chelsea',True,penalty spot,shot,True,False,False,224081.0,85.61,49.99
+1343,135,87.13,b'Chelsea',True,penalty spot,shot,True,False,False,230353.0,99.27,39.53
+1344,135,85.66,b'Chelsea',True,penalty spot,clearance,False,True,False,271856.0,97.13,27.7
+1351,136,79.71,b'Gr\xeamio',False,penalty spot,foul,False,False,False,199353.0,7.76,32.38
+1352,136,84.72,b'Gr\xeamio',False,penalty spot,clearance,False,True,False,230375.0,49.66,39.63
+1353,136,12.56,b'Nottingham Forest',False,penalty spot,clearance,False,True,False,255474.0,87.89,24.45
+1354,136,74.31,b'Nottingham Forest',True,near post,shot,True,False,False,252897.0,34.25,4.99
+1355,136,58.32,b'Nottingham Forest',True,far post,shot,True,False,False,230229.0,69.86,47.11
+1361,137,32.95,b'Brentford',False,far post,foul,False,False,False,264421.0,57.67,48.48
+1362,137,29.03,b'Brentford',True,penalty spot,goal,True,False,True,220407.0,19.81,5.41
+1371,138,22.82,b'LASK Linz',True,near post,no outcome,False,False,False,203751.0,44.97,36.67
+1372,138,4.89,b'LASK Linz',True,near post,foul,False,False,False,272369.0,77.21,33.3
+1373,138,53.47,b'FC Lokomotiv Moscow',True,far post,clearance,False,True,False,212442.0,55.99,23.83
+1381,139,3.82,b'Austria Wien',False,far post,clearance,False,True,False,257308.0,70.63,9.82
+1391,140,38.76,b'Club Athletico Paranaense',False,penalty spot,shot,True,False,False,261495.0,83.17,33.52
+1401,141,49.02,b'CSA',True,near post,shot,True,False,False,233732.0,49.41,16.5
+1411,142,68.15,b'Ava\xed FC',False,far post,clearance,False,True,False,230399.0,0.62,42.88
+1412,142,16.37,b'Ava\xed FC',True,penalty spot,goal,True,False,True,234820.0,32.73,1.53
+1413,142,53.27,b'Ava\xed FC',True,penalty spot,shot,True,False,False,243253.0,68.32,6.57
+1414,142,53.01,b'Ava\xed FC',True,near post,shot,True,False,False,232411.0,13.99,26.91
+1415,142,31.36,b'Ava\xed FC',True,far post,foul,False,False,False,234020.0,69.77,42.36
+1421,143,3.83,b'Ried',False,far post,clearance,False,True,False,202518.0,78.93,40.8
+1422,143,37.75,b'Crotone',False,far post,shot,True,False,False,226271.0,62.03,25.12
+1423,143,88.53,b'Ried',True,far post,foul,False,False,False,213414.0,13.47,3.48
+1424,143,33.14,b'Crotone',False,penalty spot,shot,True,False,False,250926.0,92.85,42.84
+1431,144,79.95,b'LASK Linz',True,near post,shot,True,False,False,232526.0,81.11,35.01
+1432,144,54.04,b'Bologna',True,penalty spot,no outcome,False,False,False,244456.0,22.94,31.9
+1441,145,10.73,b'Empoli',False,near post,clearance,False,True,False,202151.0,44.93,48.0
+1442,145,2.1,b'Empoli',True,penalty spot,foul,False,False,False,271850.0,96.2,47.14
+1451,146,41.44,b'Flamengo',True,near post,goal,True,False,True,241585.0,31.28,28.35
+1461,147,31.35,b'Burnley',False,near post,goal,True,False,True,236368.0,50.59,6.75
+1471,148,17.09,b'Paderborn',True,penalty spot,clearance,False,True,False,271329.0,20.05,5.38
+1472,148,6.01,b'Newcastle United',False,far post,clearance,False,True,False,251196.0,66.04,9.2
+1473,148,54.57,b'Newcastle United',True,penalty spot,shot,True,False,False,193264.0,33.42,27.21
+1474,148,69.98,b'Newcastle United',True,near post,foul,False,False,False,248470.0,96.13,18.22
+1481,149,72.48,b'Crotone',True,penalty spot,shot,True,False,False,198176.0,20.18,25.44
+1482,149,57.99,b'Torino F.C.',True,near post,clearance,False,True,False,199576.0,86.81,10.51
+1491,150,28.7,b'Club Athletico Paranaense',False,penalty spot,foul,False,False,False,223909.0,36.94,24.08
+1492,150,27.47,b'Hartberg',True,near post,shot,True,False,False,229640.0,27.29,40.29
+1493,150,75.04,b'Hartberg',False,penalty spot,no outcome,False,False,False,264645.0,25.85,33.01
+1494,150,49.41,b'Hartberg',True,far post,shot,True,False,False,221448.0,8.48,11.05
+1495,150,69.73,b'Hartberg',True,penalty spot,clearance,False,True,False,220509.0,83.0,48.63
+1501,151,50.79,b'Wattens',True,penalty spot,shot,True,False,False,262793.0,28.13,14.63
+1502,151,20.67,b'Lazio',False,penalty spot,clearance,False,True,False,189324.0,98.4,46.5
+1511,152,15.54,b'FC Red Bull Salzburg',True,penalty spot,shot,True,False,False,261446.0,90.99,32.5
+1512,152,45.34,b'Admira',False,penalty spot,clearance,False,True,False,267867.0,41.0,41.85
+1513,152,83.21,b'FC Red Bull Salzburg',False,far post,goal,True,False,True,270485.0,4.48,46.49
+1514,152,12.85,b'FC Red Bull Salzburg',True,penalty spot,clearance,False,True,False,247166.0,98.52,3.23
+1521,153,38.56,b'Kaizer Chiefs',True,near post,clearance,False,True,False,203884.0,79.48,6.33
+1522,153,47.34,b'Kaizer Chiefs',False,near post,clearance,False,True,False,270911.0,63.76,46.91
+1523,153,60.38,b'Salernitana',False,near post,foul,False,False,False,233419.0,30.54,17.8
+1524,153,83.84,b'Kaizer Chiefs',True,penalty spot,no outcome,False,False,False,255409.0,22.25,3.32
+1531,154,21.64,b'Spartak Moskva',True,far post,foul,False,False,False,210329.0,62.47,38.99
+1532,154,27.87,b'Mattersburg',True,penalty spot,no outcome,False,False,False,188377.0,95.24,36.72
+1533,154,52.8,b'Spartak Moskva',True,far post,shot,True,False,False,222558.0,74.15,28.31
+1541,155,68.8,b'Aston Villa',False,near post,shot,True,False,False,239090.0,15.74,11.17
+1551,156,67.2,b'FC Red Bull Salzburg',True,far post,goal,True,False,True,240045.0,36.91,4.41
+1552,156,73.07,b'FC Red Bull Salzburg',False,penalty spot,shot,True,False,False,230365.0,16.8,17.27
+1553,156,13.4,b'FC Red Bull Salzburg',True,near post,shot,True,False,False,266596.0,89.08,18.9
+1561,157,5.23,b'Leeds United',True,penalty spot,clearance,False,True,False,231292.0,87.02,48.78
+1562,157,36.36,b'Eintracht Frankfurt',True,penalty spot,clearance,False,True,False,190460.0,61.61,43.26
+1563,157,77.26,b'Eintracht Frankfurt',False,near post,shot,True,False,False,224933.0,26.69,43.23
+1571,158,33.17,b'Paderborn',True,far post,clearance,False,True,False,265636.0,52.74,23.04
+1572,158,31.3,b'Fortaleza',False,far post,no outcome,False,False,False,230384.0,29.51,13.08
+1573,158,31.09,b'Paderborn',False,near post,shot,True,False,False,199110.0,14.82,32.83
+1581,159,48.4,b'Wattens',True,far post,clearance,False,True,False,195202.0,13.86,18.71
+1582,159,73.23,b'Ava\xed',False,penalty spot,shot,True,False,False,262096.0,56.41,0.59
+1591,160,61.64,b'Atl\xe9tico Mineiro',True,penalty spot,no outcome,False,False,False,202201.0,34.88,14.24
+1592,160,64.14,b'Atl\xe9tico Mineiro',False,penalty spot,no outcome,False,False,False,181458.0,31.34,11.83
+1593,160,41.88,b'Atl\xe9tico Mineiro',False,far post,clearance,False,True,False,224213.0,59.0,45.08
+1601,161,69.43,b'Coritiba',False,penalty spot,shot,True,False,False,204883.0,36.17,23.57
+1602,161,25.24,b'Kaizer Chiefs',False,near post,foul,False,False,False,230185.0,97.13,34.06
+1611,162,45.51,b'Roma',True,near post,foul,False,False,False,225381.0,4.74,12.07
+1612,162,24.56,b'Roma',True,far post,foul,False,False,False,244428.0,22.11,33.45
+1621,163,88.1,b'Dynamo Kyiv',True,far post,shot,True,False,False,173165.0,34.81,20.92
+1622,163,81.91,b'Dynamo Kyiv',False,penalty spot,clearance,False,True,False,262298.0,64.2,12.71
+1623,163,77.85,b'Vasco da Gama',True,far post,shot,True,False,False,263685.0,67.73,0.63
+1624,163,40.67,b'Vasco da Gama',False,far post,shot,True,False,False,271922.0,35.35,35.67
+1631,164,86.63,b'Vasco da Gama',False,near post,clearance,False,True,False,203910.0,88.54,25.42
+1641,165,50.4,b'Werder Bremen',True,far post,no outcome,False,False,False,193942.0,22.27,24.54
+1642,165,39.94,b'Salernitana',True,far post,shot,True,False,False,199897.0,53.76,17.22
+1643,165,13.01,b'Werder Bremen',True,far post,shot,True,False,False,199353.0,87.38,9.53
+1644,165,21.08,b'Werder Bremen',True,far post,shot,True,False,False,189433.0,11.32,31.33
+1645,165,16.99,b'Werder Bremen',True,near post,no outcome,False,False,False,183220.0,30.9,10.57
+1651,166,80.0,b'Bragantino',False,penalty spot,shot,True,False,False,262637.0,59.8,13.57
+1652,166,49.56,b'FC Schalke 04',False,penalty spot,clearance,False,True,False,233943.0,76.59,46.6
+1661,167,48.97,b'Napoli',True,near post,clearance,False,True,False,230436.0,14.72,13.81
+1662,167,20.39,b'Napoli',True,far post,clearance,False,True,False,199776.0,66.65,28.08
+1663,167,30.11,b'Manchester City',False,far post,shot,True,False,False,195864.0,81.29,6.08
+1671,168,53.28,b'PFC CSKA Moscow',True,far post,clearance,False,True,False,220883.0,32.38,2.01
+1672,168,61.36,b'PFC CSKA Moscow',True,near post,clearance,False,True,False,235133.0,26.69,13.89
+1681,169,38.71,b'VfB Stuttgart',True,far post,no outcome,False,False,False,204355.0,98.68,39.74
+1682,169,82.64,b'Brentford',False,near post,clearance,False,True,False,183569.0,25.9,18.23
+1683,169,51.45,b'Brentford',False,near post,clearance,False,True,False,251464.0,4.84,18.62
+1684,169,61.06,b'Brentford',True,far post,shot,True,False,False,237509.0,53.02,29.47
+1685,169,67.76,b'VfB Stuttgart',True,near post,shot,True,False,False,204024.0,23.99,41.04
+1691,170,73.23,b'WSG Tirol',False,near post,no outcome,False,False,False,163587.0,99.05,41.59
+1692,170,26.57,b'Eintracht Frankfurt',True,far post,clearance,False,True,False,192612.0,4.81,19.26
+1693,170,56.85,b'WSG Tirol',True,near post,clearance,False,True,False,222573.0,44.54,41.42
+1694,170,58.8,b'WSG Tirol',True,near post,clearance,False,True,False,225147.0,2.87,44.21
+1695,170,27.73,b'Eintracht Frankfurt',True,near post,no outcome,False,False,False,186143.0,34.26,48.08
+1701,171,52.84,b'Dynamo Kyiv',False,near post,no outcome,False,False,False,223427.0,89.19,43.63
+1702,171,84.42,b'Sturm Graz',True,penalty spot,clearance,False,True,False,222493.0,55.26,38.51
+1703,171,28.32,b'Dynamo Kyiv',False,penalty spot,shot,True,False,False,229148.0,42.37,19.45
+1704,171,78.33,b'Dynamo Kyiv',False,penalty spot,clearance,False,True,False,239732.0,71.38,6.9
+1711,172,51.05,b'Borussia M\xf6nchengladbach',True,near post,goal,True,False,True,260016.0,91.0,14.73
+1712,172,48.71,b'Nottingham Forest',True,near post,clearance,False,True,False,239099.0,39.03,6.9
+1721,173,32.54,b'Brescia',True,near post,shot,True,False,False,230451.0,45.95,34.97
+1731,174,82.35,b'Ava\xed FC',True,penalty spot,clearance,False,True,False,268655.0,73.24,5.96
+1741,175,53.55,b'Cuiab\xe1',True,far post,clearance,False,True,False,236703.0,20.82,17.85
+1742,175,73.57,b'Cuiab\xe1',False,far post,shot,True,False,False,241042.0,75.19,1.02
+1743,175,20.78,b'Cuiab\xe1',True,penalty spot,foul,False,False,False,234078.0,94.06,45.76
+1744,175,15.66,b'Associa\xe7\xe3o Chapecoense de Futebol',True,near post,goal,True,False,True,241924.0,72.89,44.09
+1751,176,36.22,b'U.S. Sassuolo Calcio',True,penalty spot,clearance,False,True,False,210935.0,98.08,28.0
+1752,176,77.1,b'FC Augsburg',True,near post,clearance,False,True,False,230329.0,75.98,45.12
+1753,176,44.93,b'U.S. Sassuolo Calcio',True,near post,shot,True,False,False,218154.0,93.62,44.08
+1754,176,75.62,b'FC Augsburg',False,far post,clearance,False,True,False,193336.0,83.44,18.15
+1761,177,38.35,b'Everton',False,near post,clearance,False,True,False,198904.0,31.37,46.55
+1762,177,24.97,b'Everton',False,penalty spot,clearance,False,True,False,199189.0,14.72,20.3
+1763,177,48.36,b'Everton',False,penalty spot,clearance,False,True,False,259569.0,55.04,27.34
+1764,177,72.18,b'Everton',True,far post,no outcome,False,False,False,198861.0,89.08,15.82
+1765,177,13.45,b'Everton',True,penalty spot,clearance,False,True,False,207562.0,28.99,42.61
+1771,178,28.76,b'VfB Stuttgart',False,near post,goal,True,False,True,247204.0,76.39,14.31
+1772,178,88.84,b'VfB Stuttgart',False,penalty spot,no outcome,False,False,False,189615.0,66.27,1.6
+1773,178,62.45,b'Norwich City',True,far post,no outcome,False,False,False,268624.0,43.02,30.59
+1781,179,71.62,b'Empoli',True,far post,shot,True,False,False,211454.0,4.54,8.82
+1782,179,11.81,b'VfB Stuttgart',True,near post,foul,False,False,False,251988.0,56.7,17.86
+1783,179,67.76,b'Empoli',True,penalty spot,shot,True,False,False,222352.0,3.07,35.38
+1784,179,68.31,b'Empoli',True,far post,clearance,False,True,False,237161.0,49.75,37.53
+1791,180,33.33,b'RB Leipzig',True,near post,shot,True,False,False,188836.0,46.03,26.74
+1792,180,55.93,b'Udinese',False,near post,shot,True,False,False,230253.0,88.74,6.89
+1801,181,89.8,b'Bahia',False,near post,shot,True,False,False,227604.0,21.17,4.48
+1802,181,27.33,b'Bahia',False,penalty spot,foul,False,False,False,240164.0,56.78,25.11
+1803,181,8.92,b'Bahia',True,far post,clearance,False,True,False,236164.0,50.29,15.84
+1804,181,7.48,b'Sassuolo',True,near post,no outcome,False,False,False,203884.0,37.08,43.58
+1811,182,45.12,b'Cear\xe1 Sporting Club',True,penalty spot,shot,True,False,False,263449.0,24.55,30.13
+1812,182,44.2,b'Atl\xe9tico GO',False,near post,clearance,False,True,False,230379.0,91.11,25.45
+1813,182,61.94,b'Atl\xe9tico GO',False,penalty spot,goal,True,False,True,192505.0,75.88,13.08
+1814,182,33.12,b'Cear\xe1 Sporting Club',True,far post,goal,True,False,True,193352.0,50.9,15.5
+1821,183,9.39,b'Associa\xe7\xe3o Chapecoense de Futebol',False,far post,goal,True,False,True,239360.0,35.52,20.96
+1822,183,20.85,b'Associa\xe7\xe3o Chapecoense de Futebol',True,far post,goal,True,False,True,210676.0,90.42,4.07
+1823,183,45.28,b'Austria Wien',True,penalty spot,shot,True,False,False,271063.0,57.67,3.17
+1824,183,70.19,b'Associa\xe7\xe3o Chapecoense de Futebol',False,far post,shot,True,False,False,264867.0,21.82,42.97
+1831,184,25.85,b'1. FC Union Berlin',False,near post,no outcome,False,False,False,207926.0,20.16,19.9
+1832,184,13.86,b'1. FC Union Berlin',False,far post,shot,True,False,False,260910.0,15.08,43.76
+1841,185,11.37,b'LASK Linz',False,penalty spot,clearance,False,True,False,257028.0,86.54,45.32
+1851,186,49.45,b'Bayer 04 Leverkusen',False,penalty spot,clearance,False,True,False,267862.0,29.43,35.17
+1852,186,35.73,b'Bayer 04 Leverkusen',False,far post,no outcome,False,False,False,253407.0,11.76,30.21
+1853,186,78.88,b'Shakhtar Donetsk',False,near post,clearance,False,True,False,206534.0,62.16,40.14
+1854,186,88.03,b'Shakhtar Donetsk',False,near post,foul,False,False,False,234574.0,55.58,31.76
+1855,186,87.67,b'Bayer 04 Leverkusen',True,penalty spot,clearance,False,True,False,205812.0,87.67,44.37
+1861,187,6.3,b'Rheindorf Altach',True,penalty spot,no outcome,False,False,False,267864.0,86.74,38.29
+1862,187,32.31,b'RB Leipzig',True,penalty spot,foul,False,False,False,237629.0,96.98,30.81
+1863,187,2.06,b'Rheindorf Altach',True,penalty spot,shot,True,False,False,205569.0,57.11,5.92
+1864,187,26.23,b'RB Leipzig',True,far post,clearance,False,True,False,203551.0,19.87,25.72
+1865,187,73.66,b'RB Leipzig',True,near post,foul,False,False,False,247623.0,67.14,8.21
+1871,188,32.33,b'SC Rheindorf Altach',False,penalty spot,clearance,False,True,False,254135.0,53.06,35.72
+1872,188,76.29,b'SC Rheindorf Altach',False,near post,clearance,False,True,False,258928.0,14.01,37.1
+1873,188,72.48,b'1. FC K\xf6ln',False,far post,shot,True,False,False,260175.0,16.13,29.87
+1874,188,13.84,b'SC Rheindorf Altach',False,near post,shot,True,False,False,264253.0,97.6,36.51
+1875,188,73.71,b'1. FC K\xf6ln',False,penalty spot,shot,True,False,False,244090.0,58.74,10.92
+1881,189,16.57,b'Gr\xeamio',True,penalty spot,shot,True,False,False,239573.0,38.41,30.52
+1882,189,67.65,b'Gr\xeamio',True,near post,goal,True,False,True,230349.0,80.31,0.39
+1883,189,20.91,b'Gr\xeamio',True,far post,shot,True,False,False,243702.0,29.9,41.38
+1884,189,36.4,b'SK Sturm Graz',False,far post,goal,True,False,True,227234.0,77.95,26.28
+1885,189,58.19,b'Gr\xeamio',False,near post,foul,False,False,False,235949.0,41.73,4.15
+1891,190,24.64,b'Newcastle United',False,far post,no outcome,False,False,False,207998.0,18.79,2.95
+1892,190,43.56,b'Newcastle United',True,near post,shot,True,False,False,246863.0,91.16,19.0
+1893,190,37.97,b'Eintracht Frankfurt',True,far post,goal,True,False,True,244629.0,0.57,11.31
+1894,190,28.53,b'Eintracht Frankfurt',True,far post,shot,True,False,False,236532.0,86.3,31.05
+1895,190,46.4,b'Newcastle United',True,far post,clearance,False,True,False,263449.0,87.15,36.93
+1901,191,1.55,b'Leeds United',False,far post,clearance,False,True,False,200949.0,82.45,15.04
+1902,191,35.86,b'Cagliari',True,near post,clearance,False,True,False,230247.0,39.34,37.88
+1911,192,56.66,b'Napoli',True,near post,clearance,False,True,False,189725.0,86.32,45.24
+1912,192,36.26,b'Ava\xed FC',False,far post,goal,True,False,True,243882.0,88.84,7.42
+1913,192,12.66,b'Ava\xed FC',False,far post,clearance,False,True,False,230389.0,29.33,20.02
+1914,192,71.75,b'Ava\xed FC',True,near post,clearance,False,True,False,198706.0,83.77,17.99
+1921,193,44.1,b'Tottenham Hotspur',False,near post,foul,False,False,False,230217.0,84.18,32.12
+1922,193,56.73,b'Tottenham Hotspur',True,near post,no outcome,False,False,False,248823.0,90.3,9.48
+1923,193,24.61,b'Associa\xe7\xe3o Chapecoense de Futebol',False,near post,shot,True,False,False,192955.0,45.68,19.53
+1924,193,76.05,b'Tottenham Hotspur',True,far post,clearance,False,True,False,262628.0,54.7,34.43
+1925,193,61.35,b'Tottenham Hotspur',True,far post,goal,True,False,True,248171.0,55.66,5.14
+1931,194,5.02,b'Brescia',True,penalty spot,shot,True,False,False,229128.0,1.96,14.24
+1932,194,1.17,b'Brescia',True,penalty spot,clearance,False,True,False,139068.0,41.29,38.45
+1933,194,51.97,b'Brescia',True,near post,clearance,False,True,False,271420.0,40.42,0.66
+1941,195,29.99,b'Hartberg',False,far post,clearance,False,True,False,215370.0,23.97,22.83
+1942,195,21.05,b'Hartberg',True,near post,foul,False,False,False,237692.0,5.79,25.06
+1943,195,42.73,b'Hartberg',False,far post,clearance,False,True,False,252371.0,67.29,21.93
+1951,196,33.75,b'Leeds United',False,near post,shot,True,False,False,202750.0,40.15,19.97
+1952,196,32.67,b'Leeds United',False,penalty spot,clearance,False,True,False,230456.0,35.37,9.74
+1953,196,53.28,b'Burnley',True,far post,clearance,False,True,False,266069.0,74.46,36.54
+1961,197,78.81,b'Parma',False,near post,shot,True,False,False,263151.0,85.77,44.62
+1962,197,46.21,b'Parma',False,penalty spot,foul,False,False,False,271778.0,15.53,12.11
+1963,197,79.27,b'SC Freiburg',True,penalty spot,no outcome,False,False,False,215556.0,91.11,24.4
+1964,197,63.92,b'SC Freiburg',True,penalty spot,clearance,False,True,False,237286.0,72.13,30.61
+1965,197,34.0,b'Parma',False,near post,clearance,False,True,False,212245.0,91.27,7.24
+1971,198,29.58,b'Santos',True,far post,no outcome,False,False,False,252259.0,68.26,29.73
+1972,198,4.34,b'Santos',True,penalty spot,shot,True,False,False,205988.0,9.34,34.11
+1981,199,21.1,b'Borussia M\xf6nchengladbach',True,penalty spot,clearance,False,True,False,225793.0,2.34,8.21
+1982,199,39.17,b'Borussia M\xf6nchengladbach',True,penalty spot,clearance,False,True,False,230373.0,41.28,14.45
+1983,199,83.86,b'Cremonese',True,near post,clearance,False,True,False,258316.0,64.4,10.56
+1984,199,87.61,b'Cremonese',True,near post,shot,True,False,False,246669.0,17.4,40.44
+1991,200,11.58,b'CSA',False,penalty spot,shot,True,False,False,260926.0,34.28,39.21
+2001,201,88.01,b'Atl\xe9tico Mineiro',False,near post,shot,True,False,False,247827.0,29.99,19.09
+2002,201,46.88,b'U.S. Sassuolo Calcio',True,penalty spot,clearance,False,True,False,205897.0,66.34,27.56
+2003,201,52.24,b'U.S. Sassuolo Calcio',True,far post,goal,True,False,True,263042.0,26.61,28.28
+2004,201,24.05,b'U.S. Sassuolo Calcio',False,far post,shot,True,False,False,259324.0,51.76,5.93
+2005,201,72.53,b'U.S. Sassuolo Calcio',False,far post,shot,True,False,False,202562.0,84.47,37.71
+2011,202,54.38,b'Palmeiras',True,penalty spot,goal,True,False,True,220633.0,13.72,13.03
+2012,202,79.3,b'Palmeiras',True,far post,goal,True,False,True,229973.0,54.45,32.08
+2013,202,9.93,b'Palmeiras',True,far post,clearance,False,True,False,227558.0,75.4,40.66
+2021,203,19.05,b'Werder Bremen',True,far post,shot,True,False,False,236723.0,64.53,6.07
+2022,203,8.53,b'Crotone',True,penalty spot,shot,True,False,False,267849.0,26.77,44.73
+2031,204,21.28,b'FC Augsburg',False,penalty spot,foul,False,False,False,190941.0,99.48,15.6
+2032,204,47.99,b'1. FSV Mainz 05',False,penalty spot,clearance,False,True,False,270952.0,73.01,25.93
+2041,205,57.11,b'RB Leipzig',True,near post,shot,True,False,False,224371.0,90.53,24.84
+2051,206,70.42,b'Flamengo',True,near post,shot,True,False,False,244717.0,51.93,22.83
+2052,206,27.52,b'Flamengo',False,far post,foul,False,False,False,212602.0,0.77,7.85
+2053,206,73.04,b'Wattens',False,far post,shot,True,False,False,230281.0,61.77,49.01
+2054,206,15.7,b'Flamengo',True,far post,foul,False,False,False,230672.0,42.59,17.04
+2061,207,41.01,b'Corinthians',True,far post,shot,True,False,False,207421.0,27.91,42.64
+2071,208,25.3,b'Milan',True,penalty spot,shot,True,False,False,189390.0,50.84,12.67
+2081,209,49.97,b'Cear\xe1',False,penalty spot,shot,True,False,False,230338.0,91.34,23.16
+2082,209,68.45,b'Cear\xe1',False,near post,shot,True,False,False,215590.0,98.43,36.89
+2083,209,43.93,b'Cear\xe1',False,far post,no outcome,False,False,False,211394.0,16.7,39.42
+2091,210,25.92,b'SC Paderborn 07',True,far post,shot,True,False,False,224811.0,2.49,24.25
+2101,211,56.4,b'1. FC Union Berlin',True,near post,goal,True,False,True,254541.0,3.36,17.62
+2111,212,50.43,b'SpVgg Greuther F\xfcrth',True,near post,clearance,False,True,False,183129.0,87.97,26.68
+2112,212,82.71,b'Juventude',False,penalty spot,no outcome,False,False,False,230208.0,67.85,36.55
+2121,213,1.32,b'Watford',True,near post,goal,True,False,True,263452.0,31.43,35.23
+2122,213,70.08,b'Watford',False,penalty spot,clearance,False,True,False,236295.0,81.04,10.06
+2123,213,32.11,b'Watford',True,far post,shot,True,False,False,199439.0,34.04,7.56
+2124,213,72.93,b'Watford',True,penalty spot,clearance,False,True,False,263785.0,68.18,5.54
+2125,213,34.91,b'Watford',False,far post,shot,True,False,False,239890.0,64.58,2.7
+2131,214,66.22,b'Salernitana',True,far post,no outcome,False,False,False,263444.0,68.62,10.93
+2132,214,50.09,b'Salernitana',False,near post,no outcome,False,False,False,212240.0,36.74,11.66
+2141,215,28.78,b'Rapid Vienna',True,far post,no outcome,False,False,False,197777.0,55.15,9.14
+2142,215,15.91,b'Rapid Vienna',True,near post,shot,True,False,False,230470.0,53.15,23.5
+2143,215,53.02,b'FC Augsburg',False,near post,no outcome,False,False,False,216258.0,58.38,7.36
+2151,216,49.1,b'Borussia M\xf6nchengladbach',False,far post,foul,False,False,False,271747.0,17.68,40.87
+2161,217,52.34,b'Lazio',True,penalty spot,clearance,False,True,False,243133.0,61.5,21.59
+2171,218,44.03,b'Orlando Pirates',True,penalty spot,goal,True,False,True,216282.0,92.7,25.17
+2181,219,43.59,b'VfL Wolfsburg',False,far post,clearance,False,True,False,198329.0,17.33,1.21
+2182,219,15.35,b'VfL Wolfsburg',True,penalty spot,clearance,False,True,False,264645.0,27.64,24.54
+2183,219,29.47,b'Ava\xed',False,penalty spot,foul,False,False,False,239778.0,91.88,22.5
+2184,219,37.2,b'Ava\xed',True,penalty spot,foul,False,False,False,243848.0,62.04,49.31
+2185,219,83.17,b'VfL Wolfsburg',False,far post,foul,False,False,False,230209.0,22.18,46.63
+2191,220,73.38,b'FC Bayern M\xfcnchen',True,far post,shot,True,False,False,247827.0,43.22,0.87
+2192,220,75.92,b'FC Bayern M\xfcnchen',False,near post,shot,True,False,False,211454.0,92.28,3.26
+2193,220,75.74,b'SPAL',True,far post,clearance,False,True,False,263044.0,23.59,35.39
+2201,221,15.02,b'SC Rheindorf Altach',True,penalty spot,clearance,False,True,False,263041.0,22.14,3.88
+2211,222,49.53,b'Bahia',False,penalty spot,clearance,False,True,False,257273.0,13.22,10.71
+2212,222,11.06,b'Bahia',True,penalty spot,clearance,False,True,False,241096.0,46.8,15.21
+2221,223,24.52,b'Clube Atl\xe9tico Mineiro',True,penalty spot,clearance,False,True,False,210474.0,74.85,47.89
+2222,223,58.5,b'Clube Atl\xe9tico Mineiro',False,penalty spot,clearance,False,True,False,189043.0,21.5,18.23
+2223,223,35.94,b'Club Athletico Paranaense',True,near post,shot,True,False,False,241522.0,91.85,41.46
+2224,223,66.57,b'Club Athletico Paranaense',False,near post,no outcome,False,False,False,266755.0,70.27,13.5
+2225,223,39.5,b'Clube Atl\xe9tico Mineiro',False,near post,goal,True,False,True,266866.0,93.36,16.23
+2231,224,64.6,b'Hartberg',True,far post,shot,True,False,False,270952.0,73.96,37.34
+2232,224,51.52,b'Hartberg',True,penalty spot,shot,True,False,False,243241.0,94.51,49.0
+2233,224,15.72,b'Juventus',True,far post,foul,False,False,False,203042.0,64.64,49.85
+2234,224,82.88,b'Juventus',True,near post,no outcome,False,False,False,216682.0,29.62,41.07
+2241,225,41.39,b'Chelsea',True,far post,foul,False,False,False,234028.0,20.37,36.95
+2251,226,36.26,b'SK Rapid Wien',True,penalty spot,shot,True,False,False,257051.0,38.12,23.06
+2252,226,17.77,b'Shakhtar Donetsk',False,near post,clearance,False,True,False,271763.0,72.12,29.61
+2253,226,19.68,b'Shakhtar Donetsk',False,far post,no outcome,False,False,False,181098.0,4.89,20.69
+2261,227,31.49,b'1. FC Union Berlin',True,near post,clearance,False,True,False,252975.0,77.32,26.7
+2271,228,9.13,b'U.C. Sampdoria',True,penalty spot,shot,True,False,False,206517.0,3.01,19.02
+2272,228,48.56,b'U.C. Sampdoria',False,penalty spot,clearance,False,True,False,180930.0,33.75,25.29
+2281,229,66.7,b'Atl\xe9tico Mineiro',False,penalty spot,clearance,False,True,False,252001.0,99.05,5.41
+2282,229,6.35,b'Atl\xe9tico Mineiro',True,penalty spot,shot,True,False,False,262936.0,80.68,26.6
+2291,230,59.48,b'Kaizer Chiefs',True,far post,clearance,False,True,False,201290.0,20.49,11.79
+2301,231,50.18,b'Bragantino',True,near post,clearance,False,True,False,172837.0,91.72,38.55
+2302,231,14.89,b'Fortaleza',False,penalty spot,clearance,False,True,False,225316.0,6.07,24.89
+2303,231,15.05,b'Fortaleza',True,penalty spot,shot,True,False,False,220915.0,48.16,34.88
+2311,232,30.14,b'RZ Pellets Wolfsberger AC',True,near post,clearance,False,True,False,231485.0,72.86,9.44
+2321,233,30.76,b'Burnley',True,near post,shot,True,False,False,227873.0,79.92,37.81
+2331,234,15.23,b'FC Lokomotiv Moscow',True,penalty spot,no outcome,False,False,False,225206.0,3.79,9.01
+2332,234,22.14,b'FC Lokomotiv Moscow',False,near post,clearance,False,True,False,236189.0,15.02,27.46
+2333,234,88.73,b'Cruzeiro',True,near post,shot,True,False,False,204760.0,96.81,33.87
+2334,234,37.13,b'Cruzeiro',True,near post,clearance,False,True,False,220018.0,55.39,2.27
+2341,235,42.83,b'West Bromwich Albion',True,far post,shot,True,False,False,265180.0,7.45,9.93
+2342,235,1.59,b'Associa\xe7\xe3o Chapecoense de Futebol',True,near post,shot,True,False,False,205812.0,95.79,45.33
+2343,235,65.63,b'Associa\xe7\xe3o Chapecoense de Futebol',False,near post,no outcome,False,False,False,270989.0,56.14,10.34
+2344,235,38.19,b'West Bromwich Albion',False,penalty spot,no outcome,False,False,False,244373.0,66.25,21.7
+2351,236,5.48,b'RB Leipzig',False,near post,goal,True,False,True,219911.0,75.53,36.14
+2361,237,5.97,b'AFC Bournemouth',True,penalty spot,shot,True,False,False,205346.0,27.2,33.01
+2362,237,62.6,b'AFC Bournemouth',True,near post,shot,True,False,False,188545.0,37.07,6.82
+2363,237,65.12,b'SC Paderborn 07',True,far post,shot,True,False,False,241854.0,4.12,45.97
+2364,237,51.76,b'SC Paderborn 07',False,far post,goal,True,False,True,257075.0,12.28,14.08
+2371,238,50.97,b'SV Werder Bremen',False,far post,shot,True,False,False,233943.0,38.15,15.07
+2372,238,31.45,b'SC Paderborn 07',True,near post,clearance,False,True,False,240913.0,88.7,48.3
+2381,239,16.97,b'FC Red Bull Salzburg',False,penalty spot,shot,True,False,False,206085.0,38.2,20.77
+2382,239,65.34,b'FC Red Bull Salzburg',False,far post,goal,True,False,True,228413.0,6.52,16.3
+2383,239,47.56,b'Werder Bremen',False,near post,clearance,False,True,False,195586.0,58.0,17.65
+2391,240,9.61,b'Bologna',False,near post,clearance,False,True,False,230277.0,40.56,27.19
+2392,240,51.16,b'Bologna',False,far post,goal,True,False,True,245863.0,1.13,39.73
+2401,241,74.66,b'Southampton',False,near post,clearance,False,True,False,244097.0,36.85,3.07
+2402,241,71.62,b'Southampton',True,penalty spot,shot,True,False,False,212501.0,39.85,0.84
+2403,241,3.91,b'Coritiba',False,near post,shot,True,False,False,248060.0,28.64,35.35
+2411,242,65.65,b'Centro Sportivo Alagoano',True,penalty spot,foul,False,False,False,199576.0,66.93,22.37
+2412,242,41.74,b'Santos',True,penalty spot,goal,True,False,True,230477.0,37.44,44.8
+2413,242,41.09,b'Centro Sportivo Alagoano',True,penalty spot,no outcome,False,False,False,238379.0,95.62,20.96
+2421,243,13.19,b'SC Freiburg',False,far post,shot,True,False,False,233368.0,27.16,35.37
+2422,243,68.79,b'SC Freiburg',True,near post,clearance,False,True,False,224221.0,99.12,26.41
+2423,243,33.21,b'SC Freiburg',True,near post,goal,True,False,True,220883.0,61.27,31.4
+2424,243,43.06,b'SC Freiburg',True,near post,no outcome,False,False,False,237592.0,33.62,37.38
+2425,243,40.85,b'SC Freiburg',False,penalty spot,clearance,False,True,False,226536.0,96.19,32.16
+2431,244,78.79,b'Club Athletico Paranaense',True,penalty spot,no outcome,False,False,False,243882.0,19.56,45.0
+2432,244,33.47,b'Club Athletico Paranaense',True,near post,no outcome,False,False,False,268133.0,74.44,9.84
+2433,244,45.12,b'Club Athletico Paranaense',False,penalty spot,clearance,False,True,False,234824.0,6.07,1.76
+2441,245,58.99,b'Sport-Club Freiburg',True,far post,foul,False,False,False,190765.0,37.06,30.64
+2442,245,12.27,b'Sport-Club Freiburg',False,near post,clearance,False,True,False,253475.0,4.7,28.55
+2443,245,44.36,b'Sport-Club Freiburg',True,far post,shot,True,False,False,245566.0,39.1,27.16
+2451,246,40.74,b'Parma',True,near post,goal,True,False,True,230298.0,8.52,39.38
+2452,246,56.9,b'VfL Bochum 1848',True,near post,clearance,False,True,False,195864.0,42.49,19.03
+2453,246,25.08,b'Parma',True,near post,foul,False,False,False,230327.0,4.66,0.2
+2461,247,43.51,b'Internacional',True,penalty spot,clearance,False,True,False,197853.0,47.17,13.78
+2462,247,59.55,b'Sassuolo',False,penalty spot,foul,False,False,False,202562.0,29.97,30.98
+2463,247,40.41,b'Sassuolo',False,near post,clearance,False,True,False,235949.0,27.63,5.6
+2471,248,86.31,b'Mamelodi Sundowns',False,far post,shot,True,False,False,188943.0,58.21,32.06
+2472,248,56.76,b'Mamelodi Sundowns',True,near post,clearance,False,True,False,248820.0,25.18,36.24
+2481,249,47.48,b'West Bromwich Albion',False,near post,clearance,False,True,False,260558.0,31.5,6.23
+2482,249,84.49,b'Austria Wien',True,far post,shot,True,False,False,215333.0,23.21,44.84
+2483,249,24.02,b'West Bromwich Albion',True,near post,clearance,False,True,False,215370.0,29.13,7.01
+2484,249,3.77,b'Austria Wien',True,near post,goal,True,False,True,230258.0,64.73,20.6
+2485,249,37.0,b'West Bromwich Albion',False,penalty spot,goal,True,False,True,198009.0,50.73,4.41
+2491,250,54.37,b'Austria Klagenfurt',False,far post,foul,False,False,False,239998.0,38.36,11.59
+2492,250,76.04,b'Austria Klagenfurt',False,far post,clearance,False,True,False,258510.0,15.23,21.32
+2493,250,79.52,b'Austria Klagenfurt',True,near post,shot,True,False,False,264529.0,4.76,26.08
+2494,250,63.21,b'SV Werder Bremen',False,penalty spot,clearance,False,True,False,224294.0,14.13,48.07
+2495,250,7.28,b'SV Werder Bremen',False,near post,clearance,False,True,False,228080.0,71.23,46.45
+2501,251,14.47,b'Rheindorf Altach',True,far post,shot,True,False,False,208920.0,77.45,43.36
+2502,251,4.76,b'Rheindorf Altach',True,far post,foul,False,False,False,235947.0,32.32,2.62
+2511,252,89.07,b'SV Mattersburg',True,penalty spot,clearance,False,True,False,238074.0,51.2,29.07
+2512,252,25.74,b'Chelsea',False,far post,clearance,False,True,False,239476.0,62.35,43.57
+2513,252,1.99,b'SV Mattersburg',False,far post,clearance,False,True,False,213689.0,39.9,48.56
+2521,253,34.08,b'Paderborn',True,penalty spot,clearance,False,True,False,242374.0,30.53,42.98
+2522,253,18.15,b'Juventude',True,penalty spot,clearance,False,True,False,231512.0,39.77,13.76
+2531,254,36.48,b'Sassuolo',False,far post,shot,True,False,False,232223.0,70.5,36.97
+2541,255,75.99,b'Sturm Graz',True,penalty spot,shot,True,False,False,229155.0,62.5,32.9
+2551,256,77.97,b'Udinese',True,far post,no outcome,False,False,False,230525.0,48.39,24.56
+2561,257,80.12,b'Eintracht Frankfurt',True,penalty spot,clearance,False,True,False,231428.0,3.09,19.5
+2562,257,4.05,b'FSV Mainz 05',True,near post,clearance,False,True,False,222024.0,29.27,29.7
+2571,258,84.91,b'Roma',False,penalty spot,goal,True,False,True,212153.0,13.41,44.51
+2572,258,48.68,b'FC Red Bull Salzburg',True,penalty spot,no outcome,False,False,False,211117.0,74.62,5.86
+2573,258,5.85,b'Roma',False,near post,shot,True,False,False,231840.0,40.22,12.01
+2574,258,37.99,b'FC Red Bull Salzburg',True,near post,clearance,False,True,False,244795.0,43.28,36.92
+2581,259,48.55,b'Clube Atl\xe9tico Mineiro',False,near post,shot,True,False,False,266433.0,47.71,4.24
+2582,259,62.28,b'Clube Atl\xe9tico Mineiro',True,near post,shot,True,False,False,250753.0,40.21,39.87
+2583,259,85.42,b'Clube Atl\xe9tico Mineiro',True,penalty spot,clearance,False,True,False,271548.0,12.05,10.43
+2591,260,27.77,b'FC Lokomotiv Moscow',True,far post,shot,True,False,False,177475.0,84.12,13.34
+2601,261,24.61,b'Monza',False,far post,no outcome,False,False,False,264115.0,39.31,12.97
+2611,262,58.0,b'AC Milan',True,far post,no outcome,False,False,False,251229.0,4.05,43.16
+2612,262,2.3,b'TSV Egger Glas Hartberg',True,far post,no outcome,False,False,False,227873.0,43.23,46.0
+2621,263,64.83,b'Sampdoria',True,far post,clearance,False,True,False,228768.0,2.45,6.39
+2622,263,76.11,b'Sampdoria',True,far post,shot,True,False,False,235883.0,32.44,48.03
+2623,263,38.18,b'Sampdoria',False,near post,shot,True,False,False,211454.0,33.41,45.13
+2624,263,29.88,b'Internacional',False,near post,foul,False,False,False,229508.0,74.87,25.4
+2625,263,80.65,b'Sampdoria',True,near post,clearance,False,True,False,230475.0,73.4,35.84
+2631,264,56.31,b'Rheindorf Altach',False,penalty spot,clearance,False,True,False,204447.0,51.25,31.96
+2632,264,54.58,b'Atl\xe9tico GO',True,far post,shot,True,False,False,242663.0,88.31,47.77
+2633,264,15.69,b'Atl\xe9tico GO',True,far post,no outcome,False,False,False,270597.0,15.77,43.69
+2641,265,27.17,b'Schalke 04',True,penalty spot,clearance,False,True,False,244369.0,74.0,44.04
+2651,266,75.87,b'Venezia',False,near post,shot,True,False,False,257877.0,78.07,37.7
+2652,266,74.5,b'1. FC Union Berlin',True,penalty spot,goal,True,False,True,198219.0,6.56,37.97
+2653,266,1.7,b'Venezia',False,penalty spot,shot,True,False,False,252480.0,5.34,37.7
+2654,266,43.33,b'Venezia',False,far post,foul,False,False,False,193886.0,77.75,38.04
+2661,267,57.31,b'FC Union Berlin',True,penalty spot,clearance,False,True,False,230232.0,2.84,15.44
+2671,268,8.02,b'1. FSV Mainz 05',False,near post,clearance,False,True,False,251499.0,57.38,1.44
+2672,268,47.75,b'1. FSV Mainz 05',False,near post,shot,True,False,False,258632.0,17.88,9.69
+2673,268,22.53,b'1. FSV Mainz 05',True,far post,no outcome,False,False,False,264821.0,51.97,18.45
+2681,269,79.2,b'Brentford',False,penalty spot,clearance,False,True,False,234396.0,99.13,26.15
+2682,269,57.18,b'U.C. Sampdoria',True,penalty spot,clearance,False,True,False,222959.0,14.66,44.41
+2683,269,65.65,b'Brentford',True,near post,clearance,False,True,False,257876.0,14.33,15.96
+2684,269,65.16,b'Brentford',True,penalty spot,foul,False,False,False,199339.0,99.75,42.7
+2691,270,50.9,b'Fluminense',True,far post,clearance,False,True,False,258041.0,40.08,40.6
+2692,270,25.48,b'SC Freiburg',False,penalty spot,shot,True,False,False,244284.0,12.03,5.31
+2693,270,23.87,b'SC Freiburg',True,near post,no outcome,False,False,False,220085.0,68.89,20.39
+2701,271,50.1,b'Udinese Calcio',True,penalty spot,shot,True,False,False,230520.0,32.85,11.87
+2702,271,3.0,b'Tottenham Hotspur',True,near post,clearance,False,True,False,243231.0,71.41,24.21
+2703,271,10.87,b'Udinese Calcio',True,near post,clearance,False,True,False,238637.0,19.11,13.78
+2711,272,48.86,b'Hartberg',False,far post,shot,True,False,False,263551.0,33.32,32.3
+2712,272,89.15,b'SV Werder Bremen',True,far post,clearance,False,True,False,189908.0,65.36,21.13
+2721,273,64.54,b'Kaizer Chiefs',True,penalty spot,clearance,False,True,False,230196.0,54.66,40.54
+2731,274,54.28,b'Crystal Palace',True,penalty spot,shot,True,False,False,236075.0,28.68,33.93
+2732,274,5.86,b'Crystal Palace',True,far post,clearance,False,True,False,240658.0,86.84,6.03
+2733,274,17.21,b'Crystal Palace',True,penalty spot,clearance,False,True,False,195202.0,96.64,39.81
+2734,274,46.36,b'Crystal Palace',True,near post,goal,True,False,True,220558.0,81.11,30.7
+2741,275,23.29,b'SC Paderborn 07',True,far post,clearance,False,True,False,248470.0,44.25,11.91
+2742,275,69.18,b'VfL Wolfsburg',True,near post,clearance,False,True,False,262227.0,9.71,40.86
+2751,276,5.5,b'Juventude',True,far post,foul,False,False,False,228708.0,10.23,44.19
+2752,276,69.67,b'spusu SKN St. P\xf6lten',True,near post,shot,True,False,False,212244.0,69.38,31.61
+2761,277,17.6,b'Kaizer Chiefs',True,far post,clearance,False,True,False,271063.0,57.81,42.22
+2771,278,86.37,b'Inter',True,penalty spot,clearance,False,True,False,230213.0,44.58,22.82
+2772,278,79.34,b'Inter',True,penalty spot,clearance,False,True,False,208892.0,5.17,37.07
+2781,279,88.54,b'Chapecoense',True,far post,clearance,False,True,False,223790.0,24.54,11.11
+2782,279,64.63,b'Chapecoense',True,penalty spot,goal,True,False,True,210802.0,18.05,23.92
+2791,280,85.59,b'SC Paderborn 07',True,far post,shot,True,False,False,262171.0,9.56,2.08
+2801,281,40.11,b'Napoli',True,far post,shot,True,False,False,265636.0,30.64,19.76
+2802,281,66.37,b'Napoli',True,far post,shot,True,False,False,170084.0,99.77,3.03
+2811,282,84.43,b'Fortuna D\xfcsseldorf',True,far post,goal,True,False,True,263132.0,34.91,3.49
+2812,282,78.86,b'Fortuna D\xfcsseldorf',True,far post,foul,False,False,False,253010.0,25.8,15.21
+2813,282,58.47,b'Venezia',False,far post,clearance,False,True,False,201068.0,6.2,41.66
+2814,282,73.58,b'Venezia',False,penalty spot,shot,True,False,False,220509.0,5.89,35.37
+2815,282,40.51,b'Venezia',True,penalty spot,shot,True,False,False,258607.0,47.71,47.54
+2821,283,30.06,b'Lecce',True,far post,clearance,False,True,False,256545.0,47.44,38.09
+2822,283,37.13,b'Lecce',False,penalty spot,shot,True,False,False,190941.0,58.96,12.22
+2823,283,57.44,b'Lecce',False,far post,shot,True,False,False,248808.0,73.87,8.6
+2824,283,80.73,b'Lecce',True,near post,shot,True,False,False,244390.0,83.52,44.56
+2825,283,21.1,b'Lecce',False,penalty spot,clearance,False,True,False,179783.0,98.78,38.75
+2831,284,82.41,b'Manchester United',False,far post,shot,True,False,False,235565.0,52.29,8.14
+2841,285,59.86,b'Admira',True,penalty spot,foul,False,False,False,239322.0,33.06,5.43
+2842,285,43.94,b'Admira',False,far post,clearance,False,True,False,200752.0,87.84,8.37
+2851,286,80.91,b'Southampton',True,penalty spot,foul,False,False,False,193082.0,72.04,41.93
+2852,286,82.35,b'Southampton',True,penalty spot,clearance,False,True,False,193260.0,8.4,8.08
+2853,286,51.53,b'Atl\xe9tico GO',False,near post,shot,True,False,False,230464.0,79.78,20.0
+2854,286,74.52,b'Atl\xe9tico GO',False,penalty spot,clearance,False,True,False,243279.0,67.11,11.23
+2861,287,27.76,b'Bragantino',True,far post,shot,True,False,False,238621.0,24.84,11.95
+2862,287,24.47,b'Bragantino',True,near post,clearance,False,True,False,256862.0,48.71,31.38
+2863,287,18.09,b'Bragantino',True,near post,clearance,False,True,False,190460.0,45.29,47.99
+2871,288,38.4,b'Flamengo',True,near post,clearance,False,True,False,272392.0,14.46,0.9
+2872,288,54.83,b'Am\xe9rica Mineiro',False,penalty spot,clearance,False,True,False,213993.0,71.16,45.79
+2873,288,58.37,b'Am\xe9rica Mineiro',False,penalty spot,foul,False,False,False,247497.0,99.9,24.42
+2874,288,27.77,b'Am\xe9rica Mineiro',True,near post,clearance,False,True,False,203106.0,91.49,28.62
+2881,289,81.78,b'1. FSV Mainz 05',False,near post,shot,True,False,False,202849.0,53.48,38.21
+2882,289,43.25,b'Milan',False,far post,shot,True,False,False,221841.0,1.55,20.44
+2883,289,72.24,b'Milan',False,far post,shot,True,False,False,242023.0,95.34,39.61
+2891,290,82.49,b'Gr\xeamio',True,penalty spot,no outcome,False,False,False,244629.0,78.31,39.89
+2892,290,14.71,b'Gr\xeamio',True,far post,goal,True,False,True,262387.0,8.75,26.61
+2893,290,27.62,b'Werder Bremen',False,penalty spot,foul,False,False,False,264335.0,83.66,5.36
+2894,290,43.24,b'Gr\xeamio',True,far post,shot,True,False,False,242332.0,9.96,27.84
+2901,291,33.58,b'Borussia Dortmund',False,near post,shot,True,False,False,230526.0,34.9,16.81
+2902,291,36.63,b'Borussia Dortmund',False,far post,clearance,False,True,False,241721.0,61.3,27.58
+2903,291,38.82,b'Hellas Verona',False,near post,no outcome,False,False,False,234016.0,54.45,20.41
+2911,292,46.22,b'Paderborn',True,near post,clearance,False,True,False,203485.0,94.23,35.55
+2912,292,79.12,b'Bologna',True,penalty spot,foul,False,False,False,230260.0,56.33,40.48
+2913,292,29.56,b'Paderborn',True,penalty spot,goal,True,False,True,255001.0,57.85,16.36
+2914,292,26.88,b'Bologna',False,penalty spot,clearance,False,True,False,229891.0,70.0,12.27
+2915,292,78.75,b'Paderborn',True,near post,goal,True,False,True,235526.0,18.8,10.51
+2921,293,69.99,b'Austria Wien',True,far post,goal,True,False,True,204638.0,38.27,18.21
+2922,293,70.22,b'Austria Wien',True,penalty spot,goal,True,False,True,230202.0,68.76,32.51
+2931,294,66.84,b'Goi\xe1s',True,far post,no outcome,False,False,False,192071.0,68.33,10.91
+2932,294,35.46,b'SpVgg Greuther F\xfcrth',True,penalty spot,clearance,False,True,False,230800.0,27.56,26.82
+2933,294,6.96,b'Goi\xe1s',False,near post,shot,True,False,False,268260.0,97.98,35.66
+2934,294,43.28,b'Goi\xe1s',False,near post,shot,True,False,False,199769.0,49.98,28.11
+2935,294,52.43,b'SpVgg Greuther F\xfcrth',False,far post,shot,True,False,False,206594.0,67.28,26.67
+2941,295,50.18,b'Manchester United',True,penalty spot,shot,True,False,False,184274.0,84.77,48.09
+2942,295,16.26,b'Manchester United',True,penalty spot,foul,False,False,False,240045.0,20.62,6.07
+2943,295,52.95,b'Fortuna D\xfcsseldorf',True,near post,foul,False,False,False,268271.0,64.15,16.39
+2944,295,85.43,b'Fortuna D\xfcsseldorf',False,far post,clearance,False,True,False,253010.0,66.82,42.54
+2951,296,80.89,b'Parma',True,far post,shot,True,False,False,210008.0,92.15,17.94
+2952,296,19.82,b'Parma',True,near post,clearance,False,True,False,239267.0,0.25,11.06
+2953,296,8.85,b'Gr\xeamio',False,penalty spot,shot,True,False,False,184392.0,11.83,20.75
+2954,296,52.67,b'Parma',True,near post,shot,True,False,False,205693.0,15.77,5.43
+2955,296,4.98,b'Parma',True,penalty spot,shot,True,False,False,252060.0,46.81,47.73
+2961,297,75.4,b'Cear\xe1',True,penalty spot,clearance,False,True,False,197756.0,3.26,14.93
+2971,298,5.38,b'Coritiba',False,penalty spot,clearance,False,True,False,211856.0,2.42,31.41
+2972,298,68.38,b'Coritiba',True,far post,goal,True,False,True,230252.0,46.08,46.23
+2973,298,65.84,b'Nottingham Forest',True,penalty spot,goal,True,False,True,258168.0,87.96,37.23
+2974,298,79.53,b'Coritiba',True,penalty spot,goal,True,False,True,243698.0,70.92,42.12
+2981,299,18.58,b'Bahia',True,penalty spot,clearance,False,True,False,206654.0,17.75,46.31
+2982,299,89.19,b'Bahia',False,penalty spot,clearance,False,True,False,236191.0,97.87,37.31
+2991,300,79.65,b'FC Augsburg',True,penalty spot,clearance,False,True,False,242818.0,58.07,37.71
+2992,300,75.9,b'FC Augsburg',True,penalty spot,clearance,False,True,False,225116.0,14.11,34.0
+3001,301,14.98,b'CSA',False,far post,clearance,False,True,False,205186.0,18.63,46.49
+3011,302,32.82,b'Genoa',False,near post,clearance,False,True,False,242392.0,3.78,34.49
+3012,302,44.08,b'Genoa',False,penalty spot,clearance,False,True,False,231866.0,64.48,23.22
+3013,302,75.15,b'Norwich City',True,penalty spot,clearance,False,True,False,199339.0,99.52,34.96
+3014,302,31.74,b'Norwich City',True,penalty spot,clearance,False,True,False,258806.0,78.55,38.47
+3015,302,34.04,b'Norwich City',True,near post,shot,True,False,False,226790.0,20.53,12.76
+3021,303,51.62,b'Roma',False,near post,goal,True,False,True,251293.0,31.81,26.73
+3022,303,62.5,b'Roma',False,penalty spot,clearance,False,True,False,226356.0,79.4,16.0
+3023,303,75.52,b'Benevento',True,penalty spot,clearance,False,True,False,222546.0,40.75,7.05
+3024,303,4.55,b'Roma',True,penalty spot,clearance,False,True,False,181458.0,4.49,26.71
+3025,303,74.6,b'Benevento',True,far post,clearance,False,True,False,243854.0,81.22,12.33
+3031,304,80.49,b'CSA',False,far post,clearance,False,True,False,169115.0,59.25,5.55
+3032,304,82.18,b'CSA',True,penalty spot,shot,True,False,False,254692.0,59.56,1.63
+3033,304,74.87,b'CSA',False,far post,shot,True,False,False,187498.0,87.66,22.71
+3041,305,63.8,b'Fiorentina',True,near post,shot,True,False,False,200759.0,86.08,44.94
+3042,305,35.99,b'Fiorentina',True,far post,shot,True,False,False,263180.0,22.97,42.46
+3043,305,55.63,b'Fiorentina',True,penalty spot,shot,True,False,False,263043.0,86.05,14.22
+3044,305,36.71,b'PFC CSKA Moscow',True,far post,clearance,False,True,False,197786.0,58.06,29.81
+3045,305,40.81,b'Fiorentina',False,penalty spot,shot,True,False,False,253167.0,36.48,25.66
+3051,306,60.41,b'Genoa',True,near post,clearance,False,True,False,230475.0,49.52,37.0
+3052,306,44.3,b'Santos',True,far post,clearance,False,True,False,250781.0,47.18,13.47
+3053,306,50.33,b'Genoa',False,penalty spot,no outcome,False,False,False,212198.0,8.11,21.89
+3061,307,4.88,b'Atl\xe9tico Mineiro',True,far post,clearance,False,True,False,230196.0,7.78,5.0
+3062,307,66.9,b'Atl\xe9tico Mineiro',True,far post,goal,True,False,True,230247.0,83.16,14.75
+3071,308,55.34,b'Admira',True,near post,clearance,False,True,False,234875.0,18.76,47.0
+3072,308,30.06,b'Admira',False,near post,goal,True,False,True,239410.0,65.63,13.2
+3073,308,21.96,b'Coritiba',False,far post,no outcome,False,False,False,232363.0,70.91,25.52
+3081,309,68.41,b'Fluminense',True,near post,shot,True,False,False,233437.0,27.73,36.37
+3082,309,4.06,b'Fluminense',True,penalty spot,shot,True,False,False,252903.0,89.46,48.74
+3083,309,53.52,b'Fluminense',True,far post,shot,True,False,False,234171.0,55.88,1.69
+3084,309,88.16,b'Fluminense',True,far post,shot,True,False,False,236378.0,29.74,24.19
+3091,310,8.62,b'Mamelodi Sundowns',False,penalty spot,shot,True,False,False,163489.0,89.04,27.88
+3092,310,43.23,b'Mamelodi Sundowns',False,penalty spot,shot,True,False,False,236703.0,48.19,32.19
+3093,310,9.76,b'VfB Stuttgart',True,far post,goal,True,False,True,206098.0,94.91,24.55
+3094,310,35.33,b'VfB Stuttgart',True,near post,clearance,False,True,False,235442.0,66.91,10.52
+3095,310,20.03,b'Mamelodi Sundowns',False,near post,shot,True,False,False,246885.0,37.6,35.23
+3101,311,74.88,b'Fortaleza',True,penalty spot,clearance,False,True,False,202848.0,59.33,44.17
+3102,311,40.69,b'Manchester City',False,far post,clearance,False,True,False,269596.0,52.51,1.37
+3103,311,13.81,b'Manchester City',True,penalty spot,shot,True,False,False,228205.0,24.39,13.79
+3104,311,12.4,b'Manchester City',True,penalty spot,shot,True,False,False,268629.0,52.63,25.77
+3111,312,59.59,b'Torino F.C.',True,penalty spot,shot,True,False,False,230681.0,81.92,9.68
+3112,312,37.48,b'Santos',False,near post,goal,True,False,True,262118.0,61.22,6.54
+3113,312,41.53,b'Torino F.C.',True,near post,clearance,False,True,False,268132.0,98.48,49.41
+3114,312,13.54,b'Santos',True,far post,clearance,False,True,False,239267.0,52.01,9.74
+3121,313,2.2,b'Santos',False,near post,shot,True,False,False,243497.0,89.98,15.04
+3122,313,47.31,b'VfB Stuttgart',True,near post,shot,True,False,False,256079.0,37.31,19.36
+3131,314,46.78,b'1. FC Union Berlin',False,far post,foul,False,False,False,257916.0,28.82,0.78
+3132,314,13.76,b'1. FC Union Berlin',True,near post,clearance,False,True,False,230335.0,79.82,15.84
+3133,314,15.13,b'Ried',False,far post,clearance,False,True,False,213798.0,8.52,10.88
+3134,314,21.34,b'1. FC Union Berlin',True,far post,shot,True,False,False,263038.0,46.24,42.91
+3135,314,81.74,b'1. FC Union Berlin',True,far post,clearance,False,True,False,230218.0,40.21,36.15
+3141,315,18.81,b'Sheffield United',False,near post,shot,True,False,False,258805.0,55.05,9.53
+3142,315,21.11,b'S\xe3o Paulo',True,penalty spot,goal,True,False,True,192387.0,44.44,15.23
+3143,315,75.58,b'Sheffield United',True,near post,shot,True,False,False,236556.0,17.73,49.11
+3151,316,28.24,b'Centro Sportivo Alagoano',True,near post,clearance,False,True,False,230243.0,7.58,20.45
+3152,316,12.61,b'Spartak Moskva',True,far post,shot,True,False,False,213689.0,58.79,5.89
+3153,316,51.56,b'Spartak Moskva',True,far post,clearance,False,True,False,253167.0,72.13,6.7
+3154,316,26.2,b'Centro Sportivo Alagoano',False,far post,clearance,False,True,False,256104.0,90.58,0.21
+3161,317,20.31,b'Tottenham Hotspur',True,far post,shot,True,False,False,237819.0,31.84,48.98
+3162,317,15.33,b'Tottenham Hotspur',True,near post,clearance,False,True,False,260105.0,4.89,3.44
+3171,318,44.94,b'Orlando Pirates',True,penalty spot,foul,False,False,False,266500.0,41.74,39.35
+3181,319,3.82,b'Brentford',False,far post,goal,True,False,True,266891.0,75.84,14.7
+3182,319,10.03,b'Manchester United',True,far post,shot,True,False,False,211302.0,4.49,15.36
+3191,320,36.07,b'Dynamo Kyiv',True,near post,clearance,False,True,False,263932.0,81.22,31.56
+3201,321,27.81,b'Roma',False,far post,shot,True,False,False,220475.0,32.02,6.77
+3202,321,84.4,b'SpVgg Greuther F\xfcrth',False,near post,goal,True,False,True,202024.0,48.52,16.93
+3211,322,48.85,b'Mattersburg',False,penalty spot,shot,True,False,False,240123.0,40.1,39.56
+3212,322,89.62,b'Mattersburg',True,near post,no outcome,False,False,False,261375.0,81.52,49.05
+3213,322,2.69,b'Bragantino',True,penalty spot,clearance,False,True,False,203535.0,16.07,5.48
+3221,323,13.85,b'Liverpool',True,near post,shot,True,False,False,264664.0,77.92,24.97
+3222,323,31.95,b'Liverpool',True,penalty spot,shot,True,False,False,238637.0,83.38,18.32
+3231,324,88.83,b'PFC CSKA Moscow',True,near post,no outcome,False,False,False,230400.0,89.4,14.36
+3232,324,60.54,b'PFC CSKA Moscow',True,far post,goal,True,False,True,262384.0,37.62,36.7
+3233,324,64.49,b'Cremonese',False,near post,foul,False,False,False,247017.0,61.81,22.99
+3234,324,76.46,b'Cremonese',False,far post,no outcome,False,False,False,236610.0,82.38,34.41
+3241,325,37.95,b'spusu SKN St. P\xf6lten',True,penalty spot,foul,False,False,False,230367.0,84.45,24.29
+3251,326,13.95,b'SV Werder Bremen',False,far post,clearance,False,True,False,220197.0,54.29,1.3
+3252,326,12.19,b'Shakhtar Donetsk',True,penalty spot,clearance,False,True,False,252247.0,86.07,4.11
+3253,326,40.6,b'Shakhtar Donetsk',False,far post,clearance,False,True,False,235442.0,80.93,13.5
+3254,326,15.86,b'Shakhtar Donetsk',True,near post,shot,True,False,False,189505.0,91.6,19.54
+3261,327,55.45,b'FC Union Berlin',True,penalty spot,clearance,False,True,False,235149.0,72.19,17.22
+3271,328,45.6,b'Brighton & Hove Albion',True,near post,shot,True,False,False,212190.0,58.99,38.91
+3272,328,88.74,b'Clube Atl\xe9tico Mineiro',True,near post,clearance,False,True,False,250779.0,1.84,17.03
+3273,328,4.99,b'Brighton & Hove Albion',True,near post,shot,True,False,False,216266.0,26.37,33.26
+3281,329,5.66,b'Brescia',False,penalty spot,shot,True,False,False,239085.0,28.67,37.27
+3282,329,11.66,b'Brescia',False,near post,goal,True,False,True,230198.0,69.94,7.07
+3283,329,6.5,b'Empoli',False,penalty spot,shot,True,False,False,221753.0,49.36,48.32
+3284,329,9.4,b'Brescia',True,penalty spot,clearance,False,True,False,240452.0,58.54,28.32
+3291,330,38.88,b'AFC Bournemouth',False,far post,shot,True,False,False,224258.0,42.46,38.66
+3292,330,56.24,b'PFC CSKA Moscow',True,near post,no outcome,False,False,False,156438.0,60.24,1.6
+3293,330,52.99,b'PFC CSKA Moscow',False,near post,shot,True,False,False,245233.0,45.44,20.35
+3294,330,22.28,b'AFC Bournemouth',False,penalty spot,goal,True,False,True,251377.0,70.09,36.94
+3295,330,41.72,b'AFC Bournemouth',True,penalty spot,shot,True,False,False,251429.0,28.29,2.5
+3301,331,48.64,b'Southampton',False,far post,no outcome,False,False,False,198904.0,86.34,6.9
+3302,331,67.17,b'Nottingham Forest',True,near post,shot,True,False,False,230218.0,55.68,42.29
+3311,332,18.06,b'Gr\xeamio',False,near post,foul,False,False,False,244538.0,26.82,48.56
+3312,332,66.04,b'Bragantino',True,far post,clearance,False,True,False,220665.0,23.77,7.7
+3313,332,32.0,b'Gr\xeamio',True,near post,no outcome,False,False,False,236764.0,97.93,18.99
+3321,333,21.18,b'Sassuolo',True,penalty spot,clearance,False,True,False,200408.0,24.15,25.75
+3331,334,54.7,b'FC Lokomotiv Moscow',False,penalty spot,clearance,False,True,False,203376.0,77.61,17.2
+3341,335,20.88,b'Brescia',False,penalty spot,shot,True,False,False,263464.0,46.35,5.04
+3342,335,64.42,b'Ava\xed FC',True,far post,shot,True,False,False,263804.0,81.32,2.01
+3351,336,32.66,b'Arsenal',True,near post,goal,True,False,True,213661.0,80.37,0.58
+3361,337,56.62,b'FC Augsburg',True,near post,goal,True,False,True,260014.0,46.68,1.33
+3362,337,13.17,b'FC Augsburg',False,penalty spot,foul,False,False,False,262654.0,26.94,16.33
+3363,337,12.66,b'FC Augsburg',False,penalty spot,no outcome,False,False,False,241102.0,14.66,32.07
+3364,337,25.52,b'Bologna',True,far post,clearance,False,True,False,188996.0,83.57,29.71
+3365,337,64.46,b'Bologna',True,far post,shot,True,False,False,256943.0,32.3,1.04
+3371,338,25.67,b'Brighton & Hove Albion',True,penalty spot,clearance,False,True,False,263929.0,34.76,3.76
+3372,338,7.88,b'Benevento',True,far post,clearance,False,True,False,254113.0,1.58,8.52
+3373,338,74.05,b'Benevento',False,near post,foul,False,False,False,254556.0,87.97,18.86
+3381,339,76.57,b'Austria Wien',False,penalty spot,clearance,False,True,False,239580.0,33.63,34.8
+3382,339,11.85,b'FC K\xf6ln',True,penalty spot,foul,False,False,False,220570.0,15.52,32.1
+3383,339,32.94,b'Austria Wien',True,penalty spot,clearance,False,True,False,189242.0,32.5,8.22
+3384,339,49.56,b'FC K\xf6ln',True,far post,shot,True,False,False,231943.0,18.39,6.09
+3391,340,37.76,b'AC Milan',True,near post,clearance,False,True,False,229261.0,63.39,27.42
+3401,341,7.08,b'Cear\xe1',False,near post,clearance,False,True,False,241038.0,72.84,45.89
+3402,341,82.46,b'Cagliari',True,far post,shot,True,False,False,231943.0,1.14,45.95
+3411,342,25.1,b'Aston Villa',True,penalty spot,no outcome,False,False,False,234005.0,57.12,24.25
+3412,342,26.3,b'Newcastle United',False,penalty spot,no outcome,False,False,False,230475.0,26.21,45.94
+3413,342,84.8,b'Aston Villa',True,near post,no outcome,False,False,False,203487.0,32.79,35.22
+3414,342,19.95,b'Aston Villa',True,far post,goal,True,False,True,235883.0,76.62,25.28
+3415,342,10.11,b'Aston Villa',True,near post,shot,True,False,False,245277.0,51.53,28.07
+3421,343,80.47,b'Genoa',False,far post,clearance,False,True,False,234378.0,40.44,49.33
+3422,343,87.66,b'Genoa',True,near post,shot,True,False,False,242660.0,19.13,49.16
+3423,343,11.75,b'Genoa',True,far post,foul,False,False,False,243702.0,77.21,45.35
+3424,343,61.97,b'Genoa',True,penalty spot,clearance,False,True,False,215449.0,13.69,4.0
+3425,343,25.88,b'Genoa',False,far post,shot,True,False,False,260558.0,13.66,15.58
+3431,344,71.34,b'Milan',False,near post,no outcome,False,False,False,224081.0,71.93,35.92
+3432,344,63.81,b'S\xe3o Paulo',True,near post,no outcome,False,False,False,237238.0,30.07,49.16
+3433,344,27.9,b'Milan',True,far post,clearance,False,True,False,235949.0,90.49,22.68
+3441,345,55.49,b'Fortaleza',True,far post,clearance,False,True,False,227638.0,37.47,28.17
+3442,345,80.67,b'Benevento',False,penalty spot,goal,True,False,True,242937.0,48.78,15.83
+3443,345,35.71,b'Fortaleza',True,penalty spot,shot,True,False,False,262384.0,28.06,0.35
+3444,345,43.39,b'Benevento',True,far post,no outcome,False,False,False,169697.0,36.56,45.34
+3445,345,66.42,b'Fortaleza',True,penalty spot,clearance,False,True,False,230190.0,4.91,28.36
+3451,346,26.67,b'Udinese Calcio',False,far post,clearance,False,True,False,233195.0,16.67,0.49
+3452,346,1.72,b'TSG Hoffenheim',False,far post,shot,True,False,False,216258.0,59.1,27.83
+3453,346,84.24,b'Udinese Calcio',True,penalty spot,shot,True,False,False,202849.0,82.34,46.91
+3461,347,59.07,b'SC Paderborn 07',True,far post,shot,True,False,False,221992.0,57.6,30.17
+3462,347,35.14,b'SC Paderborn 07',True,penalty spot,no outcome,False,False,False,193881.0,57.53,36.31
+3471,348,74.05,b'Werder Bremen',False,far post,shot,True,False,False,251809.0,56.81,35.47
+3481,349,18.51,b'Brentford',False,penalty spot,no outcome,False,False,False,230188.0,41.65,44.39
+3482,349,62.17,b'Mattersburg',True,penalty spot,shot,True,False,False,221618.0,73.16,15.59
+3483,349,71.29,b'Mattersburg',False,near post,clearance,False,True,False,265774.0,84.11,37.57
+3491,350,42.89,b'Hertha BSC',True,penalty spot,shot,True,False,False,253473.0,94.0,22.71
+3492,350,25.62,b'Hertha BSC',False,far post,clearance,False,True,False,243856.0,49.43,7.63
+3493,350,87.82,b'Hertha BSC',False,far post,clearance,False,True,False,195272.0,53.7,4.87
+3494,350,78.17,b'Hertha BSC',False,far post,foul,False,False,False,188829.0,93.32,29.15
+3495,350,55.55,b'Brentford',True,near post,shot,True,False,False,222404.0,53.9,22.21
+3501,351,81.04,b'FK Austria Wien',True,near post,no outcome,False,False,False,191011.0,54.56,1.57
+3502,351,55.6,b'FK Austria Wien',True,penalty spot,shot,True,False,False,240938.0,74.78,32.82
+3503,351,66.89,b'Fortuna D\xfcsseldorf',True,near post,foul,False,False,False,170597.0,61.91,20.92
+3511,352,36.78,b'SC Paderborn 07',True,far post,goal,True,False,True,179847.0,56.26,23.29
+3512,352,36.58,b'SC Paderborn 07',True,penalty spot,no outcome,False,False,False,244369.0,49.3,32.94
+3513,352,70.31,b'SC Paderborn 07',True,penalty spot,shot,True,False,False,228332.0,72.77,31.62
+3514,352,73.99,b'Manchester City',True,near post,clearance,False,True,False,244553.0,45.79,0.78
+3521,353,19.26,b'Lazio',False,far post,foul,False,False,False,238196.0,91.07,22.06
+3531,354,85.23,b'FC Bayern M\xfcnchen',False,far post,goal,True,False,True,235073.0,34.36,8.69
+3532,354,12.35,b'Borussia Dortmund',True,far post,no outcome,False,False,False,236898.0,99.2,27.12
+3533,354,33.64,b'FC Bayern M\xfcnchen',True,far post,shot,True,False,False,245537.0,33.22,12.05
+3541,355,60.84,b'Atl\xe9tico Mineiro',True,near post,clearance,False,True,False,228698.0,23.07,9.67
+3542,355,20.01,b'Atl\xe9tico Mineiro',True,penalty spot,shot,True,False,False,235995.0,95.61,38.09
+3543,355,69.17,b'Atl\xe9tico Mineiro',True,penalty spot,foul,False,False,False,253492.0,3.58,11.65
+3551,356,60.69,b'Empoli',True,far post,goal,True,False,True,262171.0,22.54,33.68
+3552,356,84.36,b'Clube Atl\xe9tico Mineiro',True,penalty spot,shot,True,False,False,234028.0,52.37,24.39
+3553,356,14.49,b'Clube Atl\xe9tico Mineiro',False,near post,clearance,False,True,False,245396.0,33.4,4.89
+3561,357,36.32,b'Torino F.C.',False,far post,clearance,False,True,False,257190.0,85.12,14.0
+3571,358,28.2,b'VfL Wolfsburg',True,near post,clearance,False,True,False,230439.0,68.2,28.62
+3572,358,15.73,b'Spezia',True,near post,clearance,False,True,False,224656.0,76.28,35.51
+3573,358,17.3,b'Spezia',True,far post,foul,False,False,False,189730.0,12.57,43.56
+3574,358,31.66,b'Spezia',True,far post,no outcome,False,False,False,266891.0,75.45,12.94
+3575,358,50.9,b'VfL Wolfsburg',True,near post,shot,True,False,False,216283.0,5.46,18.38
+3581,359,24.41,b'Coritiba',True,penalty spot,shot,True,False,False,230631.0,56.95,47.18
+3582,359,28.49,b'Coritiba',True,far post,clearance,False,True,False,230389.0,72.44,34.17
+3583,359,6.03,b'Coritiba',False,near post,shot,True,False,False,268259.0,2.66,7.78
+3584,359,43.17,b'WSG Tirol',True,far post,no outcome,False,False,False,224977.0,17.3,22.7
+3591,360,34.06,b'Torino F.C.',False,far post,clearance,False,True,False,210617.0,72.22,31.29
+3592,360,42.91,b'Torino F.C.',True,far post,foul,False,False,False,271573.0,18.59,24.31
+3601,361,11.22,b'Leeds United',False,near post,foul,False,False,False,203455.0,36.8,30.63
+3602,361,41.36,b'Leeds United',True,near post,no outcome,False,False,False,231028.0,3.33,36.94
+3603,361,80.35,b'Leeds United',True,far post,foul,False,False,False,230278.0,73.46,38.06
+3604,361,22.51,b'Watford',False,far post,no outcome,False,False,False,252318.0,27.18,10.98
+3605,361,69.41,b'Watford',False,far post,no outcome,False,False,False,230372.0,40.47,9.95
+3611,362,19.7,b'VfL Bochum 1848',False,penalty spot,shot,True,False,False,230301.0,59.55,38.41
+3612,362,39.88,b'SK Rapid Wien',True,near post,shot,True,False,False,191076.0,23.69,14.28
+3613,362,8.02,b'SK Rapid Wien',True,far post,clearance,False,True,False,226491.0,61.94,23.92
+3614,362,73.94,b'VfL Bochum 1848',False,far post,foul,False,False,False,233152.0,8.25,14.94
+3621,363,75.85,b'FC Union Berlin',True,penalty spot,clearance,False,True,False,183714.0,75.27,19.69
+3622,363,60.17,b'FC Union Berlin',True,near post,shot,True,False,False,203315.0,94.98,37.46
+3623,363,61.85,b'FC Union Berlin',True,penalty spot,clearance,False,True,False,200647.0,49.2,14.22
+3624,363,26.82,b'FC Union Berlin',True,penalty spot,goal,True,False,True,242937.0,51.74,24.22
+3625,363,42.74,b'Goi\xe1s',True,penalty spot,no outcome,False,False,False,221354.0,45.76,23.61
+3631,364,15.7,b'FC K\xf6ln',False,near post,no outcome,False,False,False,243510.0,47.08,18.52
+3641,365,56.97,b'West Bromwich Albion',True,near post,no outcome,False,False,False,216267.0,68.71,21.95
+3642,365,35.64,b'West Bromwich Albion',False,near post,no outcome,False,False,False,235360.0,29.48,13.77
+3651,366,37.48,b'FC Red Bull Salzburg',True,penalty spot,shot,True,False,False,250723.0,86.54,33.62
+3652,366,79.21,b'FC Red Bull Salzburg',True,near post,shot,True,False,False,257195.0,52.48,10.09
+3653,366,58.77,b'Milan',False,far post,goal,True,False,True,256832.0,53.81,38.88
+3661,367,48.51,b'TSG Hoffenheim',False,penalty spot,no outcome,False,False,False,230529.0,14.0,14.99
+3671,368,82.98,b'Fulham',False,near post,clearance,False,True,False,207862.0,36.61,40.09
+3672,368,41.9,b'Torino F.C.',False,penalty spot,goal,True,False,True,225145.0,2.67,10.74
+3673,368,81.45,b'Torino F.C.',True,penalty spot,shot,True,False,False,201891.0,91.94,12.59
+3674,368,44.72,b'Fulham',True,far post,shot,True,False,False,203486.0,7.46,3.93
+3681,369,18.8,b'1. FC K\xf6ln',True,near post,foul,False,False,False,233064.0,19.03,36.44
+3682,369,73.92,b'FC Schalke 04',True,far post,shot,True,False,False,268259.0,45.33,2.56
+3683,369,26.23,b'1. FC K\xf6ln',False,far post,clearance,False,True,False,270209.0,16.35,1.55
+3691,370,28.82,b'FC Flyeralarm Admira',True,far post,shot,True,False,False,230268.0,63.62,17.96
+3692,370,87.88,b'Atl\xe9tico Mineiro',False,far post,shot,True,False,False,259403.0,16.76,19.18
+3701,371,87.46,b'FC Union Berlin',True,penalty spot,shot,True,False,False,248060.0,8.79,5.27
+3711,372,72.38,b'FC Augsburg',True,far post,no outcome,False,False,False,201931.0,49.27,20.22
+3712,372,63.38,b'FC Augsburg',True,near post,no outcome,False,False,False,205812.0,45.0,48.6
+3713,372,64.14,b'FC Augsburg',False,near post,no outcome,False,False,False,205452.0,29.53,45.07
+3721,373,49.0,b'Norwich City',True,near post,shot,True,False,False,189237.0,0.65,35.32
+3722,373,61.63,b'Cear\xe1 Sporting Club',True,far post,clearance,False,True,False,207894.0,92.05,12.59
+3723,373,23.06,b'Cear\xe1 Sporting Club',False,far post,clearance,False,True,False,230274.0,18.25,21.88
+3724,373,45.28,b'Norwich City',True,far post,shot,True,False,False,230356.0,4.86,16.94
+3731,374,63.03,b'Leeds United',True,far post,clearance,False,True,False,230465.0,1.33,4.31
+3732,374,16.14,b'Leeds United',True,far post,clearance,False,True,False,257618.0,61.15,27.14
+3733,374,34.82,b'Leeds United',True,far post,clearance,False,True,False,231028.0,35.52,33.49
+3734,374,80.68,b'Leeds United',False,penalty spot,foul,False,False,False,268632.0,17.4,31.81
+3735,374,28.49,b'Leeds United',False,near post,goal,True,False,True,189908.0,4.44,46.0
+3741,375,73.58,b'Shakhtar Donetsk',True,near post,no outcome,False,False,False,139062.0,95.93,49.23
+3742,375,37.29,b'FSV Mainz 05',True,near post,shot,True,False,False,223641.0,81.87,1.74
+3751,376,9.93,b'SpVgg Greuther F\xfcrth',True,penalty spot,foul,False,False,False,210406.0,65.95,41.9
+3752,376,27.99,b'SpVgg Greuther F\xfcrth',False,penalty spot,clearance,False,True,False,256197.0,62.78,37.35
+3761,377,83.53,b'Sampdoria',False,near post,clearance,False,True,False,221768.0,32.92,15.68
+3762,377,6.57,b'Sampdoria',True,penalty spot,clearance,False,True,False,270907.0,84.24,26.24
+3763,377,18.75,b'Rheindorf Altach',True,penalty spot,clearance,False,True,False,235022.0,30.46,24.32
+3771,378,62.53,b'Fiorentina',True,near post,goal,True,False,True,223641.0,81.76,11.06
+3781,379,28.35,b'Genoa',True,penalty spot,shot,True,False,False,211117.0,7.17,28.22
+3782,379,29.49,b'SpVgg Greuther F\xfcrth',False,penalty spot,clearance,False,True,False,265188.0,50.23,26.88
+3783,379,12.43,b'SpVgg Greuther F\xfcrth',False,near post,clearance,False,True,False,262637.0,24.14,33.45
+3784,379,78.96,b'SpVgg Greuther F\xfcrth',False,near post,shot,True,False,False,252961.0,69.71,0.76
+3791,380,65.88,b'Wolverhampton Wanderers',False,penalty spot,foul,False,False,False,201995.0,61.4,18.87
+3801,381,66.62,b'Liverpool',False,near post,clearance,False,True,False,224294.0,74.32,13.99
+3811,382,61.86,b'Sampdoria',True,far post,goal,True,False,True,256118.0,28.81,3.49
+3812,382,31.48,b'Austria Wien',True,far post,no outcome,False,False,False,211575.0,33.15,43.15
+3821,383,29.42,b'Lokomotiv Moskva',False,penalty spot,goal,True,False,True,226851.0,32.98,20.76
+3822,383,65.86,b'Lokomotiv Moskva',True,near post,clearance,False,True,False,214459.0,94.52,4.6
+3823,383,21.83,b'S\xe3o Paulo',False,far post,clearance,False,True,False,184344.0,34.91,26.61
+3824,383,39.27,b'S\xe3o Paulo',False,near post,clearance,False,True,False,255654.0,49.92,9.68
+3831,384,51.11,b'Bragantino',True,far post,foul,False,False,False,256675.0,42.3,40.77
+3841,385,33.02,b'Santos',True,penalty spot,clearance,False,True,False,239138.0,99.18,42.45
+3842,385,26.16,b'Santos',False,penalty spot,foul,False,False,False,231447.0,56.81,0.33
+3851,386,34.89,b'SK Rapid Wien',True,near post,goal,True,False,True,207494.0,10.45,40.87
+3852,386,67.49,b'Genoa',True,near post,clearance,False,True,False,192505.0,21.9,13.92
+3853,386,74.01,b'SK Rapid Wien',False,near post,clearance,False,True,False,230482.0,23.11,37.92
+3854,386,69.47,b'Genoa',True,near post,clearance,False,True,False,198329.0,63.75,31.32
+3861,387,51.46,b'Coritiba',False,far post,foul,False,False,False,224494.0,66.83,36.13
+3871,388,16.38,b'Hellas Verona',False,near post,clearance,False,True,False,267867.0,64.97,30.44
+3872,388,68.88,b'Paderborn',True,penalty spot,clearance,False,True,False,205897.0,62.93,34.41
+3873,388,84.69,b'Paderborn',False,far post,no outcome,False,False,False,265782.0,29.83,23.89
+3874,388,39.84,b'Paderborn',True,far post,no outcome,False,False,False,234143.0,45.95,47.17
+3875,388,62.91,b'Hellas Verona',True,penalty spot,clearance,False,True,False,193337.0,77.11,4.91
+3881,389,80.2,b'SK Sturm Graz',True,penalty spot,clearance,False,True,False,216145.0,20.83,11.42
+3882,389,69.06,b'Everton',True,far post,shot,True,False,False,230183.0,77.38,32.04
+3883,389,7.11,b'Everton',True,near post,clearance,False,True,False,207599.0,21.52,11.75
+3884,389,35.51,b'Everton',True,far post,clearance,False,True,False,230396.0,18.04,31.36
+3885,389,16.89,b'Everton',True,near post,clearance,False,True,False,234249.0,50.13,4.47
+3891,390,21.35,b'Flamengo',True,penalty spot,clearance,False,True,False,266127.0,69.46,22.21
+3892,390,2.27,b'Centro Sportivo Alagoano',True,near post,goal,True,False,True,224836.0,16.62,3.93
+3901,391,17.81,b'Gr\xeamio',True,penalty spot,goal,True,False,True,230299.0,5.6,34.94
+3902,391,72.81,b'Corinthians',False,penalty spot,clearance,False,True,False,230501.0,78.12,17.9
+3911,392,35.02,b'U.C. Sampdoria',False,near post,goal,True,False,True,240319.0,3.61,23.95
+3912,392,71.24,b'SV Werder Bremen',True,penalty spot,foul,False,False,False,230512.0,27.79,38.65
+3913,392,16.93,b'U.C. Sampdoria',False,near post,no outcome,False,False,False,204760.0,8.41,15.63
+3914,392,32.81,b'U.C. Sampdoria',False,far post,foul,False,False,False,198784.0,43.89,45.67
+3921,393,30.73,b'Juventus',False,far post,shot,True,False,False,240926.0,33.56,23.88
+3922,393,9.86,b'Juventus',False,penalty spot,clearance,False,True,False,195365.0,28.8,37.37
+3923,393,37.0,b'Everton',True,far post,clearance,False,True,False,213345.0,87.73,11.03
+3924,393,46.24,b'Everton',False,far post,clearance,False,True,False,244087.0,69.05,4.0
+3931,394,67.25,b'Ried',True,penalty spot,clearance,False,True,False,269951.0,45.32,8.78
+3932,394,6.08,b'Ried',True,near post,shot,True,False,False,242656.0,33.07,24.72
+3933,394,56.92,b'Flamengo',False,penalty spot,shot,True,False,False,206654.0,20.78,27.62
+3934,394,72.49,b'Flamengo',False,near post,shot,True,False,False,196978.0,75.96,47.1
+3941,395,81.37,b'FC Schalke 04',False,near post,foul,False,False,False,230510.0,2.48,19.63
+3942,395,57.26,b'FC Schalke 04',False,penalty spot,shot,True,False,False,210474.0,81.65,29.64
+3951,396,33.84,b'VfB Stuttgart',True,far post,clearance,False,True,False,244269.0,64.08,0.02
+3952,396,57.13,b'VfB Stuttgart',True,far post,foul,False,False,False,265185.0,9.75,28.52
+3953,396,33.1,b'Corinthians',False,near post,shot,True,False,False,242656.0,29.03,19.39
+3954,396,19.77,b'Corinthians',True,far post,shot,True,False,False,184941.0,36.96,42.27
+3961,397,82.1,b'West Ham United',False,far post,no outcome,False,False,False,210697.0,91.31,35.96
+3962,397,88.33,b'Salernitana',False,near post,goal,True,False,True,240100.0,13.98,37.14
+3963,397,66.34,b'Salernitana',False,penalty spot,shot,True,False,False,223641.0,65.47,21.49
+3964,397,84.55,b'Salernitana',True,near post,goal,True,False,True,210635.0,21.35,4.12
+3971,398,89.61,b'Chapecoense',False,penalty spot,clearance,False,True,False,253122.0,8.03,13.74
+3972,398,70.56,b'Chapecoense',False,penalty spot,foul,False,False,False,221885.0,65.73,13.69
+3981,399,53.42,b'Club Athletico Paranaense',True,far post,clearance,False,True,False,233977.0,34.26,2.74
+3991,400,78.01,b'FC Flyeralarm Admira',False,near post,clearance,False,True,False,265588.0,40.91,3.13
+3992,400,77.73,b'U.C. Sampdoria',True,near post,goal,True,False,True,269454.0,99.77,9.99
+3993,400,49.25,b'U.C. Sampdoria',True,near post,clearance,False,True,False,205850.0,19.58,44.58
+3994,400,66.08,b'U.C. Sampdoria',True,penalty spot,shot,True,False,False,201046.0,22.92,31.74
+3995,400,19.12,b'U.C. Sampdoria',False,penalty spot,shot,True,False,False,168435.0,81.03,15.71
+4001,401,60.72,b'SK Rapid Wien',False,penalty spot,shot,True,False,False,253729.0,1.68,15.36
+4011,402,58.69,b'RB Leipzig',True,near post,shot,True,False,False,237297.0,31.0,11.39
+4012,402,66.45,b'RB Leipzig',True,far post,clearance,False,True,False,265576.0,69.93,25.53
+4013,402,6.36,b'Crotone',True,near post,goal,True,False,True,263272.0,1.28,19.18
+4014,402,33.37,b'Crotone',False,far post,no outcome,False,False,False,242530.0,52.04,28.44
+4015,402,78.5,b'Crotone',False,penalty spot,no outcome,False,False,False,230325.0,71.58,44.02
+4021,403,81.06,b'Paderborn',False,penalty spot,clearance,False,True,False,263380.0,67.09,12.83
+4022,403,62.53,b'Internacional',False,far post,no outcome,False,False,False,220633.0,57.72,16.81
+4031,404,14.07,b'VfB Stuttgart',False,penalty spot,no outcome,False,False,False,251453.0,86.75,16.64
+4032,404,11.65,b'S\xe3o Paulo',True,far post,no outcome,False,False,False,258042.0,26.82,20.96
+4033,404,46.63,b'S\xe3o Paulo',True,penalty spot,clearance,False,True,False,201118.0,55.73,24.27
+4034,404,1.87,b'S\xe3o Paulo',False,far post,goal,True,False,True,230341.0,56.63,28.5
+4035,404,13.54,b'VfB Stuttgart',True,near post,clearance,False,True,False,222560.0,7.85,44.78
+4041,405,1.55,b'FC Union Berlin',True,far post,clearance,False,True,False,205995.0,2.39,14.93
+4042,405,77.0,b'Atalanta',False,penalty spot,no outcome,False,False,False,248185.0,49.25,33.91
+4043,405,64.03,b'Atalanta',False,near post,shot,True,False,False,268081.0,81.48,34.49
+4044,405,85.06,b'Atalanta',True,penalty spot,clearance,False,True,False,230369.0,16.96,40.05
+4051,406,1.88,b'Torino F.C.',True,near post,shot,True,False,False,230245.0,75.5,17.32
+4061,407,24.84,b'FC Red Bull Salzburg',False,penalty spot,shot,True,False,False,216380.0,82.1,25.93
+4062,407,51.54,b'FC Red Bull Salzburg',False,far post,foul,False,False,False,243849.0,80.71,4.87
+4071,408,30.97,b'Bahia',False,far post,goal,True,False,True,253482.0,47.42,2.58
+4072,408,7.03,b'Bahia',True,far post,shot,True,False,False,201389.0,26.71,38.34
+4081,409,69.78,b'Napoli',False,far post,clearance,False,True,False,228708.0,14.4,38.57
+4082,409,71.11,b'Napoli',True,near post,shot,True,False,False,244369.0,82.48,45.68
+4083,409,70.74,b'Napoli',True,near post,clearance,False,True,False,265789.0,60.01,28.17
+4084,409,6.89,b'FC Union Berlin',True,near post,clearance,False,True,False,221269.0,72.09,29.8
+4085,409,88.54,b'Napoli',True,far post,clearance,False,True,False,220421.0,21.49,16.32
+4091,410,29.98,b'SC Freiburg',True,near post,clearance,False,True,False,227497.0,10.71,48.14
+4092,410,44.5,b'SC Paderborn 07',False,far post,clearance,False,True,False,258171.0,50.11,25.88
+4093,410,38.24,b'SC Paderborn 07',False,near post,foul,False,False,False,267782.0,7.28,30.14
+4094,410,43.3,b'SC Freiburg',False,penalty spot,shot,True,False,False,231633.0,10.12,27.29
+4095,410,50.01,b'SC Freiburg',True,penalty spot,clearance,False,True,False,190778.0,6.32,38.03
+4101,411,29.4,b'Benevento',True,near post,goal,True,False,True,230240.0,40.34,4.9
+4102,411,65.07,b'Benevento',False,near post,no outcome,False,False,False,186905.0,14.25,43.15
+4111,412,21.55,b'Fortaleza',False,far post,shot,True,False,False,256666.0,18.58,27.1
+4112,412,89.22,b'Fortaleza',True,near post,no outcome,False,False,False,257176.0,6.03,25.69
+4113,412,15.47,b'Fortaleza',True,penalty spot,clearance,False,True,False,259214.0,27.71,12.17
+4114,412,45.63,b'Fortaleza',False,near post,clearance,False,True,False,220491.0,35.31,2.94
+4121,413,41.81,b'FC Lokomotiv Moscow',False,penalty spot,clearance,False,True,False,229857.0,54.14,36.05
+4122,413,22.93,b'FC Lokomotiv Moscow',True,penalty spot,no outcome,False,False,False,192883.0,38.48,8.74
+4123,413,55.48,b'SK Sturm Graz',True,penalty spot,foul,False,False,False,258505.0,25.81,44.91
+4131,414,20.18,b'Monza',True,far post,foul,False,False,False,230354.0,95.77,49.86
+4132,414,35.78,b'SK Rapid Wien',True,penalty spot,foul,False,False,False,193786.0,1.68,9.76
+4133,414,74.1,b'SK Rapid Wien',True,penalty spot,shot,True,False,False,104389.0,6.22,31.19
+4141,415,68.52,b'Spezia',True,far post,foul,False,False,False,192612.0,17.0,24.24
+4142,415,72.99,b'Eintracht Frankfurt',False,near post,shot,True,False,False,221768.0,16.41,18.01
+4143,415,41.38,b'Spezia',True,penalty spot,shot,True,False,False,238216.0,15.02,45.66
+4144,415,25.93,b'Eintracht Frankfurt',False,far post,shot,True,False,False,234016.0,73.63,33.25
+4145,415,42.56,b'Eintracht Frankfurt',True,far post,shot,True,False,False,264215.0,10.69,5.79
+4151,416,16.1,b'Norwich City',True,far post,shot,True,False,False,230938.0,47.86,10.83
+4152,416,17.28,b'Norwich City',True,near post,shot,True,False,False,256630.0,49.29,19.82
+4153,416,80.94,b'Norwich City',False,penalty spot,clearance,False,True,False,228251.0,65.96,29.0
+4161,417,6.35,b'Austria Wien',True,far post,clearance,False,True,False,244263.0,17.97,24.77
+4162,417,9.02,b'Austria Wien',True,penalty spot,goal,True,False,True,258648.0,90.75,23.15
+4171,418,59.58,b'Burnley',True,far post,goal,True,False,True,257299.0,87.99,30.78
+4172,418,82.41,b'Burnley',False,near post,goal,True,False,True,189177.0,69.13,28.88
+4173,418,15.42,b'Burnley',True,near post,clearance,False,True,False,224389.0,28.17,0.98
+4181,419,29.59,b'SPAL',False,penalty spot,clearance,False,True,False,264383.0,71.74,10.37
+4182,419,53.38,b'SPAL',False,far post,shot,True,False,False,224263.0,14.87,35.48
+4183,419,32.92,b'Burnley',True,near post,shot,True,False,False,244470.0,56.74,6.45
+4184,419,68.47,b'Burnley',False,penalty spot,goal,True,False,True,226129.0,58.26,39.68
+4185,419,38.34,b'SPAL',True,penalty spot,goal,True,False,True,215441.0,36.62,46.86
+4191,420,83.07,b'Rapid Vienna',False,far post,shot,True,False,False,239978.0,10.11,2.52
+4201,421,39.5,b'Schalke 04',False,far post,clearance,False,True,False,220633.0,34.13,10.67
+4202,421,9.07,b'VfL Wolfsburg',True,penalty spot,clearance,False,True,False,230258.0,4.32,33.07
+4211,422,44.38,b'Flamengo',False,far post,goal,True,False,True,230323.0,89.17,46.79
+4212,422,84.0,b'Flamengo',False,penalty spot,clearance,False,True,False,232081.0,47.46,8.39
+4213,422,78.99,b'Cear\xe1 Sporting Club',True,penalty spot,goal,True,False,True,222553.0,39.29,6.63
+4214,422,11.97,b'Cear\xe1 Sporting Club',False,near post,foul,False,False,False,266644.0,56.8,21.15
+4221,423,21.19,b'Wolfsberger AC',True,penalty spot,shot,True,False,False,256281.0,24.49,23.36
+4222,423,8.69,b'Coritiba',False,far post,goal,True,False,True,271954.0,17.02,44.64
+4231,424,71.4,b'Manchester City',True,penalty spot,shot,True,False,False,259101.0,22.31,4.43
+4241,425,7.57,b'Borussia M\xf6nchengladbach',True,penalty spot,foul,False,False,False,208830.0,41.92,20.36
+4242,425,71.57,b'Cear\xe1 Sporting Club',False,far post,shot,True,False,False,208920.0,36.61,19.88
+4243,425,89.22,b'Cear\xe1 Sporting Club',True,far post,shot,True,False,False,222546.0,63.65,48.33
+4244,425,61.54,b'Cear\xe1 Sporting Club',True,penalty spot,clearance,False,True,False,243702.0,55.38,39.93
+4245,425,75.05,b'Borussia M\xf6nchengladbach',False,far post,goal,True,False,True,263104.0,77.48,12.62
+4251,426,40.26,b'Leeds United',True,near post,clearance,False,True,False,230211.0,96.38,45.85
+4252,426,11.93,b'Leeds United',True,penalty spot,clearance,False,True,False,205850.0,18.19,8.06
+4253,426,7.41,b'Leeds United',True,near post,clearance,False,True,False,235840.0,62.2,8.01
+4254,426,40.56,b'Leeds United',True,near post,clearance,False,True,False,194146.0,8.87,19.68
+4255,426,52.23,b'Leeds United',True,penalty spot,shot,True,False,False,226093.0,49.46,49.35
+4261,427,69.15,b'Salernitana',False,near post,clearance,False,True,False,203751.0,41.41,2.69
+4262,427,19.87,b'Orlando Pirates',True,penalty spot,shot,True,False,False,180819.0,74.91,25.48
+4263,427,7.8,b'Salernitana',True,near post,clearance,False,True,False,206085.0,12.5,5.69
+4264,427,32.0,b'Orlando Pirates',True,near post,clearance,False,True,False,230416.0,67.98,42.53
+4265,427,43.32,b'Salernitana',True,near post,no outcome,False,False,False,271196.0,2.95,24.91
+4271,428,30.2,b'Arsenal',True,near post,clearance,False,True,False,235026.0,6.62,49.81
+4272,428,89.47,b'Arsenal',True,penalty spot,clearance,False,True,False,230196.0,90.39,42.1
+4281,429,42.62,b'Santos',False,penalty spot,clearance,False,True,False,226162.0,6.98,3.81
+4291,430,8.58,b'Bayer 04 Leverkusen',True,penalty spot,clearance,False,True,False,193264.0,85.26,8.39
+4292,430,37.73,b'Bayer 04 Leverkusen',False,far post,goal,True,False,True,230260.0,93.86,5.18
+4293,430,83.54,b'TSG Hoffenheim',False,near post,foul,False,False,False,230526.0,5.57,41.97
+4294,430,3.38,b'Bayer 04 Leverkusen',False,near post,foul,False,False,False,264505.0,8.0,32.43
+4295,430,11.61,b'TSG Hoffenheim',True,near post,shot,True,False,False,234777.0,68.18,45.37
+4301,431,17.62,b'Associa\xe7\xe3o Chapecoense de Futebol',False,penalty spot,clearance,False,True,False,263093.0,62.45,6.45
+4311,432,65.04,b'Botafogo',True,penalty spot,shot,True,False,False,177129.0,73.23,17.6
+4312,432,19.92,b'Botafogo',True,near post,shot,True,False,False,258513.0,76.16,17.75
+4313,432,26.66,b'Associa\xe7\xe3o Chapecoense de Futebol',True,near post,clearance,False,True,False,228997.0,32.73,41.17
+4314,432,26.66,b'Associa\xe7\xe3o Chapecoense de Futebol',False,penalty spot,clearance,False,True,False,205569.0,27.57,44.15
+4315,432,70.27,b'Botafogo',False,far post,no outcome,False,False,False,233794.0,29.15,18.56
+4321,433,33.85,b'Bologna',True,penalty spot,shot,True,False,False,192449.0,23.64,9.25
+4322,433,75.91,b'Internacional',False,near post,shot,True,False,False,240709.0,80.77,24.03
+4323,433,64.05,b'Bologna',True,penalty spot,clearance,False,True,False,264692.0,10.64,33.8
+4324,433,8.09,b'Bologna',False,far post,shot,True,False,False,230329.0,52.09,35.95
+4325,433,86.6,b'Bologna',False,penalty spot,clearance,False,True,False,255874.0,49.04,11.85
+4331,434,35.16,b'Leicester City',True,near post,shot,True,False,False,198352.0,82.66,7.66
+4332,434,1.08,b'Fortaleza',True,far post,no outcome,False,False,False,237003.0,49.28,43.32
+4333,434,65.83,b'Leicester City',False,penalty spot,clearance,False,True,False,253167.0,46.08,25.24
+4334,434,8.22,b'Leicester City',True,penalty spot,no outcome,False,False,False,241038.0,18.54,23.11
+4335,434,23.66,b'Fortaleza',True,penalty spot,clearance,False,True,False,216145.0,77.74,38.04
+4341,435,21.37,b'Ried',True,far post,no outcome,False,False,False,246750.0,94.51,9.25
+4342,435,74.33,b'Fluminense',False,far post,clearance,False,True,False,260247.0,53.32,21.75
+4343,435,6.83,b'Ried',False,penalty spot,clearance,False,True,False,263130.0,65.1,23.31
+4344,435,4.36,b'Ried',True,near post,foul,False,False,False,179844.0,90.68,22.6
+4345,435,85.78,b'Ried',True,far post,clearance,False,True,False,230899.0,78.62,5.17
+4351,436,69.02,b'Crotone',True,penalty spot,goal,True,False,True,216354.0,67.99,44.09
+4352,436,35.35,b'Sheffield United',False,far post,shot,True,False,False,230214.0,44.06,33.41
+4353,436,11.49,b'Sheffield United',False,penalty spot,shot,True,False,False,231111.0,30.61,23.72
+4354,436,56.65,b'Crotone',True,penalty spot,foul,False,False,False,271548.0,21.67,38.37
+4355,436,72.27,b'Crotone',False,far post,clearance,False,True,False,232130.0,20.21,33.03
+4361,437,31.27,b'Lokomotiv Moskva',True,near post,shot,True,False,False,268421.0,40.0,10.78
+4362,437,71.6,b'Lokomotiv Moskva',False,far post,shot,True,False,False,230458.0,56.67,49.82
+4363,437,77.43,b'AFC Bournemouth',True,penalty spot,no outcome,False,False,False,177404.0,71.31,12.86
+4364,437,64.87,b'Lokomotiv Moskva',True,near post,foul,False,False,False,263038.0,98.86,46.35
+4371,438,49.91,b'Everton',True,far post,clearance,False,True,False,242386.0,82.28,32.23
+4372,438,65.21,b'Everton',True,near post,shot,True,False,False,237594.0,77.52,13.26
+4381,439,1.37,b'Torino',False,penalty spot,shot,True,False,False,269402.0,10.12,37.38
+4391,440,8.85,b'Udinese',True,near post,foul,False,False,False,238569.0,46.33,43.62
+4401,441,73.27,b'Manchester City',False,far post,goal,True,False,True,230507.0,90.85,20.48
+4411,442,6.34,b'S\xe3o Paulo',True,penalty spot,shot,True,False,False,210537.0,17.77,13.67
+4412,442,17.96,b'Newcastle United',True,penalty spot,clearance,False,True,False,210475.0,96.72,35.98
+4413,442,84.53,b'S\xe3o Paulo',False,penalty spot,clearance,False,True,False,247257.0,68.73,0.82
+4414,442,75.73,b'Newcastle United',False,near post,clearance,False,True,False,234147.0,77.63,2.15
+4421,443,77.18,b'SC Paderborn 07',False,near post,clearance,False,True,False,212419.0,33.61,3.97
+4422,443,38.04,b'FC Flyeralarm Admira',True,far post,clearance,False,True,False,270097.0,42.46,17.95
+4423,443,59.11,b'FC Flyeralarm Admira',True,near post,shot,True,False,False,192984.0,34.18,2.07
+4424,443,37.55,b'SC Paderborn 07',False,near post,goal,True,False,True,272450.0,11.42,26.39
+4425,443,88.33,b'FC Flyeralarm Admira',True,penalty spot,clearance,False,True,False,268271.0,52.06,29.89
+4431,444,2.31,b'Am\xe9rica Mineiro',True,penalty spot,clearance,False,True,False,188943.0,59.66,36.99
+4432,444,52.64,b'Lokomotiv Moskva',False,penalty spot,goal,True,False,True,230214.0,48.08,25.96
+4441,445,5.86,b'VfL Wolfsburg',True,near post,clearance,False,True,False,247601.0,89.84,9.44
+4442,445,34.49,b'Sheffield United',True,far post,shot,True,False,False,234889.0,7.91,39.9
+4443,445,27.6,b'VfL Wolfsburg',False,far post,clearance,False,True,False,216380.0,64.33,5.4
+4451,446,49.89,b'Brighton & Hove Albion',True,penalty spot,shot,True,False,False,211618.0,29.82,26.25
+4452,446,41.81,b'Brighton & Hove Albion',True,penalty spot,shot,True,False,False,230234.0,69.84,7.98
+4453,446,48.81,b'Sampdoria',False,near post,shot,True,False,False,234333.0,86.2,25.62
+4454,446,11.19,b'Sampdoria',False,far post,shot,True,False,False,259721.0,38.76,32.47
+4461,447,47.22,b'Orlando Pirates',False,penalty spot,goal,True,False,True,208421.0,15.78,0.6
+4462,447,13.48,b'Orlando Pirates',False,far post,clearance,False,True,False,230469.0,89.7,5.35
+4471,448,57.52,b'Hartberg',False,far post,clearance,False,True,False,248823.0,73.21,20.69
+4472,448,28.69,b'Hartberg',True,near post,shot,True,False,False,250955.0,66.02,45.03
+4481,449,16.05,b'FC Flyeralarm Admira',True,penalty spot,goal,True,False,True,180818.0,66.46,22.26
+4491,450,76.5,b'Sheffield United',True,penalty spot,clearance,False,True,False,194957.0,20.34,26.72
+4492,450,25.33,b'Sheffield United',False,near post,goal,True,False,True,254807.0,88.37,21.42
+4493,450,13.76,b'Brentford',False,far post,foul,False,False,False,262638.0,88.17,25.96
+4494,450,74.56,b'Brentford',True,far post,clearance,False,True,False,261032.0,80.0,47.38
+4501,451,72.52,b'Torino F.C.',False,far post,foul,False,False,False,229261.0,96.45,23.43
+4511,452,54.01,b'Inter',True,far post,clearance,False,True,False,211394.0,85.89,3.55
+4521,453,74.78,b'VfL Bochum 1848',False,far post,clearance,False,True,False,271199.0,34.28,8.06
+4531,454,26.59,b'FC Union Berlin',False,near post,clearance,False,True,False,246863.0,80.11,47.61
+4541,455,27.53,b'SPAL',True,near post,goal,True,False,True,185144.0,57.39,49.32
+4542,455,3.33,b'Crotone',True,far post,clearance,False,True,False,215914.0,13.59,21.91
+4543,455,24.97,b'SPAL',True,penalty spot,foul,False,False,False,209957.0,36.85,11.16
+4544,455,3.32,b'SPAL',True,penalty spot,clearance,False,True,False,230206.0,32.43,11.49
+4551,456,78.14,b'Cremonese',True,near post,no outcome,False,False,False,252060.0,28.03,31.87
+4561,457,74.6,b'Botafogo',True,near post,foul,False,False,False,182528.0,10.7,46.81
+4562,457,7.56,b'Botafogo',False,penalty spot,shot,True,False,False,264692.0,18.04,19.7
+4563,457,57.49,b'FC K\xf6ln',False,penalty spot,clearance,False,True,False,239189.0,12.62,18.98
+4564,457,16.86,b'Botafogo',True,near post,clearance,False,True,False,211891.0,23.14,0.73
+4571,458,80.47,b'VfL Bochum 1848',False,penalty spot,clearance,False,True,False,230203.0,78.85,28.51
+4572,458,66.21,b'Liverpool',True,penalty spot,shot,True,False,False,270911.0,3.93,1.61
+4581,459,6.19,b'Crotone',True,far post,shot,True,False,False,260924.0,83.91,18.31
+4582,459,66.45,b'Crotone',False,far post,goal,True,False,True,213689.0,50.86,10.33
+4583,459,19.09,b'SK Sturm Graz',False,penalty spot,clearance,False,True,False,228562.0,23.54,20.42
+4591,460,42.16,b'Botafogo',False,penalty spot,clearance,False,True,False,230183.0,49.07,41.18
+4592,460,45.09,b'Bologna',True,far post,shot,True,False,False,222553.0,41.26,4.15
+4601,461,80.55,b'Cremonese',False,penalty spot,goal,True,False,True,178005.0,49.21,23.83
+4611,462,9.46,b'Shakhtar Donetsk',True,near post,clearance,False,True,False,242068.0,41.56,11.46
+4612,462,47.08,b'Shakhtar Donetsk',True,penalty spot,shot,True,False,False,239696.0,99.46,6.58
+4613,462,87.7,b'Brentford',True,far post,shot,True,False,False,210257.0,51.56,10.64
+4621,463,35.94,b'Bahia',True,near post,clearance,False,True,False,194404.0,14.17,24.62
+4622,463,29.26,b'Bahia',False,near post,shot,True,False,False,230266.0,62.78,36.18
+4623,463,68.8,b'Bahia',True,far post,clearance,False,True,False,251401.0,63.85,33.86
+4624,463,38.78,b'FC Union Berlin',True,penalty spot,clearance,False,True,False,242202.0,93.09,9.18
+4625,463,1.5,b'FC Union Berlin',False,near post,clearance,False,True,False,201118.0,72.48,13.14
+4631,464,35.88,b'Vasco da Gama',True,near post,clearance,False,True,False,223697.0,81.41,5.3
+4632,464,12.38,b'Vasco da Gama',True,far post,shot,True,False,False,221885.0,45.6,0.15
+4633,464,7.84,b'Vasco da Gama',False,near post,shot,True,False,False,238616.0,97.08,46.13
+4634,464,21.6,b'Milan',False,near post,shot,True,False,False,225206.0,13.17,45.36
+4635,464,70.35,b'Vasco da Gama',False,penalty spot,clearance,False,True,False,255507.0,38.39,28.6
+4641,465,29.92,b'Southampton',True,far post,shot,True,False,False,230005.0,43.72,16.05
+4651,466,21.44,b'Hartberg',True,far post,shot,True,False,False,239231.0,79.38,42.29
+4652,466,55.35,b'S\xe3o Paulo',True,penalty spot,foul,False,False,False,177129.0,5.46,19.09
+4653,466,78.66,b'Hartberg',False,far post,clearance,False,True,False,177413.0,32.35,49.45
+4661,467,65.21,b'S\xe3o Paulo',False,near post,clearance,False,True,False,230412.0,15.03,35.73
+4662,467,81.18,b'S\xe3o Paulo',True,far post,shot,True,False,False,193331.0,92.36,17.63
+4671,468,32.37,b'U.C. Sampdoria',True,near post,clearance,False,True,False,201144.0,71.14,37.84
+4672,468,25.67,b'Udinese Calcio',False,near post,clearance,False,True,False,242364.0,67.76,43.98
+4673,468,81.01,b'Udinese Calcio',False,far post,foul,False,False,False,211818.0,75.04,43.64
+4674,468,79.76,b'U.C. Sampdoria',True,penalty spot,shot,True,False,False,193277.0,82.25,49.13
+4681,469,89.79,b'Borussia M\xf6nchengladbach',True,near post,clearance,False,True,False,230176.0,45.01,39.2
+4682,469,7.76,b'Borussia M\xf6nchengladbach',False,far post,foul,False,False,False,265464.0,69.54,43.37
+4683,469,73.06,b'SK Rapid Wien',True,penalty spot,shot,True,False,False,257075.0,2.6,35.93
+4684,469,24.01,b'SK Rapid Wien',False,near post,shot,True,False,False,171490.0,70.99,15.71
+4685,469,37.1,b'SK Rapid Wien',True,penalty spot,clearance,False,True,False,239231.0,65.44,30.16
+4691,470,1.2,b'Coritiba',False,near post,clearance,False,True,False,253452.0,52.21,49.72
+4692,470,2.74,b'Coritiba',True,far post,goal,True,False,True,190460.0,5.4,6.58
+4693,470,74.58,b'SK Sturm Graz',True,near post,shot,True,False,False,230266.0,8.55,31.83
+4694,470,22.4,b'SK Sturm Graz',False,far post,clearance,False,True,False,263486.0,74.4,45.63
+4695,470,32.91,b'SK Sturm Graz',True,near post,foul,False,False,False,177475.0,7.74,22.47
+4701,471,55.27,b'FK Austria Wien',True,far post,no outcome,False,False,False,230260.0,53.07,21.41
+4711,472,75.02,b'Torino',True,penalty spot,goal,True,False,True,212626.0,45.64,42.86
+4712,472,63.88,b'Atl\xe9tico Mineiro',False,far post,shot,True,False,False,257618.0,42.47,19.1
+4713,472,1.89,b'Torino',True,far post,goal,True,False,True,255040.0,79.71,35.1
+4714,472,67.24,b'Atl\xe9tico Mineiro',True,near post,goal,True,False,True,256542.0,67.63,42.99
+4721,473,75.8,b'Brentford',False,near post,clearance,False,True,False,204760.0,42.38,8.03
+4722,473,38.36,b'Juventus',False,near post,no outcome,False,False,False,233866.0,21.18,0.62
+4731,474,14.18,b'Dynamo Kyiv',False,near post,clearance,False,True,False,202335.0,31.33,14.79
+4732,474,31.8,b'Bahia',False,near post,clearance,False,True,False,180930.0,83.76,12.18
+4741,475,40.4,b'Ried',True,near post,no outcome,False,False,False,219536.0,63.9,25.4
+4742,475,29.31,b'Ried',True,far post,clearance,False,True,False,234147.0,45.78,2.79
+4743,475,14.87,b'Arsenal',True,near post,clearance,False,True,False,211818.0,54.76,5.38
+4744,475,29.17,b'Arsenal',True,far post,clearance,False,True,False,259097.0,98.62,33.95
+4745,475,33.38,b'Ried',True,far post,shot,True,False,False,260406.0,19.57,19.29
+4751,476,79.87,b'Ried',True,near post,shot,True,False,False,239097.0,63.84,0.09
+4752,476,73.86,b'Corinthians',True,far post,clearance,False,True,False,211862.0,96.73,11.83
+4753,476,77.61,b'Ried',False,far post,clearance,False,True,False,228941.0,50.48,20.93
+4754,476,14.42,b'Corinthians',True,penalty spot,clearance,False,True,False,200715.0,34.79,26.79
+4761,477,59.98,b'Sassuolo',True,penalty spot,shot,True,False,False,208333.0,10.32,28.07
+4771,478,1.13,b'SV Werder Bremen',True,far post,foul,False,False,False,263685.0,3.83,4.01
+4772,478,23.68,b'Sassuolo',True,near post,foul,False,False,False,233691.0,91.98,5.42
+4773,478,66.48,b'SV Werder Bremen',False,far post,foul,False,False,False,231554.0,3.5,27.48
+4774,478,57.51,b'SV Werder Bremen',False,far post,goal,True,False,True,233049.0,13.24,11.28
+4781,479,75.34,b'Monza',True,penalty spot,clearance,False,True,False,235055.0,36.18,5.59
+4782,479,17.67,b'Monza',False,far post,foul,False,False,False,210136.0,80.22,31.04
+4791,480,24.71,b'Brentford',False,penalty spot,goal,True,False,True,196978.0,26.57,31.87
+4801,481,50.98,b'Cuiab\xe1',False,far post,clearance,False,True,False,194806.0,85.64,39.42
+4802,481,84.86,b'Gr\xeamio',False,far post,clearance,False,True,False,264313.0,99.2,24.73
+4803,481,48.82,b'Cuiab\xe1',True,far post,clearance,False,True,False,263272.0,84.6,23.9
+4804,481,23.92,b'Gr\xeamio',False,near post,shot,True,False,False,230226.0,51.47,20.48
+4805,481,41.18,b'Cuiab\xe1',True,penalty spot,clearance,False,True,False,237003.0,46.21,43.44
+4811,482,25.26,b'Cear\xe1',True,near post,shot,True,False,False,262916.0,75.83,35.69
+4812,482,44.39,b'Cear\xe1',True,near post,foul,False,False,False,251852.0,64.05,16.23
+4821,483,58.53,b'TSV Egger Glas Hartberg',True,penalty spot,goal,True,False,True,224221.0,89.65,32.35
+4822,483,50.06,b'TSV Egger Glas Hartberg',True,near post,shot,True,False,False,237502.0,35.49,42.13
+4823,483,79.03,b'TSV Egger Glas Hartberg',False,near post,clearance,False,True,False,245537.0,45.63,31.21
+4824,483,45.8,b'West Ham United',False,far post,clearance,False,True,False,244274.0,66.13,1.5
+4831,484,41.58,b'Internacional',True,penalty spot,clearance,False,True,False,271196.0,15.56,45.52
+4832,484,72.86,b'Sassuolo',True,far post,clearance,False,True,False,204935.0,71.8,1.1
+4833,484,87.65,b'Sassuolo',True,penalty spot,clearance,False,True,False,203362.0,57.9,33.38
+4834,484,31.07,b'Internacional',False,far post,shot,True,False,False,178005.0,4.77,21.65
+4835,484,11.0,b'Sassuolo',False,far post,no outcome,False,False,False,242628.0,43.38,23.94
+4841,485,67.7,b'Lecce',False,near post,foul,False,False,False,189557.0,98.09,21.86
+4842,485,7.78,b'WSG Tirol',True,penalty spot,clearance,False,True,False,230268.0,86.4,4.41
+4843,485,61.31,b'Lecce',True,penalty spot,no outcome,False,False,False,229880.0,36.99,25.4
+4851,486,14.6,b'West Ham United',True,near post,clearance,False,True,False,257793.0,43.13,13.59
+4852,486,86.5,b'Bahia',False,near post,shot,True,False,False,238744.0,81.08,17.65
+4861,487,52.29,b'AFC Bournemouth',True,far post,foul,False,False,False,230317.0,9.17,20.29
+4862,487,56.64,b'Wolfsberger AC',False,penalty spot,clearance,False,True,False,212626.0,42.52,6.5
+4863,487,69.12,b'Wolfsberger AC',False,near post,clearance,False,True,False,210964.0,47.66,22.83
+4871,488,30.97,b'SC Paderborn 07',True,far post,shot,True,False,False,246929.0,43.78,13.67
+4872,488,74.48,b'SC Paderborn 07',True,penalty spot,shot,True,False,False,238900.0,45.37,37.04
+4881,489,26.37,b'Juventude',True,far post,shot,True,False,False,244170.0,67.82,10.18
+4882,489,70.35,b'CSA',True,near post,no outcome,False,False,False,169115.0,25.62,24.51
+4883,489,25.86,b'Juventude',True,near post,shot,True,False,False,212188.0,14.3,22.32
+4891,490,57.19,b'1. FSV Mainz 05',True,far post,clearance,False,True,False,263486.0,2.08,18.14
+4901,491,22.46,b'Wolverhampton Wanderers',True,far post,clearance,False,True,False,230267.0,99.12,12.29
+4902,491,76.15,b'Wattens',False,far post,shot,True,False,False,264338.0,77.17,26.53
+4911,492,88.94,b'Fluminense',True,near post,clearance,False,True,False,219496.0,39.23,38.57
+4912,492,24.19,b'Schalke 04',True,near post,goal,True,False,True,248384.0,14.84,14.19
+4913,492,61.98,b'Schalke 04',True,penalty spot,clearance,False,True,False,232488.0,15.14,29.88
+4914,492,15.65,b'Fluminense',True,penalty spot,clearance,False,True,False,177766.0,37.19,21.49
+4921,493,2.08,b'Rapid Vienna',True,near post,no outcome,False,False,False,244717.0,32.49,10.26
+4931,494,56.4,b'Borussia M\xf6nchengladbach',False,far post,clearance,False,True,False,256545.0,75.31,39.72
+4932,494,62.52,b'Santos',True,penalty spot,clearance,False,True,False,258931.0,47.37,35.15
+4933,494,3.43,b'Borussia M\xf6nchengladbach',False,far post,goal,True,False,True,256790.0,67.23,41.81
+4934,494,67.29,b'Borussia M\xf6nchengladbach',True,near post,shot,True,False,False,219683.0,82.46,12.48
+4941,495,9.6,b'SC Freiburg',True,near post,foul,False,False,False,257618.0,25.82,24.67
+4951,496,66.36,b'1. FSV Mainz 05',True,near post,goal,True,False,True,266657.0,53.19,0.01
+4952,496,35.86,b'Salernitana',False,far post,no outcome,False,False,False,230406.0,73.97,4.64
+4953,496,79.86,b'Salernitana',False,penalty spot,no outcome,False,False,False,240671.0,66.87,2.71
+4954,496,83.17,b'1. FSV Mainz 05',False,far post,clearance,False,True,False,244383.0,96.78,31.11
+4955,496,39.86,b'1. FSV Mainz 05',True,penalty spot,shot,True,False,False,187598.0,49.92,15.42
+4961,497,6.18,b'Flamengo',False,near post,shot,True,False,False,263963.0,25.52,21.59
+4962,497,81.74,b'Monza',True,far post,shot,True,False,False,236378.0,97.15,1.01
+4971,498,79.24,b'Gr\xeamio',True,penalty spot,clearance,False,True,False,267476.0,24.69,1.76
+4972,498,43.8,b'Austria Lustenau',False,far post,clearance,False,True,False,256537.0,86.78,11.02
+4973,498,12.96,b'Gr\xeamio',False,far post,shot,True,False,False,253213.0,40.19,34.21
+4974,498,19.03,b'Austria Lustenau',True,near post,shot,True,False,False,262416.0,83.83,32.01
+4981,499,36.71,b'Southampton',True,far post,no outcome,False,False,False,230332.0,71.41,7.62
+4982,499,24.52,b'VfL Bochum 1848',False,penalty spot,clearance,False,True,False,245277.0,88.28,11.76
+4983,499,8.25,b'Southampton',False,near post,clearance,False,True,False,210366.0,44.68,47.91
+4991,500,84.04,b'Fluminense',True,penalty spot,shot,True,False,False,271018.0,39.45,17.58
+4992,500,18.74,b'SK Rapid Wien',False,far post,shot,True,False,False,256545.0,12.78,28.86
+4993,500,17.95,b'Fluminense',False,penalty spot,shot,True,False,False,230198.0,26.22,30.71

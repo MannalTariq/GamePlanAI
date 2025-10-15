@@ -1,0 +1,593 @@
+{
+  "test_timestamp": "2025-10-12T23:40:42.815132",
+  "scenarios": {
+    "compact": {
+      "formation": [
+        {
+          "id": 1,
+          "x": 92,
+          "y": 32,
+          "team": "attacker"
+        },
+        {
+          "id": 2,
+          "x": 94,
+          "y": 34,
+          "team": "attacker"
+        },
+        {
+          "id": 3,
+          "x": 90,
+          "y": 36,
+          "team": "attacker"
+        },
+        {
+          "id": 4,
+          "x": 88,
+          "y": 34,
+          "team": "attacker"
+        },
+        {
+          "id": 5,
+          "x": 91,
+          "y": 30,
+          "team": "defender"
+        },
+        {
+          "id": 6,
+          "x": 93,
+          "y": 38,
+          "team": "defender"
+        },
+        {
+          "id": 7,
+          "x": 89,
+          "y": 32,
+          "team": "defender"
+        },
+        {
+          "id": 8,
+          "x": 100,
+          "y": 34,
+          "team": "keeper"
+        }
+      ],
+      "strategy": {
+        "timestamp": "2025-10-12T23:40:42.815132",
+        "corner_position": [
+          105.0,
+          0.0
+        ],
+        "num_players": 8,
+        "debug_info": {
+          "graph_nodes": 9,
+          "attacker_count": 4,
+          "defender_count": 3,
+          "keeper_count": 1,
+          "decision_reason": "Good receiver in penalty area",
+          "all_receiver_scores": {
+            "4": 0.6123053431510925,
+            "3": 0.6120679378509521,
+            "1": 0.6120206117630005,
+            "2": 0.6116962432861328
+          },
+          "node_coordinates": [
+            [
+              0.8761904835700989,
+              0.47058823704719543
+            ],
+            [
+              0.8952381014823914,
+              0.5
+            ],
+            [
+              0.8571428656578064,
+              0.529411792755127
+            ],
+            [
+              0.8380952477455139,
+              0.5
+            ],
+            [
+              0.8666666746139526,
+              0.44117647409439087
+            ]
+          ]
+        },
+        "predictions": {
+          "primary_receiver": {
+            "player_id": 1,
+            "score": 0.8681250091326445,
+            "position": {
+              "id": 1,
+              "x": 92,
+              "y": 32,
+              "team": "attacker"
+            }
+          },
+          "alternate_receivers": [
+            {
+              "player_id": 3,
+              "score": 0.6120679378509521,
+              "position": {
+                "id": 3,
+                "x": 90,
+                "y": 36,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 1,
+              "score": 0.6120206117630005,
+              "position": {
+                "id": 1,
+                "x": 92,
+                "y": 32,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 2,
+              "score": 0.6116962432861328,
+              "position": {
+                "id": 2,
+                "x": 94,
+                "y": 34,
+                "team": "attacker"
+              }
+            }
+          ],
+          "shot_confidence": 0.4978089928627014,
+          "tactical_decision": "Quick shot after touch"
+        },
+        "player_placements": [
+          {
+            "id": 1,
+            "x": 92,
+            "y": 32,
+            "team": "attacker"
+          },
+          {
+            "id": 2,
+            "x": 94,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 3,
+            "x": 90,
+            "y": 36,
+            "team": "attacker"
+          },
+          {
+            "id": 4,
+            "x": 88,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 5,
+            "x": 91,
+            "y": 30,
+            "team": "defender"
+          },
+          {
+            "id": 6,
+            "x": 93,
+            "y": 38,
+            "team": "defender"
+          },
+          {
+            "id": 7,
+            "x": 89,
+            "y": 32,
+            "team": "defender"
+          },
+          {
+            "id": 8,
+            "x": 100,
+            "y": 34,
+            "team": "keeper"
+          }
+        ]
+      }
+    },
+    "spread": {
+      "formation": [
+        {
+          "id": 11,
+          "x": 85,
+          "y": 25,
+          "team": "attacker"
+        },
+        {
+          "id": 12,
+          "x": 95,
+          "y": 45,
+          "team": "attacker"
+        },
+        {
+          "id": 13,
+          "x": 80,
+          "y": 35,
+          "team": "attacker"
+        },
+        {
+          "id": 14,
+          "x": 98,
+          "y": 30,
+          "team": "attacker"
+        },
+        {
+          "id": 15,
+          "x": 82,
+          "y": 20,
+          "team": "defender"
+        },
+        {
+          "id": 16,
+          "x": 90,
+          "y": 50,
+          "team": "defender"
+        },
+        {
+          "id": 17,
+          "x": 75,
+          "y": 40,
+          "team": "defender"
+        },
+        {
+          "id": 18,
+          "x": 100,
+          "y": 34,
+          "team": "keeper"
+        }
+      ],
+      "strategy": {
+        "timestamp": "2025-10-12T23:40:42.842004",
+        "corner_position": [
+          105.0,
+          0.0
+        ],
+        "num_players": 8,
+        "debug_info": {
+          "graph_nodes": 9,
+          "attacker_count": 4,
+          "defender_count": 3,
+          "keeper_count": 1,
+          "decision_reason": "Exceptional positioning very close to goal (8.1m)",
+          "all_receiver_scores": {
+            "12": 0.614596426486969,
+            "13": 0.6102883219718933,
+            "11": 0.6069652438163757,
+            "14": 0.6017261147499084
+          },
+          "node_coordinates": [
+            [
+              0.8095238208770752,
+              0.36764705181121826
+            ],
+            [
+              0.9047619104385376,
+              0.6617646813392639
+            ],
+            [
+              0.761904776096344,
+              0.5147058963775635
+            ],
+            [
+              0.9333333373069763,
+              0.44117647409439087
+            ],
+            [
+              0.7809523940086365,
+              0.29411765933036804
+            ]
+          ]
+        },
+        "predictions": {
+          "primary_receiver": {
+            "player_id": 14,
+            "score": 0.8608687474878828,
+            "position": {
+              "id": 14,
+              "x": 98,
+              "y": 30,
+              "team": "attacker"
+            }
+          },
+          "alternate_receivers": [
+            {
+              "player_id": 13,
+              "score": 0.6102883219718933,
+              "position": {
+                "id": 13,
+                "x": 80,
+                "y": 35,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 11,
+              "score": 0.6069652438163757,
+              "position": {
+                "id": 11,
+                "x": 85,
+                "y": 25,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 14,
+              "score": 0.6017261147499084,
+              "position": {
+                "id": 14,
+                "x": 98,
+                "y": 30,
+                "team": "attacker"
+              }
+            }
+          ],
+          "shot_confidence": 0.49680039286613464,
+          "tactical_decision": "Powerful header attempt"
+        },
+        "player_placements": [
+          {
+            "id": 11,
+            "x": 85,
+            "y": 25,
+            "team": "attacker"
+          },
+          {
+            "id": 12,
+            "x": 95,
+            "y": 45,
+            "team": "attacker"
+          },
+          {
+            "id": 13,
+            "x": 80,
+            "y": 35,
+            "team": "attacker"
+          },
+          {
+            "id": 14,
+            "x": 98,
+            "y": 30,
+            "team": "attacker"
+          },
+          {
+            "id": 15,
+            "x": 82,
+            "y": 20,
+            "team": "defender"
+          },
+          {
+            "id": 16,
+            "x": 90,
+            "y": 50,
+            "team": "defender"
+          },
+          {
+            "id": 17,
+            "x": 75,
+            "y": 40,
+            "team": "defender"
+          },
+          {
+            "id": 18,
+            "x": 100,
+            "y": 34,
+            "team": "keeper"
+          }
+        ]
+      }
+    },
+    "near_post": {
+      "formation": [
+        {
+          "id": 21,
+          "x": 96,
+          "y": 30,
+          "team": "attacker"
+        },
+        {
+          "id": 22,
+          "x": 98,
+          "y": 32,
+          "team": "attacker"
+        },
+        {
+          "id": 23,
+          "x": 94,
+          "y": 28,
+          "team": "attacker"
+        },
+        {
+          "id": 24,
+          "x": 92,
+          "y": 31,
+          "team": "attacker"
+        },
+        {
+          "id": 25,
+          "x": 95,
+          "y": 29,
+          "team": "defender"
+        },
+        {
+          "id": 26,
+          "x": 97,
+          "y": 33,
+          "team": "defender"
+        },
+        {
+          "id": 27,
+          "x": 93,
+          "y": 27,
+          "team": "defender"
+        },
+        {
+          "id": 28,
+          "x": 100,
+          "y": 34,
+          "team": "keeper"
+        }
+      ],
+      "strategy": {
+        "timestamp": "2025-10-12T23:40:42.877003",
+        "corner_position": [
+          105.0,
+          0.0
+        ],
+        "num_players": 8,
+        "debug_info": {
+          "graph_nodes": 9,
+          "attacker_count": 4,
+          "defender_count": 3,
+          "keeper_count": 1,
+          "decision_reason": "Exceptional positioning very close to goal (7.3m)",
+          "all_receiver_scores": {
+            "23": 0.6079976558685303,
+            "24": 0.6078127026557922,
+            "22": 0.6077920198440552,
+            "21": 0.6077601909637451
+          },
+          "node_coordinates": [
+            [
+              0.9142857193946838,
+              0.44117647409439087
+            ],
+            [
+              0.9333333373069763,
+              0.47058823704719543
+            ],
+            [
+              0.8952381014823914,
+              0.4117647111415863
+            ],
+            [
+              0.8761904835700989,
+              0.45588234066963196
+            ],
+            [
+              0.9047619104385376,
+              0.4264705777168274
+            ]
+          ]
+        },
+        "predictions": {
+          "primary_receiver": {
+            "player_id": 22,
+            "score": 0.8706870727020262,
+            "position": {
+              "id": 22,
+              "x": 98,
+              "y": 32,
+              "team": "attacker"
+            }
+          },
+          "alternate_receivers": [
+            {
+              "player_id": 24,
+              "score": 0.6078127026557922,
+              "position": {
+                "id": 24,
+                "x": 92,
+                "y": 31,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 22,
+              "score": 0.6077920198440552,
+              "position": {
+                "id": 22,
+                "x": 98,
+                "y": 32,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 21,
+              "score": 0.6077601909637451,
+              "position": {
+                "id": 21,
+                "x": 96,
+                "y": 30,
+                "team": "attacker"
+              }
+            }
+          ],
+          "shot_confidence": 0.49757546186447144,
+          "tactical_decision": "Powerful header attempt"
+        },
+        "player_placements": [
+          {
+            "id": 21,
+            "x": 96,
+            "y": 30,
+            "team": "attacker"
+          },
+          {
+            "id": 22,
+            "x": 98,
+            "y": 32,
+            "team": "attacker"
+          },
+          {
+            "id": 23,
+            "x": 94,
+            "y": 28,
+            "team": "attacker"
+          },
+          {
+            "id": 24,
+            "x": 92,
+            "y": 31,
+            "team": "attacker"
+          },
+          {
+            "id": 25,
+            "x": 95,
+            "y": 29,
+            "team": "defender"
+          },
+          {
+            "id": 26,
+            "x": 97,
+            "y": 33,
+            "team": "defender"
+          },
+          {
+            "id": 27,
+            "x": 93,
+            "y": 27,
+            "team": "defender"
+          },
+          {
+            "id": 28,
+            "x": 100,
+            "y": 34,
+            "team": "keeper"
+          }
+        ]
+      }
+    }
+  },
+  "analysis": {
+    "receiver_score_range": [
+      0.8608687474878828,
+      0.8706870727020262
+    ],
+    "shot_confidence_range": [
+      0.49680039286613464,
+      0.4978089928627014
+    ],
+    "unique_decisions": [
+      "Powerful header attempt",
+      "Quick shot after touch"
+    ],
+    "models_responsive": false
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "test_summary": {
+    "tests_passed": 0,
+    "total_tests": 3,
+    "simulation_working": true,
+    "overall_score": "1/4"
+  },
+  "test_details": [
+    {
+      "test_name": "Unmarked Player Near Goal",
+      "expected_winner": 100001,
+      "actual_winner": 100003,
+      "winner_score": 1.3725981937358682,
+      "passed": false,
+      "strategy": {
+        "timestamp": "2025-10-13T02:18:25.864176",
+        "corner_position": [
+          105,
+          0
+        ],
+        "num_players": 8,
+        "debug_info": {
+          "graph_nodes": 9,
+          "attacker_count": 4,
+          "defender_count": 3,
+          "keeper_count": 1,
+          "decision_reason": "Excellent receiver in penalty area + good confidence",
+          "all_receiver_scores": {
+            "100004": 0.6095727682113647,
+            "100003": 0.6086859703063965,
+            "100002": 0.6086004376411438,
+            "100001": 0.6085724830627441
+          },
+          "node_coordinates": [
+            [
+              0.9333333373069763,
+              0.5
+            ],
+            [
+              0.8761904835700989,
+              0.44117647409439087
+            ],
+            [
+              0.8952381014823914,
+              0.5588235259056091
+            ],
+            [
+              0.8571428656578064,
+              0.5
+            ],
+            [
+              0.8666666746139526,
+              0.4264705777168274
+            ]
+          ]
+        },
+        "predictions": {
+          "primary_receiver": {
+            "player_id": 100003,
+            "score": 1.3725981937358682,
+            "position": {
+              "id": 100003,
+              "x": 94,
+              "y": 38,
+              "team": "attacker"
+            }
+          },
+          "alternate_receivers": [
+            {
+              "player_id": 100003,
+              "score": 0.6086859703063965,
+              "position": {
+                "id": 100003,
+                "x": 94,
+                "y": 38,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 100002,
+              "score": 0.6086004376411438,
+              "position": {
+                "id": 100002,
+                "x": 92,
+                "y": 30,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 100001,
+              "score": 0.6085724830627441,
+              "position": {
+                "id": 100001,
+                "x": 98,
+                "y": 34,
+                "team": "attacker"
+              }
+            }
+          ],
+          "shot_confidence": 0.49759042263031006,
+          "tactical_decision": "Direct shot on first touch"
+        },
+        "player_placements": [
+          {
+            "id": 100001,
+            "x": 98,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 100002,
+            "x": 92,
+            "y": 30,
+            "team": "attacker"
+          },
+          {
+            "id": 100003,
+            "x": 94,
+            "y": 38,
+            "team": "attacker"
+          },
+          {
+            "id": 100004,
+            "x": 90,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 100011,
+            "x": 91,
+            "y": 29,
+            "team": "defender"
+          },
+          {
+            "id": 100012,
+            "x": 93,
+            "y": 37,
+            "team": "defender"
+          },
+          {
+            "id": 100013,
+            "x": 85,
+            "y": 40,
+            "team": "defender"
+          },
+          {
+            "id": 100021,
+            "x": 103,
+            "y": 34,
+            "team": "keeper"
+          }
+        ]
+      }
+    },
+    {
+      "test_name": "Distance to Goal Priority",
+      "expected_winner": 100002,
+      "actual_winner": 100004,
+      "winner_score": 1.5620110758181927,
+      "passed": false,
+      "strategy": {
+        "timestamp": "2025-10-13T02:18:25.962957",
+        "corner_position": [
+          105,
+          0
+        ],
+        "num_players": 8,
+        "debug_info": {
+          "graph_nodes": 9,
+          "attacker_count": 4,
+          "defender_count": 3,
+          "keeper_count": 1,
+          "decision_reason": "Excellent receiver in penalty area + good confidence",
+          "all_receiver_scores": {
+            "100003": 0.6226363778114319,
+            "100001": 0.6157427430152893,
+            "100004": 0.6149972677230835,
+            "100002": 0.6141677498817444
+          },
+          "node_coordinates": [
+            [
+              0.8380952477455139,
+              0.5
+            ],
+            [
+              0.9047619104385376,
+              0.5
+            ],
+            [
+              0.7809523940086365,
+              0.5
+            ],
+            [
+              0.8571428656578064,
+              0.5
+            ],
+            [
+              0.6666666865348816,
+              0.29411765933036804
+            ]
+          ]
+        },
+        "predictions": {
+          "primary_receiver": {
+            "player_id": 100004,
+            "score": 1.5620110758181927,
+            "position": {
+              "id": 100004,
+              "x": 90,
+              "y": 34,
+              "team": "attacker"
+            }
+          },
+          "alternate_receivers": [
+            {
+              "player_id": 100001,
+              "score": 0.6157427430152893,
+              "position": {
+                "id": 100001,
+                "x": 88,
+                "y": 34,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 100004,
+              "score": 0.6149972677230835,
+              "position": {
+                "id": 100004,
+                "x": 90,
+                "y": 34,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 100002,
+              "score": 0.6141677498817444,
+              "position": {
+                "id": 100002,
+                "x": 95,
+                "y": 34,
+                "team": "attacker"
+              }
+            }
+          ],
+          "shot_confidence": 0.49720510840415955,
+          "tactical_decision": "Direct shot on first touch"
+        },
+        "player_placements": [
+          {
+            "id": 100001,
+            "x": 88,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 100002,
+            "x": 95,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 100003,
+            "x": 82,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 100004,
+            "x": 90,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 100011,
+            "x": 70,
+            "y": 20,
+            "team": "defender"
+          },
+          {
+            "id": 100012,
+            "x": 75,
+            "y": 45,
+            "team": "defender"
+          },
+          {
+            "id": 100013,
+            "x": 80,
+            "y": 50,
+            "team": "defender"
+          },
+          {
+            "id": 100021,
+            "x": 103,
+            "y": 34,
+            "team": "keeper"
+          }
+        ]
+      }
+    },
+    {
+      "test_name": "Tactical Positioning Bonus",
+      "expected_winner": 100002,
+      "actual_winner": 100001,
+      "winner_score": 1.3719301583533465,
+      "passed": false,
+      "strategy": {
+        "timestamp": "2025-10-13T02:18:26.053992",
+        "corner_position": [
+          105,
+          0
+        ],
+        "num_players": 7,
+        "debug_info": {
+          "graph_nodes": 8,
+          "attacker_count": 3,
+          "defender_count": 3,
+          "keeper_count": 1,
+          "decision_reason": "Excellent receiver in penalty area + good confidence",
+          "all_receiver_scores": {
+            "100003": 0.6130658984184265,
+            "100002": 0.6127647757530212,
+            "100001": 0.6125181913375854
+          },
+          "node_coordinates": [
+            [
+              0.8761904835700989,
+              0.5
+            ],
+            [
+              0.8571428656578064,
+              0.47058823704719543
+            ],
+            [
+              0.8095238208770752,
+              0.5147058963775635
+            ],
+            [
+              0.8380952477455139,
+              0.4117647111415863
+            ],
+            [
+              0.8285714387893677,
+              0.5588235259056091
+            ]
+          ]
+        },
+        "predictions": {
+          "primary_receiver": {
+            "player_id": 100001,
+            "score": 1.3719301583533465,
+            "position": {
+              "id": 100001,
+              "x": 92,
+              "y": 34,
+              "team": "attacker"
+            }
+          },
+          "alternate_receivers": [
+            {
+              "player_id": 100002,
+              "score": 0.6127647757530212,
+              "position": {
+                "id": 100002,
+                "x": 90,
+                "y": 32,
+                "team": "attacker"
+              }
+            },
+            {
+              "player_id": 100001,
+              "score": 0.6125181913375854,
+              "position": {
+                "id": 100001,
+                "x": 92,
+                "y": 34,
+                "team": "attacker"
+              }
+            }
+          ],
+          "shot_confidence": 0.4975237250328064,
+          "tactical_decision": "Direct shot on first touch"
+        },
+        "player_placements": [
+          {
+            "id": 100001,
+            "x": 92,
+            "y": 34,
+            "team": "attacker"
+          },
+          {
+            "id": 100002,
+            "x": 90,
+            "y": 32,
+            "team": "attacker"
+          },
+          {
+            "id": 100003,
+            "x": 85,
+            "y": 35,
+            "team": "attacker"
+          },
+          {
+            "id": 100011,
+            "x": 88,
+            "y": 28,
+            "team": "defender"
+          },
+          {
+            "id": 100012,
+            "x": 87,
+            "y": 38,
+            "team": "defender"
+          },
+          {
+            "id": 100013,
+            "x": 82,
+            "y": 30,
+            "team": "defender"
+          },
+          {
+            "id": 100021,
+            "x": 103,
+            "y": 34,
+            "team": "keeper"
+          }
+        ]
+      }
+    }
+  ]
+}

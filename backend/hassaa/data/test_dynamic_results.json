@@ -1,0 +1,46 @@
+{
+  "test_summary": {
+    "dynamic_receivers": true,
+    "dynamic_decisions": true,
+    "no_hardcoded_layoff": true,
+    "all_tests_pass": true
+  },
+  "formation_results": [
+    {
+      "formation": "Crowded Near Post",
+      "primary_receiver_id": 100002,
+      "primary_receiver_score": 0.8718355814695193,
+      "shot_confidence": 0.4976034462451935,
+      "tactical_decision": "Direct shot on first touch",
+      "num_players": 9,
+      "timestamp": "2025-10-13T01:48:51.036227"
+    },
+    {
+      "formation": "Far Post Focus",
+      "primary_receiver_id": null,
+      "primary_receiver_score": 0.0,
+      "shot_confidence": 0.49787142872810364,
+      "tactical_decision": "Reset play - reposition",
+      "num_players": 9,
+      "timestamp": "2025-10-13T01:48:51.258105"
+    },
+    {
+      "formation": "Central Concentration",
+      "primary_receiver_id": 100005,
+      "primary_receiver_score": 0.8778357071726257,
+      "shot_confidence": 0.49794769287109375,
+      "tactical_decision": "Direct shot on first touch",
+      "num_players": 9,
+      "timestamp": "2025-10-13T01:48:51.354663"
+    },
+    {
+      "formation": "Wide Spread",
+      "primary_receiver_id": 100003,
+      "primary_receiver_score": 0.8650274276478714,
+      "shot_confidence": 0.4967513382434845,
+      "tactical_decision": "Direct shot on first touch",
+      "num_players": 9,
+      "timestamp": "2025-10-13T01:48:51.438970"
+    }
+  ]
+}
