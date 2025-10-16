@@ -196,10 +196,10 @@ def initialize_strategy_maker():
     try:
         print("Initializing Strategy Maker...")
         strategy_maker = StrategyMaker()
-        print("✅ Strategy Maker initialized successfully")
+        print("[OK] Strategy Maker initialized successfully")
         return True
     except Exception as e:
-        print(f"⚠️  Could not initialize Strategy Maker: {e}")
+        print(f"[WARNING] Could not initialize Strategy Maker: {e}")
         traceback.print_exc()
         return False
 
@@ -301,7 +301,7 @@ def optimize_strategy():
                 'timestamp': strategy['timestamp']
             }
             
-            print(f"✅ Strategy generated successfully")
+            print(f"Strategy generated successfully")
             print(f"   Primary: Player #{response['strategy']['primaryReceiver']['playerId']}")
             print(f"   Success Rate: {response['strategy']['successRate']}%")
             
@@ -314,7 +314,7 @@ def optimize_strategy():
             }), 503
             
     except Exception as e:
-        print(f"❌ Error in optimize_strategy: {e}")
+        print(f"[ERROR] Error in optimize_strategy: {e}")
         traceback.print_exc()
         return jsonify({
             'error': str(e),
@@ -331,10 +331,10 @@ def simulate_corner():
         data = request.get_json()
         
         # DETAILED LOGGING FOR API DATA FLOW VERIFICATION
-        print("\n🔍 ===== BACKEND API REQUEST RECEIVED =====")
-        print(f"📥 Raw JSON Data: {data}")
-        print(f"📋 Request Headers: {dict(request.headers)}")
-        print(f"🌐 Client IP: {request.remote_addr}")
+        print("\n[DEBUG] ===== BACKEND API REQUEST RECEIVED =====")
+        print(f"[DATA] Raw JSON Data: {data}")
+        print(f"[HEADERS] Request Headers: {dict(request.headers)}")
+        print(f"[IP] Client IP: {request.remote_addr}")
         
         # Extract data from frontend
         players = data.get('players', [])
@@ -342,13 +342,13 @@ def simulate_corner():
         goal_position = data.get('goalPosition', {'x': 95, 'y': 50})
         set_piece = data.get('setPiece', 'Corner Kick')
         
-        print(f"📊 Extracted Data:")
+        print(f"[DATA] Extracted Data:")
         print(f"  Players Count: {len(players)}")
         print(f"  Corner Position: {corner_position}")
         print(f"  Goal Position: {goal_position}")
         print(f"  Set Piece: {set_piece}")
         
-        print(f"👥 Frontend Player Data:")
+        print(f"[PLAYERS] Frontend Player Data:")
         for i, player in enumerate(players):
             print(f"  {i+1}. {player.get('label', 'Unknown')} (ID: {player.get('id', 'N/A')})")
             print(f"     Role: {player.get('role', 'N/A')}")
@@ -359,8 +359,8 @@ def simulate_corner():
         
         # Convert frontend coordinates to backend format
         # Frontend uses percentage (0-100), backend uses meters (0-105, 0-68)
-        print(f"\n🔄 ===== COORDINATE CONVERSION =====")
-        print(f"📐 Conversion Formula:")
+        print(f"\n[TARGET] ===== COORDINATE CONVERSION =====")
+        print(f"[DATA] Conversion Formula:")
         print(f"  Frontend: Percentage (0-100)")
         print(f"  Backend: Meters (0-105, 0-68)")
         print(f"  X: frontend_xPct * 105 / 100")
@@ -392,9 +392,9 @@ def simulate_corner():
             print(f"  {i+1}. {p.get('label', 'Unknown')}:")
             print(f"     Frontend: ({p['xPct']}%, {p['yPct']}%)")
             print(f"     Backend: ({x_meters:.2f}m, {y_meters:.2f}m)")
-            print(f"     Role: {p['role']} → {backend_player['team']}")
+            print(f"     Role: {p['role']} -> {backend_player['team']}")
         
-        print(f"✅ Converted {len(backend_players)} players")
+        print(f"[OK] Converted {len(backend_players)} players")
         
         # Convert corner and goal positions
         corner_x = (corner_position['x'] / 100) * 105
@@ -402,14 +402,14 @@ def simulate_corner():
         goal_x = (goal_position['x'] / 100) * 105
         goal_y = (goal_position['y'] / 100) * 68
         
-        print(f"\n🎯 ===== POSITION CONVERSION =====")
-        print(f"   Corner: Frontend ({corner_position['x']}%, {corner_position['y']}%) → Backend ({corner_x:.1f}m, {corner_y:.1f}m)")
-        print(f"   Goal: Frontend ({goal_position['x']}%, {goal_position['y']}%) → Backend ({goal_x:.1f}m, {goal_y:.1f}m)")
+        print(f"\n[TARGET] ===== POSITION CONVERSION =====")
+        print(f"   Corner: Frontend ({corner_position['x']}%, {corner_position['y']}%) -> Backend ({corner_x:.1f}m, {corner_y:.1f}m)")
+        print(f"   Goal: Frontend ({goal_position['x']}%, {goal_position['y']}%) -> Backend ({goal_x:.1f}m, {goal_y:.1f}m)")
         print(f"   Total Players: {len(backend_players)}")
         
         if strategy_maker:
-            print(f"\n🧠 ===== STRATEGY GENERATION =====")
-            print(f"📡 Calling StrategyMaker.predict_strategy()...")
+            print(f"\n[BRAIN] ===== STRATEGY GENERATION =====")
+            print(f"[CALL] Calling StrategyMaker.predict_strategy()...")
             # Generate strategy using backend
             strategy = strategy_maker.predict_strategy(
                 backend_players,
@@ -418,22 +418,21 @@ def simulate_corner():
             
             # Validate strategy data
             if not strategy or 'predictions' not in strategy:
-                print("⚠️  Strategy Maker returned invalid strategy, using fallback")
+                print("  Strategy Maker returned invalid strategy, using fallback")
                 return generate_fallback_simulation(backend_players, corner_x, corner_y, goal_x, goal_y)
             
             # Validate primary receiver data
             primary_receiver = strategy['predictions'].get('primary_receiver')
             if not primary_receiver or not primary_receiver.get('player_id'):
-                print("⚠️  Strategy Maker returned invalid primary receiver, using fallback")
+                print("  Strategy Maker returned invalid primary receiver, using fallback")
                 return generate_fallback_simulation(backend_players, corner_x, corner_y, goal_x, goal_y)
             
             # Generate simulation data
             sim_data = strategy_maker.generate_simulation_data(strategy)
             
             # Handle case where sim_data is None
-            if sim_data is None:
-                print("⚠️  Strategy Maker returned None for simulation data, using defaults")
-                sim_data = {
+            if sim_data is None:                print("  Strategy Maker returned None for simulation data, using defaults")
+            sim_data = {
                     'shot_action': True,
                     'shot_target': {'x': goal_x, 'y': goal_y}
                 }
@@ -483,15 +482,15 @@ def simulate_corner():
                 }
             }
             
-            print(f"\n📤 ===== API RESPONSE PREPARATION =====")
-            print(f"✅ Strategy Generation Complete!")
-            print(f"🎯 Primary Receiver: {get_player_label(backend_players, strategy['predictions']['primary_receiver']['player_id'])}")
-            print(f"📊 Shot Confidence: {int(strategy['predictions']['shot_confidence'] * 100)}%")
-            print(f"🎲 Tactical Decision: {strategy['predictions']['tactical_decision']}")
-            print(f"🎯 Ball Trajectory Points: {len(ball_trajectory['points'])}")
-            print(f"👥 Player Movements: {len(player_movements)}")
+            print(f"\n[RESPONSE] ===== API RESPONSE PREPARATION =====")
+            print(f"[OK] Strategy Generation Complete!")
+            print(f"[TARGET] Primary Receiver: {get_player_label(backend_players, strategy['predictions']['primary_receiver']['player_id'])}")
+            print(f"[STATS] Shot Confidence: {int(strategy['predictions']['shot_confidence'] * 100)}%")
+            print(f"[DECISION] Tactical Decision: {strategy['predictions']['tactical_decision']}")
+            print(f"[TRAJECTORY] Ball Trajectory Points: {len(ball_trajectory['points'])}")
+            print(f"[MOVEMENTS] Player Movements: {len(player_movements)}")
             
-            print(f"\n📋 Response Data Structure:")
+            print(f"\n[STRUCTURE] Response Data Structure:")
             print(f"  - success: {response_data['success']}")
             print(f"  - setPiece: {response_data['setPiece']}")
             print(f"  - totalPlayers: {response_data['totalPlayers']}")
@@ -500,18 +499,156 @@ def simulate_corner():
             print(f"  - simulation.ballTrajectory.points: {len(response_data['simulation']['ballTrajectory']['points'])}")
             print(f"  - simulation.playerMovements: {len(response_data['simulation']['playerMovements'])}")
             
-            print(f"\n🚀 Sending response to frontend...")
+            print(f"\n[START] Sending response to frontend...")
             print(f"==========================================\n")
             
             return jsonify(response_data)
             
         else:
             # Fallback simulation when Strategy Maker not available
-            print("⚠️  Strategy Maker not available, using fallback simulation")
+            print("  Strategy Maker not available, using fallback simulation")
             return generate_fallback_simulation(backend_players, corner_x, corner_y, goal_x, goal_y)
             
     except Exception as e:
-        print(f"❌ Error in simulate_corner: {e}")
+        print(f"[ERROR] Error in simulate_corner: {e}")
+        traceback.print_exc()
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/corner/left', methods=['POST'])
+def set_left_corner():
+    """
+    Set corner position to left side
+    Expects JSON body:
+    {
+        "currentCornerPosition": {"x": 95, "y": 5},
+        "currentGoalPosition": {"x": 95, "y": 50}
+    }
+    """
+    try:
+        data = request.get_json()
+        
+        # Get current positions from frontend (percentage coordinates)
+        current_corner = data.get('currentCornerPosition', {'x': 95, 'y': 5})
+        current_goal = data.get('currentGoalPosition', {'x': 95, 'y': 50})
+        
+        # Convert frontend percentage to backend meters for logic
+        corner_x_meters = (current_corner['x'] / 100) * 105
+        corner_y_meters = (current_corner['y'] / 100) * 68
+        
+        # Determine new corner position based on current position
+        if corner_x_meters > 50:  # Currently on right side, switch to left
+            new_corner_x = 0  # Left side
+            new_corner_y = 0 if corner_y_meters < 34 else 68  # Top or bottom
+        else:  # Already on left side, toggle between top and bottom
+            new_corner_x = 0
+            new_corner_y = 68 if corner_y_meters < 34 else 0
+        
+        # Set goal position for left side (attack toward left goal)
+        new_goal_x = 0
+        new_goal_y = 34
+        
+        # Convert back to frontend percentage coordinates
+        new_corner_position = {
+            'x': (new_corner_x / 105) * 100,
+            'y': (new_corner_y / 68) * 100
+        }
+        new_goal_position = {
+            'x': (new_goal_x / 105) * 100,
+            'y': (new_goal_y / 68) * 100
+        }
+        
+        # Determine corner side and description
+        corner_side = "left"
+        if new_corner_y == 0:
+            corner_description = "Left Corner (Top)"
+        else:
+            corner_description = "Left Corner (Bottom)"
+        
+        print(f"[CORNER] Left corner set:")
+        print(f"   Position: ({new_corner_x}m, {new_corner_y}m)")
+        print(f"   Goal: ({new_goal_x}m, {new_goal_y}m)")
+        print(f"   Description: {corner_description}")
+        
+        return jsonify({
+            'success': True,
+            'cornerPosition': new_corner_position,
+            'goalPosition': new_goal_position,
+            'cornerSide': corner_side,
+            'cornerDescription': corner_description,
+            'message': f'Corner set to {corner_description}'
+        })
+        
+    except Exception as e:
+        print(f"[ERROR] Error in set_left_corner: {e}")
+        traceback.print_exc()
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/api/corner/right', methods=['POST'])
+def set_right_corner():
+    """
+    Set corner position to right side
+    Expects JSON body:
+    {
+        "currentCornerPosition": {"x": 5, "y": 5},
+        "currentGoalPosition": {"x": 5, "y": 50}
+    }
+    """
+    try:
+        data = request.get_json()
+        
+        # Get current positions from frontend (percentage coordinates)
+        current_corner = data.get('currentCornerPosition', {'x': 5, 'y': 5})
+        current_goal = data.get('currentGoalPosition', {'x': 5, 'y': 50})
+        
+        # Convert frontend percentage to backend meters for logic
+        corner_x_meters = (current_corner['x'] / 100) * 105
+        corner_y_meters = (current_corner['y'] / 100) * 68
+        
+        # Determine new corner position based on current position
+        if corner_x_meters <= 50:  # Currently on left side, switch to right
+            new_corner_x = 105  # Right side
+            new_corner_y = 0 if corner_y_meters < 34 else 68  # Top or bottom
+        else:  # Already on right side, toggle between top and bottom
+            new_corner_x = 105
+            new_corner_y = 68 if corner_y_meters < 34 else 0
+        
+        # Set goal position for right side (attack toward right goal)
+        new_goal_x = 105
+        new_goal_y = 34
+        
+        # Convert back to frontend percentage coordinates
+        new_corner_position = {
+            'x': (new_corner_x / 105) * 100,
+            'y': (new_corner_y / 68) * 100
+        }
+        new_goal_position = {
+            'x': (new_goal_x / 105) * 100,
+            'y': (new_goal_y / 68) * 100
+        }
+        
+        # Determine corner side and description
+        corner_side = "right"
+        if new_corner_y == 0:
+            corner_description = "Right Corner (Top)"
+        else:
+            corner_description = "Right Corner (Bottom)"
+        
+        print(f"[CORNER] Right corner set:")
+        print(f"   Position: ({new_corner_x}m, {new_corner_y}m)")
+        print(f"   Goal: ({new_goal_x}m, {new_goal_y}m)")
+        print(f"   Description: {corner_description}")
+        
+        return jsonify({
+            'success': True,
+            'cornerPosition': new_corner_position,
+            'goalPosition': new_goal_position,
+            'cornerSide': corner_side,
+            'cornerDescription': corner_description,
+            'message': f'Corner set to {corner_description}'
+        })
+        
+    except Exception as e:
+        print(f"[ERROR] Error in set_right_corner: {e}")
         traceback.print_exc()
         return jsonify({'error': str(e)}), 500
 
@@ -534,7 +671,7 @@ def list_strategies():
         
         return jsonify({'strategies': strategies})
     except Exception as e:
-        print(f"❌ Error in list_strategies: {e}")
+        print(f"[ERROR] Error in list_strategies: {e}")
         return jsonify({'error': str(e)}), 500
 
 @app.route('/api/strategy/<filename>', methods=['GET'])
@@ -560,17 +697,19 @@ if __name__ == '__main__':
     
     # Initialize Strategy Maker
     if initialize_strategy_maker():
-        print("🚀 Starting Flask API server on http://localhost:5000")
-        print("📡 CORS enabled for React frontend")
+        print("[START] Starting Flask API server on http://localhost:5000")
+        print("[CORS] CORS enabled for React frontend")
         print("\nAvailable endpoints:")
         print("  GET  /api/health          - Health check")
         print("  POST /api/optimize        - Optimize strategy")
         print("  POST /api/simulate        - Generate simulation")
+        print("  POST /api/corner/left     - Set corner to left side")
+        print("  POST /api/corner/right    - Set corner to right side")
         print("  GET  /api/strategies      - List saved strategies")
         print("  GET  /api/strategy/<id>   - Get specific strategy")
         print("\n" + "="*70 + "\n")
         
         app.run(debug=True, host='0.0.0.0', port=5000)
     else:
-        print("❌ Failed to initialize Strategy Maker")
+        print("[ERROR] Failed to initialize Strategy Maker")
         print("   Server will not start")
