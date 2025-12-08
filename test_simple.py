@@ -22,3 +22,4 @@ if response.status_code == 200:
     print(f"Shot Confidence: {result['prediction']['shotConfidence']}%")
 else:
     print(f"Error: {response.text}")
+

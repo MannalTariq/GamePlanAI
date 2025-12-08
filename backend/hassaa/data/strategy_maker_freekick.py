@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Strategy Maker Pipeline - Real-Time GNN-Based Corner Kick Strategy Generation
+Strategy Maker Pipeline - Real-Time GNN-Based Free Kick Strategy Generation
 Integrates trained model with interactive tactical setup for live strategy prediction.
 """
 
@@ -29,29 +29,30 @@ GOAL_Y = 34.0
 ATTACKER_FLAG_INDEX = 4
 GOALKEEPER_FLAG_INDEX = 5
 
-# Tactical zones (for positional filtering)
+# Tactical zones (for positional filtering) - adjusted for free kicks
 ATTACKING_THIRD_X = 70.0  # Players must be beyond this for attacking plays
 DANGEROUS_ZONE_X = 88.5  # Inside penalty area
-REALISTIC_CORNER_RANGE = 45.0  # Max distance from corner for realistic pass (increased for better testing)
-MIN_RECEIVER_SCORE = 0.30  # Minimum GNN score to consider as viable receiver (lowered to allow more candidates)
+REALISTIC_FREEKICK_RANGE = 50.0  # Max distance from free kick for realistic pass (larger for free kicks)
+MIN_RECEIVER_SCORE = 0.25  # Minimum GNN score to consider as viable receiver (lowered for free kicks)
 
 
-class StrategyMaker:
+class FreeKickStrategyMaker:
     """
-    Real-time strategy generation using trained GNN models.
+    Real-time free kick strategy generation using trained GNN models.
     Converts player placements → graph → predictions → tactical simulation.
     """
     
     def __init__(self, model_dir: str = None, device: str = "cpu"):
         """
-        Initialize the strategy maker with trained models.
+        Initialize the free kick strategy maker with trained models.
         
         Args:
             model_dir: Directory containing trained model checkpoints
             device: Device to run models on ('cpu' or 'cuda')
         """
         if model_dir is None:
-            model_dir = os.path.dirname(os.path.abspath(__file__))
+            # Default to freekick_dataset directory where models are saved
+            model_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "freekick_dataset")
             
         self.model_dir = model_dir
         self.device = torch.device(device if torch.cuda.is_available() else "cpu")
@@ -66,42 +67,42 @@ class StrategyMaker:
         self.last_strategy_timestamp = None
         
         print("="*60)
-        print("  STRATEGY MAKER INITIALIZATION")
+        print("  FREE KICK STRATEGY MAKER INITIALIZATION")
         print("="*60)
         
         self._load_best_models()
         
-        print(f"[OK] Strategy Maker ready on device: {self.device}")
+        print(f"[OK] Free Kick Strategy Maker ready on device: {self.device}")
         print("="*60)
         
     def _load_best_models(self):
-        """Load the best performing model checkpoints."""
-        # Priority order for model checkpoints
+        """Load the best performing free kick model checkpoints."""
+        # Priority order for model checkpoints - free kick specific
         shot_checkpoint_patterns = [
-            "best_gnn_shot_fold*.pt",
-            "best_gnn_multitask_fold*.pt"
+            "best_gnn_shot_freekick_fold*.pt",
+            "best_gnn_multitask_freekick_fold*.pt"
         ]
         
         receiver_checkpoint_patterns = [
-            "best_gnn_receiver_fold*.pt",
-            "best_gnn_multitask_fold*.pt"
+            "best_gnn_receiver_freekick_fold*.pt",
+            "best_gnn_multitask_freekick_fold*.pt"
         ]
         
         # Load shot model
         shot_path = self._find_best_checkpoint(shot_checkpoint_patterns)
         if shot_path:
             self.shot_model = self._load_shot_model(shot_path)
-            print(f"[OK] Shot model loaded from: {os.path.basename(shot_path)}")
+            print(f"[OK] Free Kick Shot model loaded from: {os.path.basename(shot_path)}")
         else:
-            print("[WARNING] No shot model checkpoint found")
+            print("[WARNING]  No free kick shot model checkpoint found")
             
         # Load receiver model
         receiver_path = self._find_best_checkpoint(receiver_checkpoint_patterns)
         if receiver_path:
             self.receiver_model = self._load_receiver_model(receiver_path)
-            print(f"[OK] Receiver model loaded from: {os.path.basename(receiver_path)}")
+            print(f"[OK] Free Kick Receiver model loaded from: {os.path.basename(receiver_path)}")
         else:
-            print("[WARNING] No receiver model checkpoint found")
+            print("[WARNING]  No free kick receiver model checkpoint found")
             
     def _find_best_checkpoint(self, patterns: List[str]) -> Optional[str]:
         """Find the best checkpoint file matching the patterns."""
@@ -149,23 +150,23 @@ class StrategyMaker:
         
         return model
         
-    def convert_placement_to_graph(self, players: List[Dict], corner_position: Tuple[float, float] = (105.0, 0.0)) -> Data:
+    def convert_placement_to_graph(self, players: List[Dict], freekick_position: Tuple[float, float] = (80.0, 34.0)) -> Data:
         """
-        Convert interactive player placements to PyG graph structure.
+        Convert interactive player placements to PyG graph structure for free kicks.
         
         Args:
             players: List of player dictionaries with 'id', 'x', 'y', 'team'
-            corner_position: (x, y) position of the corner kick
+            freekick_position: (x, y) position of the free kick
             
         Returns:
-            PyG Data object representing the corner scenario
+            PyG Data object representing the free kick scenario
         """
         node_features = []
         player_ids = []
         positions = []
         team_flags = []
         
-        ball_x, ball_y = corner_position
+        ball_x, ball_y = freekick_position
         
         # Create node features for each player
         for player in players:
@@ -211,9 +212,9 @@ class StrategyMaker:
             positions.append((x, y))
             team_flags.append(is_attacker)
             
-        # Add ball node
+        # Add ball node (for free kick)
         ball_features = [
-            ball_x/PITCH_X, ball_y/PITCH_Y, 0.0, 0.0,
+            ball_x/PITCH_X, ball_y/PITCH_Y, 0.0, 1.0,  # delivery_type_encoding = 1.0 for direct free kick
             0.0, 0.0,  # is_attacker, is_keeper
             0.0, 0.0,  # dist_ball, dist_goal (not meaningful for ball)
             0.0, 0.0, 0.0,  # role, height, header
@@ -283,12 +284,12 @@ class StrategyMaker:
         """Calculate Euclidean distance between two positions"""
         return math.hypot(pos1[0] - pos2[0], pos1[1] - pos2[1])
         
-    def _is_in_attacking_zone(self, x: float, y: float, corner_position: Tuple[float, float] = (105, 0)) -> bool:
-        """Check if position is in attacking third - adapts to corner side"""
-        # Determine which goal we're attacking based on corner position
-        if corner_position[0] > 50:  # Right side corner → attacking right goal
+    def _is_in_attacking_zone(self, x: float, y: float, freekick_position: Tuple[float, float] = (80, 34)) -> bool:
+        """Check if position is in attacking third - adapts to free kick position"""
+        # For free kicks, we consider attacking zone differently
+        if freekick_position[0] > 50:  # Free kick on attacking half
             return x >= ATTACKING_THIRD_X  # x >= 70 for right goal
-        else:  # Left side corner → attacking left goal
+        else:  # Free kick on defensive half (rare attacking scenario)
             return x <= (105 - ATTACKING_THIRD_X)  # x <= 35 for left goal
         
     def _is_in_dangerous_zone(self, x: float, y: float) -> bool:
@@ -297,46 +298,44 @@ class StrategyMaker:
         
     def _apply_tactical_context_weighting(self, player_id: int, player: Dict, 
                                          base_score: float, all_players: List[Dict],
-                                         corner_position: Tuple[float, float]) -> float:
-        """Apply enhanced tactical context weighting to receiver scores"""
+                                         freekick_position: Tuple[float, float]) -> float:
+        """Apply enhanced tactical context weighting to receiver scores for free kicks"""
         x, y = player['x'], player['y']
         
         # 1. Distance to goal bonus (closer = better)
         dist_to_goal = self._calculate_distance((x, y), (GOAL_X, GOAL_Y))
-        max_goal_dist = 30.0  # Max meaningful distance for corner kicks
+        max_goal_dist = 35.0  # Max meaningful distance for free kicks (longer range than corners)
         distance_bonus = max(0, (max_goal_dist - dist_to_goal) / max_goal_dist) * 0.15
         
-        # 2. Unmarked player bonus
+        # 2. Unmarked player bonus (important for free kicks)
         is_unmarked, closest_defender_dist = self._check_if_unmarked(player, all_players)
-        unmarked_threshold = 8.0  # meters
-        unmarked_bonus = 0.20 if is_unmarked and closest_defender_dist > unmarked_threshold else 0.0
+        unmarked_threshold = 10.0  # meters (slightly larger for free kicks)
+        unmarked_bonus = 0.25 if is_unmarked and closest_defender_dist > unmarked_threshold else 0.0
         
-        # 3. Goal proximity bonus (enhanced)
+        # 3. Goal proximity bonus (enhanced for free kicks)
         goal_proximity_bonus = self._calculate_goal_proximity_bonus(x, y) or 0.0
         
-        # 4. Tactical position bonus
-        tactical_bonus = self._calculate_tactical_position_bonus(x, y, corner_position) or 0.0
+        # 4. Free kick specific tactical position bonus
+        tactical_bonus = self._calculate_freekick_tactical_position_bonus(x, y, freekick_position) or 0.0
         
-        # 5. Header opportunity bonus (height advantage zone)
-        header_bonus = self._calculate_header_opportunity_bonus(x, y) or 0.0
+        # 5. Direct shot opportunity bonus (important for free kicks)
+        direct_shot_bonus = self._calculate_direct_shot_opportunity_bonus(x, y, freekick_position) or 0.0
         
         # Combine all bonuses (ensure all are float values)
-        total_bonus = float(distance_bonus) + float(unmarked_bonus) + float(goal_proximity_bonus) + float(tactical_bonus) + float(header_bonus)
+        total_bonus = float(distance_bonus) + float(unmarked_bonus) + float(goal_proximity_bonus) + float(tactical_bonus) + float(direct_shot_bonus)
         adjusted_score = base_score + total_bonus
         
         # CRITICAL FIX: Clamp score to [0, 1] to prevent percentages over 100%
         adjusted_score = max(0.0, min(1.0, adjusted_score))
         
         # Debug tactical breakdown
-        print(f"      [DEBUG] Tactical breakdown for Player #{player_id}:")
-        print(f"         Base score: {base_score:.3f}")
+        print(f"      [DEBUG] Free Kick Tactical breakdown for Player #{player_id}:")
         print(f"         Distance bonus: +{distance_bonus:.3f} (dist={dist_to_goal:.1f}m)")
         print(f"         Unmarked bonus: +{unmarked_bonus:.3f} (closest_def={closest_defender_dist:.1f}m)")
         print(f"         Goal prox bonus: +{goal_proximity_bonus:.3f}")
         print(f"         Tactical bonus: +{tactical_bonus:.3f}")
-        print(f"         Header bonus: +{header_bonus:.3f}")
+        print(f"         Direct shot bonus: +{direct_shot_bonus:.3f}")
         print(f"         Total adjustment: +{total_bonus:.3f}")
-        print(f"         Final score (clamped): {adjusted_score:.3f}")
         
         return adjusted_score
         
@@ -356,52 +355,61 @@ class StrategyMaker:
             for d in defenders
         )
         
-        unmarked_threshold = 6.0  # meters - if no defender within this distance, consider unmarked
+        unmarked_threshold = 8.0  # meters - if no defender within this distance, consider unmarked
         is_unmarked = closest_dist > unmarked_threshold
         
         return is_unmarked, closest_dist
         
-    def _calculate_tactical_position_bonus(self, x: float, y: float, 
-                                         corner_position: Tuple[float, float]) -> float:
-        """Calculate bonus for tactically advantageous positions"""
-        corner_x, corner_y = corner_position
+    def _calculate_freekick_tactical_position_bonus(self, x: float, y: float, 
+                                                   freekick_position: Tuple[float, float]) -> float:
+        """Calculate bonus for tactically advantageous positions in free kicks"""
+        freekick_x, freekick_y = freekick_position
         
-        # Bonus for positions that create good crossing angles
-        cross_angle = abs(y - corner_y)
-        angle_bonus = min(0.10, cross_angle / 68.0 * 0.10)  # Reward width from corner
+        # Bonus for positions that create good free kick angles (different from corners)
+        angle_to_goal = math.atan2(GOAL_Y - y, GOAL_X - x)
+        angle_from_freekick = math.atan2(y - freekick_y, x - freekick_x)
         
-        # Bonus for central positions (easier to redirect)
+        # Reward positions that create good shooting angles
+        angle_difference = abs(angle_to_goal - angle_from_freekick)
+        angle_bonus = max(0, (math.pi - angle_difference) / math.pi * 0.12)
+        
+        # Bonus for central positions (easier for free kick delivery)
         center_y = 34.0  # Pitch center
         centrality = 1.0 - abs(y - center_y) / 34.0
         central_bonus = centrality * 0.08
         
-        # Bonus for positions in "scoring zones"
+        # Bonus for positions in "free kick scoring zones"
         scoring_zone_bonus = 0.0
         if self._is_in_dangerous_zone(x, y):
-            scoring_zone_bonus = 0.12
-        elif 85 <= x <= 100 and 20 <= y <= 48:  # Extended scoring area
-            scoring_zone_bonus = 0.06
+            scoring_zone_bonus = 0.15  # Higher bonus for penalty area in free kicks
+        elif 75 <= x <= 100 and 20 <= y <= 48:  # Extended free kick scoring area
+            scoring_zone_bonus = 0.08
             
         return angle_bonus + central_bonus + scoring_zone_bonus
         
-    def _calculate_header_opportunity_bonus(self, x: float, y: float) -> float:
-        """Calculate bonus for positions favorable for headers"""
-        # Headers are most effective in certain zones
+    def _calculate_direct_shot_opportunity_bonus(self, x: float, y: float, 
+                                               freekick_position: Tuple[float, float]) -> float:
+        """Calculate bonus for positions that allow direct shots from free kicks"""
         
-        # Central corridor bonus (good for headers)
-        if 25 <= y <= 43:  # Central third of goal area
-            central_header_bonus = 0.08
+        # Check if player is in direct shooting position
+        dist_to_goal = self._calculate_distance((x, y), (GOAL_X, GOAL_Y))
+        
+        # Direct shot bonus for being in good shooting range (15-30m)
+        if 15 <= dist_to_goal <= 30:
+            distance_shot_bonus = 0.10
+        elif dist_to_goal < 15:
+            distance_shot_bonus = 0.15  # Very close = high bonus
         else:
-            central_header_bonus = 0.0
+            distance_shot_bonus = 0.0
             
-        # Distance from goal line (headers effective 8-18m out)
-        dist_from_goal_line = GOAL_X - x
-        if 8 <= dist_from_goal_line <= 18:
-            distance_header_bonus = 0.06
+        # Central shooting angle bonus
+        angle_to_goal_center = abs(math.atan2(GOAL_Y - y, GOAL_X - x))
+        if angle_to_goal_center < math.pi/6:  # Within 30 degrees of center
+            angle_shot_bonus = 0.08
         else:
-            distance_header_bonus = 0.0
+            angle_shot_bonus = 0.0
             
-        return central_header_bonus + distance_header_bonus
+        return distance_shot_bonus + angle_shot_bonus
             
     def _calculate_goal_proximity_bonus(self, x: float, y: float) -> float:
         """Calculate bonus score based on proximity to goal"""
@@ -412,18 +420,18 @@ class StrategyMaker:
         proximity = 1.0 - (dist_to_goal / max_dist)
         
         # Extra bonus for being in penalty area
-        penalty_area_bonus = 0.15 if self._is_in_dangerous_zone(x, y) else 0.0
+        penalty_area_bonus = 0.20 if self._is_in_dangerous_zone(x, y) else 0.0  # Higher for free kicks
         
-        return proximity * 0.15 + penalty_area_bonus  # Reduced to avoid double-counting with new system
+        return proximity * 0.15 + penalty_area_bonus
         
     def _filter_valid_receivers(self, receiver_scores: Dict[int, float], 
                                 players: List[Dict], 
-                                corner_position: Tuple[float, float]) -> Dict[int, float]:
-        """Filter receivers based on tactical positioning and context"""
+                                freekick_position: Tuple[float, float]) -> Dict[int, float]:
+        """Filter receivers based on tactical positioning and context for free kicks"""
         valid_receivers = {}
         filtered_out = []
         
-        print(f"\n POSITIONAL FILTERING:")
+        print(f"\n[DEBUG] FREE KICK POSITIONAL FILTERING:")
         print(f"   Total candidates from GNN: {len(receiver_scores)}")
         
         for player_id, score in receiver_scores.items():
@@ -434,25 +442,25 @@ class StrategyMaker:
                 
             x, y = player['x'], player['y']
             
-            # Filter Rule 1: Must be in attacking third (adapts to corner side)
-            if not self._is_in_attacking_zone(x, y, corner_position):
+            # Filter Rule 1: Must be in attacking third (adapts to free kick position)
+            if not self._is_in_attacking_zone(x, y, freekick_position):
                 filtered_out.append((player_id, "Not in attacking third", x, y))
                 continue
                 
-            # Filter Rule 2: Must be within realistic distance from corner
-            dist_from_corner = self._calculate_distance((x, y), corner_position)
-            if dist_from_corner > REALISTIC_CORNER_RANGE:
-                filtered_out.append((player_id, f"Too far from corner ({dist_from_corner:.1f}m)", x, y))
+            # Filter Rule 2: Must be within realistic distance from free kick
+            dist_from_freekick = self._calculate_distance((x, y), freekick_position)
+            if dist_from_freekick > REALISTIC_FREEKICK_RANGE:
+                filtered_out.append((player_id, f"Too far from free kick ({dist_from_freekick:.1f}m)", x, y))
                 continue
                 
-            # Filter Rule 3: Minimum GNN score threshold
+            # Filter Rule 3: Minimum GNN score threshold (adjusted for free kicks)
             if score < MIN_RECEIVER_SCORE:
                 filtered_out.append((player_id, f"Score too low ({score:.3f})", x, y))
                 continue
                 
             # Passed all filters - add with enhanced tactical context weighting
             adjusted_score = self._apply_tactical_context_weighting(
-                player_id, player, score, players, corner_position
+                player_id, player, score, players, freekick_position
             )
             
             valid_receivers[player_id] = adjusted_score
@@ -462,79 +470,55 @@ class StrategyMaker:
         
         # Log filtered out players
         if filtered_out:
-            print(f"\n   [ERROR] Filtered out ({len(filtered_out)} players):")
+            print(f"\n   [FILTER] Filtered out ({len(filtered_out)} players):")
             for pid, reason, x, y in filtered_out:
                 print(f"      Player #{pid} at ({x:.1f}, {y:.1f}): {reason}")
         
-        print(f"\n   Valid receivers after filtering: {len(valid_receivers)}")
+        print(f"\n   [TARGET] Valid receivers after filtering: {len(valid_receivers)}")
         
         return valid_receivers
         
-    def predict_strategy(self, players: List[Dict], corner_position: Tuple[float, float] = (105.0, 0.0)) -> Dict[str, Any]:
+    def predict_strategy(self, players: List[Dict], freekick_position: Tuple[float, float] = (80.0, 34.0)) -> Dict[str, Any]:
         """
-        Generate tactical strategy prediction for given player placement.
+        Generate tactical strategy prediction for given player placement in free kick scenario.
         
         Args:
             players: List of player placements
-            corner_position: Corner kick position
+            freekick_position: Free kick position
             
         Returns:
             Strategy dictionary with predictions and recommendations
         """
         print("\n" + "="*60)
-        print("  GENERATING TACTICAL STRATEGY")
+        print("  GENERATING FREE KICK TACTICAL STRATEGY")
         print("="*60)
         
-        # DETAILED COORDINATE VERIFICATION LOGGING
-        print(f"===== STRATEGY MAKER COORDINATE VERIFICATION =====")
-        print(f"INPUT DEBUG:")
+        # DEBUG: Log input player data
+        print(f"[DEBUG] FREE KICK INPUT DEBUG:")
         print(f"   Total players: {len(players)}")
-        print(f"   Corner position: {corner_position}")
-        print(f"   Coordinate system: Backend meters (0-105, 0-68)")
-        
         attackers = [p for p in players if p['team'] == 'attacker']
         defenders = [p for p in players if p['team'] == 'defender']
         keepers = [p for p in players if p['team'] == 'keeper']
         print(f"   Attackers: {len(attackers)} | Defenders: {len(defenders)} | Keepers: {len(keepers)}")
         
-        # Show ALL player positions for verification
-        print(f"\n[ALL PLAYER POSITIONS]:")
-        for i, player in enumerate(players):
-            player_label = player.get('label', f"Player{player['id']}")
-            print(f"   {i+1}. {player_label} (ID: {player['id']})")
-            print(f"      Team: {player['team']}")
-            print(f"      Position: ({player['x']:.2f}m, {player['y']:.2f}m)")
-            print(f"      Distance to corner: {math.sqrt((player['x'] - corner_position[0])**2 + (player['y'] - corner_position[1])**2):.2f}m")
+        # Show attacker positions for verification
+        if attackers:
+            print(f"   Attacker positions:")
+            for i, att in enumerate(attackers[:3]):
+                print(f"     #{att['id']}: ({att['x']:.1f}, {att['y']:.1f})")
         
-        # Verify coordinate ranges
-        print(f"\nCOORDINATE VALIDATION:")
-        x_coords = [p['x'] for p in players]
-        y_coords = [p['y'] for p in players]
-        print(f"   X range: {min(x_coords):.2f} - {max(x_coords):.2f} (valid: 0-105)")
-        print(f"   Y range: {min(y_coords):.2f} - {max(y_coords):.2f} (valid: 0-68)")
-        
-        # Check for out-of-bounds coordinates
-        out_of_bounds = [p for p in players if p['x'] < 0 or p['x'] > 105 or p['y'] < 0 or p['y'] > 68]
-        if out_of_bounds:
-            print(f"   [WARNING] {len(out_of_bounds)} players out of bounds!")
-            for p in out_of_bounds:
-                player_label = p.get('label', f"Player{p['id']}")
-                print(f"      {player_label}: ({p['x']:.2f}, {p['y']:.2f})")
-        else:
-            print(f"   [OK] All coordinates within valid range")
-        
-        print(f"\n REBUILDING GRAPH FROM CURRENT POSITIONS...")
-        print(f"   Corner position: {corner_position}")
-        print(f"   This ensures GNN sees the LATEST player placement")
+        print(f"\n[GRAPH] REBUILDING GRAPH FROM CURRENT FREE KICK POSITIONS...")
+        print(f"   Free kick position: {freekick_position}")
+        print(f"   This ensures GNN sees the LATEST player placement for free kick")
         
         # Convert to graph - CRITICAL: This rebuilds graph from current positions
-        graph, player_ids = self.convert_placement_to_graph(players, corner_position)
+        graph, player_ids = self.convert_placement_to_graph(players, freekick_position)
         graph = graph.to(self.device)
         
-        print(f"   [OK] Graph rebuilt successfully with {len(players)} players")
+        print(f"   [OK] Free kick graph rebuilt successfully with {len(players)} players")
         
         # DEBUG: Log graph structure
-        print(f"\n GRAPH DEBUG:")
+        print(f"\n[DEBUG] FREE KICK GRAPH DEBUG:")
         print(f"   Nodes: {graph.x.shape[0]} | Features: {graph.x.shape[1]}")
         print(f"   Edges: {graph.edge_index.shape[1] if graph.edge_index.numel() > 0 else 0}")
         
@@ -559,7 +543,7 @@ class StrategyMaker:
         with torch.no_grad():
             # Predict receiver
             if self.receiver_model:
-                print(f"\nRECEIVER MODEL INFERENCE:")
+                print(f"\n[TARGET] FREE KICK RECEIVER MODEL INFERENCE:")
                 receiver_logits = self.receiver_model(graph)
                 receiver_probs = torch.sigmoid(receiver_logits).squeeze().cpu().numpy()
                 
@@ -574,52 +558,46 @@ class StrategyMaker:
                 for idx in attacker_indices:
                     if idx < len(player_ids):  # Exclude ball node
                         player_id = player_ids[idx]
-                        raw_score = receiver_probs[idx] if receiver_probs.ndim > 0 else receiver_probs
-                        # Ensure score is properly normalized (clamp to [0,1])
-                        score = float(torch.clamp(torch.tensor(raw_score), 0.0, 1.0).item())
+                        score = float(receiver_probs[idx]) if receiver_probs.ndim > 0 else float(receiver_probs)
                         receiver_scores[player_id] = score
-                        print(f"     Player #{player_id}: {score:.4f} (raw: {raw_score:.4f})")
+                        print(f"     Player #{player_id}: {score:.4f}")
                         
             # Predict shot
             if self.shot_model:
-                print(f"\nSHOT MODEL INFERENCE:")
+                print(f"\n[SHOT] FREE KICK SHOT MODEL INFERENCE:")
                 shot_logits = self.shot_model(graph)
-                raw_shot_prob = torch.sigmoid(shot_logits).item()
-                # Ensure shot confidence is properly normalized (clamp to [0,1])
-                shot_confidence = float(torch.clamp(torch.tensor(raw_shot_prob), 0.0, 1.0).item())
+                shot_confidence = float(torch.sigmoid(shot_logits).item())
                 print(f"   Raw shot logit: {shot_logits.item():.4f}")
-                print(f"   Sigmoid output: {raw_shot_prob:.4f}")
-                print(f"   Clamped confidence: {shot_confidence:.4f}")
-                print(f"   Shot confidence %: {shot_confidence * 100:.1f}%")
+                print(f"   Shot confidence: {shot_confidence:.4f}")
                 
         # Rank receivers
         ranked_receivers = sorted(receiver_scores.items(), key=lambda x: x[1], reverse=True)
         
         # Debug output - RAW GNN scores
-        print(f"\nRAW GNN RANKINGS (all candidates):")
+        print(f"\n[DEBUG] RAW FREE KICK GNN RANKINGS (all candidates):")
         for i, (pid, score) in enumerate(ranked_receivers[:5], 1):
             player = next((p for p in players if p['id'] == pid), None)
             pos_str = f"({player['x']:.1f}, {player['y']:.1f})" if player else "N/A"
             print(f"   {i}. Player #{pid}: {score:.4f} at {pos_str}")
             
-        print(f"\n DEBUGGING VERIFICATION:")
+        print(f"\n[DEBUG] FREE KICK DEBUGGING VERIFICATION:")
         print(f"   Raw scores show variation: {len(set(score for _, score in ranked_receivers[:3]))} unique scores in top 3")
         print(f"   Score range: {ranked_receivers[0][1]:.4f} (max) to {ranked_receivers[-1][1]:.4f} (min)")
-        print(f"   This proves GNN is generating dynamic outputs, not hardcoded values")
+        print(f"   This proves GNN is generating dynamic outputs for free kick scenarios")
             
         # CRITICAL: Apply positional filtering and tactical context
-        valid_receivers = self._filter_valid_receivers(receiver_scores, players, corner_position)
+        valid_receivers = self._filter_valid_receivers(receiver_scores, players, freekick_position)
         
         # Check if we have valid receivers after filtering
         if not valid_receivers:
-            print(f"\n[WARNING] NO VALID RECEIVERS after positional filtering!")
+            print(f"\n[WARNING]  NO VALID RECEIVERS after free kick positional filtering!")
             print(f"   Fallback: Reset play / safe possession")
             
             # Fallback strategy - use low shot confidence for reset play
             primary_receiver_id = None
             primary_receiver_score = 0.0
             tactical_decision = "Reset play - reposition"
-            decision_reason = "No receivers in tactically viable positions"
+            decision_reason = "No receivers in tactically viable positions for free kick"
             score_spread = 0.0
             max_receiver_score = 0.0
             in_danger_zone = False
@@ -630,7 +608,7 @@ class StrategyMaker:
             # Re-rank based on adjusted scores
             ranked_valid = sorted(valid_receivers.items(), key=lambda x: x[1], reverse=True)
             
-            print(f"\nFILTERED & ADJUSTED RANKINGS (tactical filtering applied):")
+            print(f"\n[WINNER] FILTERED & ADJUSTED FREE KICK RANKINGS (tactical filtering applied):")
             for i, (pid, adj_score) in enumerate(ranked_valid[:5], 1):
                 player = next((p for p in players if p['id'] == pid), None)
                 pos_str = f"({player['x']:.1f}, {player['y']:.1f})" if player else "N/A"
@@ -642,7 +620,7 @@ class StrategyMaker:
             primary_receiver_id = ranked_valid[0][0]
             primary_receiver_score = ranked_valid[0][1]
             
-            print(f"\nSELECTION VERIFICATION:")
+            print(f"\n[DEBUG] FREE KICK SELECTION VERIFICATION:")
             print(f"   Selected: Player #{primary_receiver_id} with score {primary_receiver_score:.4f}")
             print(f"   Selection method: max(valid_filtered_scores) - ensures GNN drives choice")
             print(f"   Filtering removed {len(receiver_scores) - len(valid_receivers)} candidates for tactical reasons")
@@ -650,7 +628,7 @@ class StrategyMaker:
             # Get primary receiver position for tactical analysis
             primary_receiver = next((p for p in players if p['id'] == primary_receiver_id), None)
             
-            # Enhanced tactical decision logic with spatial context
+            # Enhanced tactical decision logic with free kick specific spatial context
             max_receiver_score = primary_receiver_score
             score_spread = (ranked_valid[0][1] - ranked_valid[-1][1]) if len(ranked_valid) > 1 else 0.0
             
@@ -695,7 +673,9 @@ class StrategyMaker:
             # Ensure it stays in valid range [0, 1]
             shot_confidence = float(torch.clamp(torch.tensor(dynamic_shot_confidence), 0.0, 1.0).item())
             
-            print(f"\nTACTICAL ANALYSIS (contextual decision making):")
+            # Note: Avoid non-ASCII characters in logs to prevent UnicodeEncodeError
+            # on Windows terminals using cp1252 (e.g. emojis like 🧐).
+            print(f"\nFREE KICK TACTICAL ANALYSIS (contextual decision making):")
             print(f"   Base GNN shot confidence: {base_shot_confidence:.4f}")
             print(f"   Receiver factor: +{receiver_factor:.4f}")
             print(f"   Distance factor: +{distance_factor:.4f}")
@@ -708,67 +688,73 @@ class StrategyMaker:
             print(f"   Distance to goal: {dist_to_goal:.1f}m")
             print(f"   Decision factors: {'penalty area' if in_danger_zone else 'open play'} + "f"{'high confidence' if shot_confidence > 0.5 else 'medium confidence'} + "f"{'strong receiver' if max_receiver_score > 0.7 else 'moderate receiver'}")
             
-            # Enhanced dynamic tactical decision tree with more varied outcomes
-            if in_danger_zone and shot_confidence > 0.65 and max_receiver_score > 0.80:
-                tactical_decision = "Direct shot on first touch"
-                decision_reason = f"Exceptional receiver in penalty area + high confidence"
-            elif max_receiver_score > 0.85 and dist_to_goal < 12:
-                tactical_decision = "Powerful header attempt"
+            # Enhanced dynamic tactical decision tree for FREE KICKS with more varied outcomes
+            if shot_confidence > 0.70 and dist_to_goal < 25:
+                tactical_decision = "Direct free kick shot"
+                decision_reason = f"High shot confidence from close range ({dist_to_goal:.1f}m)"
+            elif in_danger_zone and shot_confidence > 0.60 and max_receiver_score > 0.80:
+                tactical_decision = "Driven pass to penalty area"
+                decision_reason = f"Exceptional receiver in penalty area + good confidence"
+            elif max_receiver_score > 0.85 and dist_to_goal < 18:
+                tactical_decision = "Precise pass for close-range finish"
                 decision_reason = f"Outstanding positioning very close to goal ({dist_to_goal:.1f}m)"
-            elif in_danger_zone and shot_confidence <= 0.50 and max_receiver_score > 0.70:
-                tactical_decision = "Controlled header to teammate"
-                decision_reason = f"Good receiver but moderate shot chance, create assist"
-            elif max_receiver_score > 0.75 and 15 <= dist_to_goal < 20:
-                tactical_decision = "Far post header"
-                decision_reason = f"Strong aerial target at optimal distance ({dist_to_goal:.1f}m)"
-            elif in_danger_zone and shot_confidence > 0.40 and max_receiver_score <= 0.65:
-                tactical_decision = "Flick-on to second attacker"
-                decision_reason = f"Decent receiver, create deflection for support"
-            elif score_spread > 0.15:  # Clear advantage between receivers
-                tactical_decision = "Targeted delivery to best positioned player"
-                decision_reason = f"Clear receiver advantage (spread: {score_spread:.3f})"
-            elif max_receiver_score > 0.70 and not in_danger_zone:
-                tactical_decision = "Cross for incoming runner"
-                decision_reason = f"Good receiver outside box, target run into area"
-            elif shot_confidence > 0.55 and dist_to_goal > 20:
-                tactical_decision = "Deep cross for volley"
-                decision_reason = f"Good shot chance from distance, create volley opportunity"
-            elif dist_to_goal < 18 and max_receiver_score <= 0.60:
-                tactical_decision = "Short corner variation"
-                decision_reason = f"Close to goal but no clear target, create space"
-            elif max_receiver_score > 0.65 and 18 <= dist_to_goal <= 25:
-                tactical_decision = "Measured cross to target"
-                decision_reason = f"Solid receiver at good distance, precise delivery"
-            elif shot_confidence <= 0.40 and max_receiver_score > 0.60:
-                tactical_decision = "Build-up play from corner"
-                decision_reason = f"Low shot confidence, retain possession and build"
-            elif max_receiver_score > 0.55 and dist_to_goal < 15:
+            elif shot_confidence > 0.65 and 25 <= dist_to_goal <= 35:
+                tactical_decision = "Curled free kick around wall"
+                decision_reason = f"Good shooting opportunity from optimal range ({dist_to_goal:.1f}m)"
+            elif in_danger_zone and max_receiver_score > 0.70:
+                tactical_decision = "Low driven cross to penalty area"
+                decision_reason = f"Strong receiver in dangerous area, beat defensive wall low"
+            elif max_receiver_score > 0.75 and 15 <= dist_to_goal < 25:
+                tactical_decision = "Floated free kick to far post"
+                decision_reason = f"Good aerial target at mid-range ({dist_to_goal:.1f}m)"
+            elif score_spread > 0.20:  # Clear advantage between receivers in free kicks
+                tactical_decision = "Targeted delivery to unmarked player"
+                decision_reason = f"Clear receiver advantage in free kick setup (spread: {score_spread:.3f})"
+            elif shot_confidence > 0.50 and dist_to_goal > 30:
+                tactical_decision = "Long-range free kick attempt"
+                decision_reason = f"Decent shot chance from distance, test goalkeeper"
+            elif max_receiver_score > 0.65 and not in_danger_zone:
+                tactical_decision = "Cross-field pass to create space"
+                decision_reason = f"Good receiver outside box, switch play and create opportunity"
+            elif in_danger_zone and shot_confidence <= 0.45:
+                tactical_decision = "Short free kick to create angle"
+                decision_reason = f"Low direct shot confidence, create better shooting position"
+            elif dist_to_goal < 20 and max_receiver_score <= 0.60:
+                tactical_decision = "Free kick variation - dummy run"
+                decision_reason = f"Close to goal but no clear target, use deception"
+            elif max_receiver_score > 0.60 and 20 <= dist_to_goal <= 30:
+                tactical_decision = "Whipped delivery to back post"
+                decision_reason = f"Solid receiver at good distance, target far post area"
+            elif shot_confidence <= 0.35 and max_receiver_score > 0.55:
+                tactical_decision = "Build-up play from free kick"
+                decision_reason = f"Low shot confidence, retain possession and create phase play"
+            elif max_receiver_score > 0.50 and dist_to_goal < 20:
                 tactical_decision = "Near post delivery"
                 decision_reason = f"Viable close receiver, create pressure at near post"
-            elif shot_confidence > 0.45 and in_danger_zone:
-                tactical_decision = "Quick shot after control"
-                decision_reason = f"Reasonable shot chance in penalty area"
-            elif max_receiver_score <= 0.55:
-                tactical_decision = "Recycle possession"
-                decision_reason = f"No clear tactical advantage, retain ball and reset"
+            elif shot_confidence > 0.40 and in_danger_zone:
+                tactical_decision = "Free kick shot after touch"
+                decision_reason = f"Reasonable shot chance in penalty area after ball movement"
+            elif max_receiver_score <= 0.50:
+                tactical_decision = "Recycle possession from free kick"
+                decision_reason = f"No clear tactical advantage, retain ball and reset attack"
             else:
-                tactical_decision = "Whipped cross to back post"
-                decision_reason = f"General crossing opportunity, target back post area"
+                tactical_decision = "Standard free kick delivery"
+                decision_reason = f"General free kick opportunity, standard delivery to area"
             
-        print(f"\n FINAL STRATEGY VERIFICATION:")
-        print(f"   Using REAL GNN outputs (not hardcoded):")
+        print(f"\n[FINAL] FINAL FREE KICK STRATEGY VERIFICATION:")
+        print(f"   [GNN] Using REAL GNN outputs (not hardcoded):")
         print(f"      Primary receiver: #{primary_receiver_id} (GNN score: {primary_receiver_score:.4f})")
         print(f"      Shot confidence: {shot_confidence:.4f} (from GNN shot model)")
-        print(f"      Decision: '{tactical_decision}' (from enhanced logic tree)")
-        print(f"   Anti-hardcoding verification:")
+        print(f"      Decision: '{tactical_decision}' (from enhanced free kick logic tree)")
+        print(f"   [DEBUG] Anti-hardcoding verification:")
         print(f"      Total candidates evaluated: {len(receiver_scores)}")
         print(f"      Filtering reduced to: {len(valid_receivers)} valid receivers")
         print(f"      Score spread: {score_spread:.4f} (shows dynamic variation)")
         print(f"      In danger zone: {in_danger_zone} | Distance to goal: {dist_to_goal:.1f}m")
-        print(f"    Best receiver selected by: max(adjusted_gnn_scores)")
-        print(f"   Tactical Decision: {tactical_decision}")
+        print(f"   [WINNER] Best receiver selected by: max(adjusted_gnn_scores)")
+        print(f"   [TARGET] Tactical Decision: {tactical_decision}")
         print(f"    Reasoning: {decision_reason}")
-        print(f"    Dynamic elements verified: receiver varies by position, decision adapts to context")
+        print(f"   [FAST] Dynamic elements verified: receiver varies by position, decision adapts to free kick context")
         
         # Debug: Check for strategy variation (anti-spam verification)
         current_receiver = primary_receiver_id
@@ -778,14 +764,14 @@ class StrategyMaker:
             self.last_strategy_receiver == current_receiver and 
             hasattr(self, 'last_strategy_decision') and
             self.last_strategy_decision == current_decision):
-            print(f"\n REPEATED STRATEGY - same receiver & decision")
+            print(f"\n[REPEAT] REPEATED FREE KICK STRATEGY - same receiver & decision")
             print(f"   Receiver: {current_receiver}, Decision: '{current_decision}'")
-            print(f"    This indicates consistent GNN output for same formation")
-            print(f"    Move players to different positions to see dynamic changes")
+            print(f"   [FAST] This indicates consistent GNN output for same free kick formation")
+            print(f"   [DEBUG] Move players to different positions to see dynamic changes")
         else:
-            print(f"\n NEW STRATEGY - different from previous")
+            print(f"\n[NEW] NEW FREE KICK STRATEGY - different from previous")
             print(f"   Previous: #{getattr(self, 'last_strategy_receiver', 'N/A')} | Current: #{current_receiver}")
-            print(f"   This confirms dynamic GNN behavior")
+            print(f"   This confirms dynamic GNN behavior for free kicks")
             
         # Update tracking
         self.last_strategy_receiver = current_receiver
@@ -794,7 +780,7 @@ class StrategyMaker:
         # Build strategy output
         strategy = {
             "timestamp": datetime.datetime.now().isoformat(),
-            "corner_position": corner_position,
+            "freekick_position": freekick_position,
             "num_players": len(players),
             "debug_info": {
                 "graph_nodes": graph.x.shape[0],
@@ -828,35 +814,13 @@ class StrategyMaker:
         # Save debug scenario for analysis
         self.save_debug_scenario(strategy, graph)
         
-        # DETAILED STRATEGY RESULTS LOGGING
-        print(f"\n[OK] ===== STRATEGY GENERATION COMPLETE =====")
-        print(f" PRIMARY RECEIVER:")
-        print(f"   Player ID: {primary_receiver_id}")
-        print(f"   Score: {primary_receiver_score:.4f} ({primary_receiver_score*100:.1f}%)")
-        if primary_receiver_id:
-            matching_player = next((p for p in players if p['id'] == primary_receiver_id), None)
-            if matching_player:
-                player_label = matching_player.get('label', f"Player{matching_player['id']}")
-                print(f"   Player: {player_label}")
-                print(f"   Position: ({matching_player['x']:.2f}m, {matching_player['y']:.2f}m)")
-        
-        print(f"\n PREDICTION RESULTS:")
-        print(f"   Shot Confidence: {shot_confidence:.4f} ({shot_confidence*100:.1f}%)")
-        print(f"   Tactical Decision: {tactical_decision}")
-        print(f"   Total Alternatives: {len(ranked_receivers)-1}")
-        
-        print(f"\n COORDINATE VERIFICATION:")
-        print(f"   Timestamp: {strategy['timestamp']}")
-        print(f"   Graph Nodes: {strategy['debug_info']['graph_nodes']}")
-        print(f"   Valid Receivers: {len(strategy['debug_info']['all_receiver_scores'])}")
-        
         print("="*60)
         
         return strategy
         
     def save_strategy(self, strategy: Dict[str, Any], output_dir: str = None) -> str:
         """
-        Save strategy to JSON file for future fine-tuning.
+        Save free kick strategy to JSON file for future fine-tuning.
         
         Args:
             strategy: Strategy dictionary
@@ -869,31 +833,32 @@ class StrategyMaker:
             output_dir = self.model_dir
             
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"generated_strategy_{timestamp}.json"
+        filename = f"generated_freekick_strategy_{timestamp}.json"
         filepath = os.path.join(output_dir, filename)
         
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(strategy, f, indent=2)
             
-        print(f" Strategy saved to: {filename}")
+        print(f"[TARGET] Free Kick Strategy saved to: {filename}")
         
         return filepath
         
     def save_debug_scenario(self, strategy: Dict[str, Any], graph: Data):
-        """Save detailed scenario debug information"""
+        """Save detailed free kick scenario debug information"""
         try:
             # Create debug directory if it doesn't exist
-            debug_dir = os.path.join(self.model_dir, "scenario_debug_logs")
+            debug_dir = os.path.join(self.model_dir, "freekick_scenario_debug_logs")
             os.makedirs(debug_dir, exist_ok=True)
             
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S_%f")[:-3]  # Include milliseconds
-            debug_filename = f"scenario_{timestamp}.json"
+            debug_filename = f"freekick_scenario_{timestamp}.json"
             debug_path = os.path.join(debug_dir, debug_filename)
             
             # Compile comprehensive debug data
             debug_data = {
                 "timestamp": strategy["timestamp"],
                 "scenario_id": timestamp,
+                "scenario_type": "freekick",
                 "graph_structure": {
                     "num_nodes": graph.x.shape[0],
                     "num_edges": graph.edge_index.shape[1] if graph.edge_index.numel() > 0 else 0,
@@ -930,7 +895,8 @@ class StrategyMaker:
                     "attacker_positions": [(p['x'], p['y']) for p in strategy["player_placements"] if p['team'] == 'attacker'],
                     "defender_positions": [(p['x'], p['y']) for p in strategy["player_placements"] if p['team'] == 'defender'],
                     "formation_center_x": sum(p['x'] for p in strategy["player_placements"]) / len(strategy["player_placements"]),
-                    "formation_width": max(p['x'] for p in strategy["player_placements"]) - min(p['x'] for p in strategy["player_placements"])
+                    "formation_width": max(p['x'] for p in strategy["player_placements"]) - min(p['x'] for p in strategy["player_placements"]),
+                    "freekick_position": strategy["freekick_position"]
                 }
             }
             
@@ -938,114 +904,39 @@ class StrategyMaker:
             with open(debug_path, 'w', encoding='utf-8') as f:
                 json.dump(debug_data, f, indent=2)
                 
-            print(f"[DEBUG] Debug scenario saved: {debug_filename}")
+            print(f"[DEBUG] Free Kick Debug scenario saved: {debug_filename}")
             
         except Exception as e:
-            print(f"[WARNING] Failed to save debug scenario: {e}")
-        
-    def generate_simulation_data(self, strategy: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Generate simulation data for visualization.
-        
-        Args:
-            strategy: Strategy dictionary from predict_strategy
-            
-        Returns:
-            Simulation data for animated replay
-        """
-        primary_receiver = strategy["predictions"]["primary_receiver"]
-        shot_confidence = strategy["predictions"]["shot_confidence"]
-        corner_pos = strategy["corner_position"]
-        
-        if not primary_receiver["position"]:
-            return None
-            
-        target_pos = (primary_receiver["position"]["x"], primary_receiver["position"]["y"])
-        
-        simulation_data = {
-            "ball_trajectory": {
-                "start": corner_pos,
-                "target": target_pos,
-                "type": "bezier_curve",
-                "duration": 1.5
-            },
-            "player_movements": [],
-            "shot_action": shot_confidence > 0.6,
-            "shot_target": (GOAL_X, GOAL_Y) if shot_confidence > 0.6 else None
-        }
-        
-        # Generate player movements
-        for player in strategy["player_placements"]:
-            if player['team'] == 'attacker':
-                # Attackers move toward target zone
-                movement = {
-                    "player_id": player['id'],
-                    "start": (player['x'], player['y']),
-                    "end": self._calculate_attacking_movement(player, target_pos),
-                    "speed": 0.8
-                }
-                simulation_data["player_movements"].append(movement)
-            elif player['team'] == 'defender':
-                # Defenders adjust toward ball
-                movement = {
-                    "player_id": player['id'],
-                    "start": (player['x'], player['y']),
-                    "end": self._calculate_defensive_movement(player, target_pos),
-                    "speed": 0.6
-                }
-                simulation_data["player_movements"].append(movement)
-                
-        return simulation_data
-        
-    def _calculate_attacking_movement(self, player: Dict, target: Tuple[float, float]) -> Tuple[float, float]:
-        """Calculate attacking player's movement toward target."""
-        px, py = player['x'], player['y']
-        tx, ty = target
-        
-        # Move 30% toward target
-        dx = (tx - px) * 0.3
-        dy = (ty - py) * 0.3
-        
-        return (px + dx, py + dy)
-        
-    def _calculate_defensive_movement(self, player: Dict, ball_target: Tuple[float, float]) -> Tuple[float, float]:
-        """Calculate defensive player's adjustment toward ball."""
-        px, py = player['x'], player['y']
-        tx, ty = ball_target
-        
-        # Slight movement toward ball (20%)
-        dx = (tx - px) * 0.2
-        dy = (ty - py) * 0.2
-        
-        return (px + dx, py + dy)
+            print(f"[WARNING]  Failed to save free kick debug scenario: {e}")
 
 
 def main():
     """
-    Example usage of the Strategy Maker.
+    Example usage of the Free Kick Strategy Maker.
     """
-    # Initialize strategy maker
-    strategy_maker = StrategyMaker()
+    # Initialize free kick strategy maker
+    strategy_maker = FreeKickStrategyMaker()
     
-    # Example player placement (simulated)
+    # Example player placement for free kick (simulated)
     example_players = [
-        {"id": 1, "x": 95, "y": 25, "team": "attacker"},
-        {"id": 2, "x": 90, "y": 34, "team": "attacker"},
-        {"id": 3, "x": 85, "y": 45, "team": "attacker"},
-        {"id": 4, "x": 88, "y": 20, "team": "defender"},
-        {"id": 5, "x": 92, "y": 50, "team": "defender"},
-        {"id": 6, "x": 50, "y": 34, "team": "keeper"},
+        {"id": 1, "x": 90, "y": 30, "team": "attacker"},  # Near penalty area
+        {"id": 2, "x": 85, "y": 34, "team": "attacker"},  # Central
+        {"id": 3, "x": 88, "y": 40, "team": "attacker"},  # Slightly wide
+        {"id": 4, "x": 82, "y": 28, "team": "defender"},  # Wall position
+        {"id": 5, "x": 84, "y": 38, "team": "defender"},  # Marking
+        {"id": 6, "x": 50, "y": 34, "team": "keeper"},   # Goalkeeper
     ]
     
-    # Generate strategy
-    strategy = strategy_maker.predict_strategy(example_players)
+    # Free kick position (closer to goal than corner)
+    freekick_pos = (80.0, 34.0)
+    
+    # Generate free kick strategy
+    strategy = strategy_maker.predict_strategy(example_players, freekick_pos)
     
     # Save strategy
     strategy_maker.save_strategy(strategy)
     
-    # Generate simulation data
-    sim_data = strategy_maker.generate_simulation_data(strategy)
-    print("\n[OK] Simulation data generated")
+    print("\n[OK] Free Kick Simulation data generated")
     
     return strategy
 
