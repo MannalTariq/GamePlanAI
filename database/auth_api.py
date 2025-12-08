@@ -23,10 +23,13 @@ from user_schema import UserSchema
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)
+
+# CORS Configuration - Support environment variable for production
+cors_origins = os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(',')
+CORS(app, origins=cors_origins)
 
 # Configuration
-app.config['SECRET_KEY'] = 'your-secret-key-change-in-production'  # Change this in production
+app.config['SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'your-secret-key-change-in-production')
 JWT_SECRET_KEY = app.config['SECRET_KEY']
 JWT_ALGORITHM = 'HS256'
 JWT_EXPIRATION_HOURS = 24
@@ -458,4 +461,8 @@ if __name__ == '__main__':
     print("  POST /api/auth/change-password - Change password")
     print("\n" + "="*70 + "\n")
     
-    app.run(debug=True, host='0.0.0.0', port=5002)
+    # Use PORT environment variable for production (Render, Heroku, etc.)
+    port = int(os.environ.get('PORT', 5002))
+    debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    
+    app.run(debug=debug, host='0.0.0.0', port=port)

@@ -22,7 +22,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from strategy_maker import StrategyMaker
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for React frontend
+
+# CORS Configuration - Support environment variable for production
+cors_origins = os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(',')
+CORS(app, origins=cors_origins)  # Enable CORS for React frontend
 
 # Initialize Strategy Maker
 strategy_maker = None
@@ -745,7 +748,11 @@ if __name__ == '__main__':
         print("  GET  /api/strategy/<id>   - Get specific strategy")
         print("\n" + "="*70 + "\n")
         
-        app.run(debug=True, host='0.0.0.0', port=5000)
+        # Use PORT environment variable for production (Render, Heroku, etc.)
+        port = int(os.environ.get('PORT', 5000))
+        debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+        
+        app.run(debug=debug, host='0.0.0.0', port=port)
     else:
         print("[ERROR] Failed to initialize Strategy Maker")
         print("   Server will not start")

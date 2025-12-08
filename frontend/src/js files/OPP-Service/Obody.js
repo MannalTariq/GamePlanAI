@@ -120,8 +120,8 @@ const Obody = () => {
         : { x: 50, y: 30 };
 
       const apiUrl = selectedSetPiece === 'Free Kick'
-        ? 'http://localhost:5001/api/freekick/position'
-        : 'http://localhost:5000/api/optimize';
+        ? `${process.env.REACT_APP_FK_API || 'http://localhost:5001/api/freekick'}/position`
+        : `${process.env.REACT_APP_CORNER_API || 'http://localhost:5000/api'}/optimize`;
 
       const requestData = selectedSetPiece === 'Free Kick'
         ? { freekickPosition: { x: 50, y: 30 } }

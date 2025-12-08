@@ -70,7 +70,7 @@ const Abody = () => {
   const fetchStrategies = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch('http://localhost:5000/api/strategies');
+      const response = await fetch(`${process.env.REACT_APP_CORNER_API || 'http://localhost:5000/api'}/strategies`);
       if (response.ok) {
         const data = await response.json();
         setAvailableStrategies(data.strategies || []);
@@ -97,7 +97,7 @@ const Abody = () => {
       );
       
       const filename = strategy ? strategy.filename : selectedStrategy;
-      const response = await fetch(`http://localhost:5000/api/strategy/${filename}`);
+      const response = await fetch(`${process.env.REACT_APP_CORNER_API || 'http://localhost:5000/api'}/strategy/${filename}`);
       
       if (response.ok) {
         const data = await response.json();

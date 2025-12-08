@@ -1,0 +1,57 @@
+# Render Blueprint for GamePlanAI Backend APIs
+# Deploy all three backend services
+
+services:
+  # Authentication API Service
+  - type: web
+    name: gameplanai-auth
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r database/requirements.txt
+    startCommand: cd database && python auth_api.py
+    envVars:
+      - key: PORT
+        value: 5002
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        fromService:
+          type: web
+          name: gameplanai-frontend
+          property: url
+
+  # Corner Kick API Service
+  - type: web
+    name: gameplanai-corner
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/hassaa/data/requirements.txt
+    startCommand: cd backend/hassaa/data && python api_server.py
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: CORS_ORIGINS
+        fromService:
+          type: web
+          name: gameplanai-frontend
+          property: url
+
+  # Free Kick API Service
+  - type: web
+    name: gameplanai-freekick
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r backend/hassaa/data/requirements.txt
+    startCommand: cd backend/hassaa/data && python freekick_api.py
+    envVars:
+      - key: PORT
+        value: 5001
+      - key: CORS_ORIGINS
+        fromService:
+          type: web
+          name: gameplanai-frontend
+          property: url
+

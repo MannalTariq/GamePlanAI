@@ -1298,7 +1298,7 @@ const Simbody = () => {
     try {
       console.log('📍 Left corner button clicked');
       
-      const response = await fetch('http://localhost:5000/api/corner/left', {
+      const response = await fetch(`${process.env.REACT_APP_CORNER_API || 'http://localhost:5000/api'}/corner/left`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1351,7 +1351,7 @@ const Simbody = () => {
     try {
       console.log('📍 Ball position set:', { x: xPct, y: yPct });
       
-      const response = await fetch('http://localhost:5001/api/freekick/position', {
+      const response = await fetch(`${process.env.REACT_APP_FK_API || 'http://localhost:5001/api/freekick'}/position`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1393,7 +1393,7 @@ const Simbody = () => {
     try {
       console.log('📍 Freekick position set:', { x: xPct, y: yPct });
       
-      const response = await fetch('http://localhost:5001/api/freekick/position', {
+      const response = await fetch(`${process.env.REACT_APP_FK_API || 'http://localhost:5001/api/freekick'}/position`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1433,7 +1433,7 @@ const Simbody = () => {
     try {
       console.log('📍 Right corner button clicked');
       
-      const response = await fetch('http://localhost:5000/api/corner/right', {
+      const response = await fetch(`${process.env.REACT_APP_CORNER_API || 'http://localhost:5000/api'}/corner/right`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -1536,8 +1536,8 @@ const Simbody = () => {
 
       // Call backend API - route to correct API based on set piece
       const apiUrl = selectedSetPiece === 'Free Kick' 
-        ? 'http://localhost:5001/api/freekick/simulate'
-        : 'http://localhost:5000/api/simulate';
+        ? `${process.env.REACT_APP_FK_API || 'http://localhost:5001/api/freekick'}/simulate`
+        : `${process.env.REACT_APP_CORNER_API || 'http://localhost:5000/api'}/simulate`;
       
       // Add timeout to prevent hanging
       const controller = new AbortController();

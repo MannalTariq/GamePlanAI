@@ -1,11 +1,12 @@
 // Authentication utility functions
 import React from 'react';
+import { API_CONFIG } from '../config/api';
 
 const AUTH_TOKEN_KEY = 'authToken';
 const USER_DATA_KEY = 'userData';
 
 export const authAPI = {
-  baseURL: 'http://localhost:5002/api/auth',
+  baseURL: API_CONFIG.AUTH_API,
   
   // Get stored token
   getToken: () => {
