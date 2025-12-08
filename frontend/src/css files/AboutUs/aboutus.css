@@ -1,0 +1,258 @@
+/* About Us Page Styles */
+.about-us-container {
+  background-color: #ffffff;
+  min-height: calc(100vh - 200px);
+}
+
+/* Section Styles */
+.about-section,
+.story-section,
+.values-section,
+.unique-section {
+  padding: 80px 170px;
+  background-color: #ffffff;
+}
+
+.mission-vision-section {
+  padding: 80px 170px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Heading Styles */
+.heading {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.heading h1 {
+  color: #68883A;
+  font-size: 28px;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.heading h2 {
+  color: #333;
+  font-size: 36px;
+  margin: 5px 0 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Content Section */
+.content-section {
+  margin-top: 30px;
+}
+
+.content-section p {
+  color: #243342;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.overview-text {
+  font-size: 18px;
+  line-height: 2;
+}
+
+/* Mission & Vision Sections */
+.section {
+  background-color: #fff;
+  padding: 30px;
+  border-left: 5px solid #68883A;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+  color: #68883A;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin: 0 0 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.section p {
+  color: #243342;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.value-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.value-card:hover {
+  border-color: #68883A;
+  box-shadow: 0 4px 12px rgba(104, 136, 58, 0.2);
+  transform: translateY(-5px);
+}
+
+.value-card h4 {
+  color: #68883A;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+
+.value-card p {
+  color: #243342;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Unique Points */
+.unique-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.unique-point {
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 4px solid #68883A;
+}
+
+.unique-point h4 {
+  color: #68883A;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.unique-point p {
+  color: #243342;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Call to Action Section */
+.cta-section {
+  padding: 100px 170px;
+  background: linear-gradient(135deg, #68883A 0%, #4a6a2a 100%);
+  text-align: center;
+  color: white;
+}
+
+.cta-content h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 42px;
+  margin: 0 0 20px;
+  color: white;
+}
+
+.cta-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin: 0 0 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-button {
+  padding: 15px 40px;
+  border-radius: 5px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button.primary {
+  background-color: white;
+  color: #68883A;
+  border: 2px solid white;
+}
+
+.cta-button.primary:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+  background-color: white;
+  color: #68883A;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about-section,
+  .story-section,
+  .values-section,
+  .unique-section,
+  .mission-vision-section,
+  .cta-section {
+    padding: 60px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section,
+  .story-section,
+  .values-section,
+  .unique-section,
+  .mission-vision-section,
+  .cta-section {
+    padding: 40px 30px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .unique-points {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+

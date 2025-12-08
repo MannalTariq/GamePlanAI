@@ -1,0 +1,54 @@
+
+/* Services Section */
+.services {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center; /* Center the heading */
+  }
+  
+  .services h2 {
+    font-size: 2em; /* Adjust font size to match the image */
+    margin-bottom: 30px; /* Space below the heading */
+    color: #333; /* Dark color for the heading */
+  }
+  
+  .services .service-list {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 60px; /* Space between the buttons */
+  }
+  
+  .service-item {
+    width: 210px; /* Fixed width to ensure all buttons are the same size */
+    height: 40px; /* Fixed height for consistency */
+    padding: 10px 20px; /* Adjust padding to match the button size in the image */
+    background-color: #68883A; /* Green background matching the design */
+    color: white; /* White text */
+    font-family: 'poppins';
+    font-size: small; /* Adjust font size to match the image */
+    text-align: center;
+    border-radius: 5px; /* Rounded corners to make it look like a button */
+    cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  
+  .service-item:hover {
+    background-color: #56702F;
+    transform: translateY(-2px); /* Move the button up by 5px on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for a lifted effect */
+  }
+  
+  @media (max-width: 768px) {
+    .services .service-list {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .service-item {
+      width: 80%; /* Adjust width for smaller screens */
+      max-width: 300px; /* Prevent it from getting too wide */
+    }
+  }
+  

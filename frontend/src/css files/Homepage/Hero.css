@@ -1,0 +1,46 @@
+
+/* Hero Section */
+.hero {
+    font-size: 4em;
+    text-align: left;
+    padding-left: 200px;
+    font-weight: bold;
+    margin-top: 200px; /* Adjust this to get the desired spacing */
+  }
+  
+  
+  .hero-description h1 {
+    font-size: medium;
+    text-align: left;
+    padding-left: 200px; /* Padding to the left to move text */
+    color: white; /* Text color */
+    margin-bottom: 50px; /* Space below the header */
+    margin-top: 1px; /* Space below the header */
+  }
+  
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    padding-left: 200px; /* Same padding as the h1 */
+    gap: 30px; /* Space between buttons */
+    margin-top: 50px; /* Space between h1 and buttons */
+  }
+  
+  
+  .hero-buttons .button {
+    background-color: #68883A; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius:5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-buttons button:hover {
+    background-color: #5e7c34; /* Darker shade on hover */
+    transform: translateY(-2px); /* Move the button up by 5px on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for a lifted effect */
+  }

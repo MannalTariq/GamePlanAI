@@ -1,0 +1,112 @@
+/* Header */
+.header {
+    position: relative;
+    background-image: url('../../images/Header.svg'); /* Update with your background image */
+    background-size: cover;
+    color: white;
+    padding: 50px 0; /* Adjusted padding */
+    text-align: center;
+    height: 700px; /* Set a fixed height for the header */
+  }
+  
+  /* Logo */
+  .header .logo {
+    font-size: 3em; /* Increased font size */
+    font-family: 'Quicksand', sans-serif; /* Apply Quicksand font */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Navbar Container */
+  .navbar-container {
+    display: flex; /* Flexbox to align navbar and buttons on the same line */
+    justify-content: space-between; /* Space out the navbar links and buttons */
+    align-items: center; /* Vertically align items */
+    margin-left: 150px;
+    padding: 0px 20px; /* Add some space to the left and right */
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: #2a2a2a; /* Dark background color for the entire navbar */
+    border-radius: 10px; /* Rounded corners for the navbar container */
+    width: 50%; /* Full width of the container */
+    padding: 5px; /* Padding for spacing around the links */
+    margin: 0 auto; /* Center the navbar horizontally */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links */
+    gap: 30px; /* Space between the links */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Navbar Links */
+  .navbar {
+    color: #ffffff; /* Set the text color to green */
+    font-size: 0.8em; /* Set the font size */
+    font-weight: normal; /* Make the text normal */
+    padding: 10px 20px; /* Add padding around the text */
+    text-transform: uppercase; /* Make the text uppercase */
+    background-color: transparent; /* Transparent background */
+    text-decoration: none; /* Remove underline */
+    border-radius: 10px; /* Rounded corners on each link */
+    display: flex; /* Make the link a flex container */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect */
+  .navbar:hover {
+    color: #68883A; /* Change text color to #68883A */
+    border-bottom: 1px solid #68883A; /* Add a bottom border (line) */
+  }
+  
+  /* Buttons Container */
+  .buttons-container {
+    display: flex;
+    gap: 15px; /* Space between the buttons */
+  }
+  
+  /* Styling for the Sign in and Login buttons */
+  .signbutton {
+    display: flex;
+    background-color: #68883A; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 2px 15px; /* Padding for the button */
+    cursor: pointer; /* Show pointer on hover */
+    font-size: 1em; /* Larger font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+  }
+  
+  .signbutton:hover {
+    background-color: #5e7c34; /* Darker green on hover */
+    transform: translateY(-2px); /* Move the button up by 5px on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for a lifted effect */
+  }
+  
+/* Hero Buttons */
+.hero-buttons {
+    display: flex;
+    color: white; /* White text */
+    width: 600px;
+    border: none; /* Remove border */
+    padding: 2px 15px; /* Padding for the button */
+    cursor: pointer; /* Show pointer on hover */
+    font-size: 1em; /* Larger font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+  
+  .hero-button:hover {
+    background-color: #5e7c34; /* Darker green on hover */
+    transform: translateY(-2px); /* Move the button up by 5px on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for a lifted effect */
+  }
+  

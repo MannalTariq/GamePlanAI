@@ -1,0 +1,284 @@
+.Obody {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+}
+
+.obody-section {
+  border-radius: 50px;
+  padding: 24px;
+  margin-bottom: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selection-section,
+.simulation-section,
+.report-section {
+  width: 100%;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdowns-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 12rem;
+}
+
+.custom-dropdown-header {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 0.25rem;
+  background-color: #688834;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-dropdown-header:hover {
+  background-color: #5e7c34;
+  color: #000000;
+}
+
+.arrow {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.custom-dropdown-header.open .arrow {
+  transform: rotate(180deg);
+}
+
+.custom-dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #d0d0d0;
+  border-top: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  background-color: #688834;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.custom-option {
+  padding: 0.5rem 0.75rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background-color: #5e7c34;
+  color: #000000;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.optimize-button,
+.print-button {
+  padding: 0.5rem 2rem;
+  background-color: #688834;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.optimize-button:hover,
+.print-button:hover {
+  background-color: #5e7c34;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.field-simulation {
+  margin: 1rem 0;
+}
+
+.field {
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  background: url('../../images/half-field.svg') no-repeat center;
+  background-size: contain;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  width: 30px; /* Adjust size as needed based on your SVG */
+  height: 30px; /* Adjust size as needed based on your SVG */
+}
+
+.player-blue {
+  width: 50px;
+  height: 50px;
+}
+
+.player-red {
+  width: 50px;
+  height: 50px;
+}
+
+.report-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  margin-bottom: 20px;
+  gap: 50px;
+}
+
+.report-text {
+  flex: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success-rate-container {
+  flex: 0 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.report-section h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: #000000;
+}
+
+.player-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.player-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 15px;
+}
+
+.optimization-insights {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #000000;
+  font-size: 13px;
+  color: #000000;
+}
+
+.optimization-insights h4 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.optimization-insights p {
+  margin: 0;
+}
+
+.success-rate-title {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: #000000;
+}
+
+.success-rate-chart {
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 768px) {
+  .obody-section {
+    max-width: 90%;
+    padding: 12px;
+  }
+
+  .dropdowns-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-dropdown {
+    width: 100%;
+    max-width: 12rem;
+  }
+
+  .field {
+    width: 300px;
+    height: 225px;
+  }
+
+  .report-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .report-text {
+    margin-bottom: 20px;
+    max-height: 250px;
+  }
+
+  .success-rate-chart {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .optimize-button,
+  .print-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .field {
+    width: 250px;
+    height: 187.5px;
+  }
+
+  .report-text {
+    max-height: 200px;
+  }
+}

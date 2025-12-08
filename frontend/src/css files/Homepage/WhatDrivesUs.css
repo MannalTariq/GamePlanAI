@@ -1,0 +1,94 @@
+/* What Drives Us Section */
+.mission-vision-container {
+    padding: 135px 170px; /* 80px top and bottom, 30px left and right */
+    background-color: #ffffff;
+}
+
+.heading {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.heading h1 {
+    color: #68883A;
+    font-size: 28px;
+    margin: 0;
+}
+
+.heading h2 {
+    color: #333;
+    font-size: 36px;
+    margin: 5px 0 0;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.text-sections {
+    flex: 1;
+}
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #68883A;
+    border-radius: 5px;
+}
+
+.section h3 {
+    color: #68883A;
+    font-family: 'poppins';
+    font-size: 21px;
+    margin: 0 0 10px;
+    display: flex; /* Keep flex for icon alignment */
+    align-items: center; /* Align icon vertically with text */
+    text-align: left; /* Ensure h3 text is left-aligned */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.42);
+    padding-bottom: 5px; /* Space below the line */
+}
+
+.section p {
+    color: #243342;
+    font-family: 'Montserrat'; /* Use quotes for font names */
+    line-height: 1.5;
+    font-size: 14px;
+    text-align: left; /* Explicitly align paragraph text to the left */
+}
+
+.section h3::before {
+    content: ''; /* Empty content for background image */
+    display: inline-block;
+    width: 44px; /* Width of the SVG */
+    height: 44px; /* Height of the SVG */
+    background-size: contain; /* Scale the SVG properly */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    vertical-align: middle; /* Align icon with text */
+}
+
+.section.mission h3::before {
+    background-image: url('../../images/mission.svg');
+}
+
+.section.vision h3::before {
+    background-image: url('../../images/vision.svg');
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

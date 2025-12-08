@@ -1,0 +1,214 @@
+/* Footer Styles */
+footer {
+    background-color: #68883A; /* Dark green background */
+    color: white; /* Ensure text is white */
+    padding: 100px 0 10px 0; /* Fixed typo: 15p to 15px */
+}
+
+/* Top section with logo, sections, and field image */
+.footer-top {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space out logo, sections, and image */
+    max-width: 1200px; /* Adjusted to fit the content */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo on the left */
+.footer-logo {
+    display: flex;
+    margin-right: 50px;
+}
+
+.footer-logo img {
+    max-width: auto; /* Adjust based on your logo size */
+    height: auto;
+}
+
+/* Footer container for the three sections */
+.footer-container {
+    display: flex;
+    justify-content: center; /* Center the sections */
+    gap: 50px; /* Space between sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: flex-start; /* Align sections to the top */
+}
+
+/* Quick Links */
+.quick-links {
+    flex: 1;
+    min-width: 150px;
+    text-align: left;
+}
+
+.quick-links h3 {
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    color: white; /* Explicitly set white for headers */
+    margin-bottom: 15px;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links li {
+    margin: 10px 0;
+}
+
+.quick-links a {
+    color: white; /* Ensure links are white */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.quick-links a:hover {
+    color: #ccc; /* Lighter color on hover */
+}
+
+/* About Us Section */
+.about-us {
+    flex: 1;
+    min-width: 250px;
+    text-align: left; /* Align text to the left */
+}
+
+.about-us h3 {
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    color: white; /* Explicitly set white for headers */
+    margin-bottom: 15px;
+}
+
+.about-us p {
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+    color: white; /* Ensure paragraph text is white */
+    margin-bottom: 15px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center; /* Keep social media icons centered within this section */
+    gap: 15px;
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px; /* Adjust size of social media icons */
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.social-media img:hover {
+    opacity: 0.7; /* Slight fade on hover */
+}
+
+/* Newsletter Section */
+.newsletter {
+    flex: 1;
+    min-width: 250px;
+    text-align: left; /* Align text to the left */
+}
+
+.newsletter h3 {
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    color: white; /* Explicitly set white for headers */
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+    color: white; /* Ensure paragraph text is white */
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-input {
+    padding: 10px 15px;
+    width: 200px;
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 25px 0 0 25px;
+    border: 2px solid #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #000; /* Input text color */
+    background-color: #fff; /* Ensure input background is white */
+}
+
+.email-input:focus {
+    border-color: #ccc;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+    width: 50px;
+    height: 42px; /* Match input height */
+    background-image: url('../../images/footer_email_arrow.svg'); /* Ensure this path is correct */
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333; /* Slightly lighter black on hover */
+}
+
+/* Field image on the right */
+.footer-image {
+    display: flex;
+    align-items: center; /* Vertically center the image within its container */
+}
+
+.footer-image img {
+    max-width: 150px; /* Adjust based on image size */
+    height: auto;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    background-color: #68883A;
+    padding: 15px 0; /* Fixed typo: 15p to 15px */
+    text-align: center; /* Centered as per the image */
+    font-size: 0.9em;
+    font-family: 'Quicksand', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    color: white; /* Ensure bottom text is white */
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: white; /* Ensure links are white */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+    color: #ccc;
+}

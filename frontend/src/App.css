@@ -1,0 +1,38 @@
+
+
+/* Homepage */
+@import 'css files/Homepage/general.css';
+@import 'css files/Homepage/Header.css';
+@import 'css files/Homepage/Hero.css';
+@import 'css files/Homepage/WhatDrivesUs.css';
+@import 'css files/Homepage/Services.css';
+@import 'css files/Homepage/FAQ.css';
+@import 'css files/Homepage/Footer.css';
+
+
+/* Service Page*/
+@import '../src/css files/Servicespage/Sheader.css';
+@import '../src/css files/Servicespage/Sbody.css';
+
+
+/* Analyze SetPiece Service Page*/
+@import '../src/css files/ASP Service/Aheader.css';
+@import '../src/css files/ASP Service/Abody.css';
+
+
+/* Optimize Player Positioning Service Page*/
+@import '../src/css files/OPP-Service/Oheader.css';
+@import '../src/css files/OPP-Service/Obody.css';
+
+
+/* Simulate Strategies Service Page*/
+@import '../src/css files/SIM-Service/Simheader.css';
+@import '../src/css files/SIM-Service/Simbody.css';
+
+/* Sign-up Page*/
+@import '../src/css files/Signup/signup-header.css';
+@import '../src/css files/Signup/signup-body.css';
+
+/* Login Page*/
+@import '../src/css files/Login/login-header.css';
+@import '../src/css files/Login/login-body.css';
