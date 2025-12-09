@@ -27,8 +27,33 @@ app = Flask(__name__)
 cors_origins = os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(',')
 CORS(app, origins=cors_origins)  # Enable CORS for React frontend
 
+# Flask startup event - ensures Strategy Maker initializes when app starts (Gunicorn compatible)
+@app.before_request
+def ensure_strategy_maker_initialized():
+    """Ensure Strategy Maker is initialized before handling requests"""
+    global strategy_maker
+    if strategy_maker is None:
+        print("[INIT] Strategy Maker not initialized, attempting initialization...")
+        if initialize_strategy_maker():
+            print("[OK] Strategy Maker initialized successfully")
+        else:
+            print("[WARNING] Strategy Maker initialization failed, some features may not work")
+
 # Initialize Strategy Maker
 strategy_maker = None
+
+# Initialize Strategy Maker when module loads (for Gunicorn compatibility)
+# This ensures strategy_maker is initialized even when running via Gunicorn
+try:
+    print("[INIT] Initializing Strategy Maker on module load...")
+    strategy_maker = StrategyMaker()
+    print("[OK] Strategy Maker initialized successfully on module load")
+except Exception as e:
+    print(f"[WARNING] Could not initialize Strategy Maker on module load: {e}")
+    import traceback
+    traceback.print_exc()
+    print("[INFO] Will attempt initialization on first request")
+    strategy_maker = None
 
 def get_player_label(players, player_id):
     """Get the display label for a player by ID"""
@@ -749,10 +774,8 @@ if __name__ == '__main__':
         print("\n" + "="*70 + "\n")
         
         # Use PORT environment variable for production (Render, Heroku, etc.)
-        port = int(os.environ.get('PORT', 5000))
-        debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
-        
-        app.run(debug=debug, host='0.0.0.0', port=port)
+        port = int(os.environ.get("PORT", 5000))
+        app.run(host="0.0.0.0", port=port)
     else:
         print("[ERROR] Failed to initialize Strategy Maker")
         print("   Server will not start")

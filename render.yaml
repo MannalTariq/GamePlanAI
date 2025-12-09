@@ -27,16 +27,16 @@ services:
     env: python
     region: oregon
     plan: free
-    buildCommand: pip install -r backend/hassaa/data/requirements.txt
-    startCommand: cd backend/hassaa/data && python api_server.py
+    rootDir: backend/hassaa/data
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 2 --timeout 120 api_server:app
     envVars:
       - key: PORT
         value: 5000
       - key: CORS_ORIGINS
-        fromService:
-          type: web
-          name: gameplanai-frontend
-          property: url
+        sync: false
+      - key: FLASK_DEBUG
+        value: "False"
 
   # Free Kick API Service
   - type: web
