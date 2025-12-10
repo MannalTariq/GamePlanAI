@@ -33,14 +33,31 @@ def ensure_strategy_maker_initialized():
     """Ensure Strategy Maker is initialized before handling requests"""
     global strategy_maker
     if strategy_maker is None:
-        print("[INIT] Strategy Maker not initialized, attempting initialization...")
-        if initialize_strategy_maker():
-            print("[OK] Strategy Maker initialized successfully")
-        else:
-            print("[WARNING] Strategy Maker initialization failed, some features may not work")
+        try:
+            print("[INIT] Strategy Maker not initialized, attempting initialization...")
+            if initialize_strategy_maker():
+                print("[OK] Strategy Maker initialized successfully")
+            else:
+                print("[WARNING] Strategy Maker initialization failed, some features may not work")
+        except Exception as e:
+            print(f"[ERROR] Failed to initialize Strategy Maker in before_request: {e}")
+            # Don't raise exception - allow routes to work even without Strategy Maker
 
 # Initialize Strategy Maker
 strategy_maker = None
+
+def initialize_strategy_maker():
+    """Initialize the strategy maker on server startup"""
+    global strategy_maker
+    try:
+        print("Initializing Strategy Maker...")
+        strategy_maker = StrategyMaker()
+        print("[OK] Strategy Maker initialized successfully")
+        return True
+    except Exception as e:
+        print(f"[WARNING] Could not initialize Strategy Maker: {e}")
+        traceback.print_exc()
+        return False
 
 # Initialize Strategy Maker when module loads (for Gunicorn compatibility)
 # This ensures strategy_maker is initialized even when running via Gunicorn
@@ -218,18 +235,19 @@ def generate_fallback_simulation(players, corner_x, corner_y, goal_x, goal_y):
         }
     })
 
-def initialize_strategy_maker():
-    """Initialize the strategy maker on server startup"""
-    global strategy_maker
-    try:
-        print("Initializing Strategy Maker...")
-        strategy_maker = StrategyMaker()
-        print("[OK] Strategy Maker initialized successfully")
-        return True
-    except Exception as e:
-        print(f"[WARNING] Could not initialize Strategy Maker: {e}")
-        traceback.print_exc()
-        return False
+@app.route('/', methods=['GET'])
+def root():
+    """Root endpoint for health checks"""
+    return jsonify({
+        'status': 'ok',
+        'service': 'GamePlanAI Corner Kick API',
+        'version': '1.0.0',
+        'endpoints': {
+            'health': '/api/health',
+            'optimize': '/api/optimize',
+            'simulate': '/api/simulate'
+        }
+    })
 
 @app.route('/api/health', methods=['GET'])
 def health_check():
